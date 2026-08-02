@@ -190,7 +190,6 @@ def get_iswc_musicbrainz(title, artist):
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
-    # ★【ユーザー指定】MusicBrainzを曲名だけで検索したダイレクトリンク
     encoded_mb_title = urllib.parse.quote(f'work:"{clean_title}"')
     mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
 
@@ -211,7 +210,6 @@ def get_iswc_musicbrainz(title, artist):
                     print("    -> [MusicBrainz Fact] 該当ワーク未登録")
                     return None, "MusicBrainz", mb_web_search_url
 
-                # --- 2段階目：演者一致ワークの探索 ---
                 best_work = None
                 candidate_iswc = None
                 candidate_url = None
@@ -228,7 +226,6 @@ def get_iswc_musicbrainz(title, artist):
                         print(f"    -> [MusicBrainz Fact] ✅ 演者一致ワーク発見: ID={work.get('id')}")
                         break
 
-                # --- 判定処理 ---
                 if best_work:
                     iswcs = best_work.get("iswcs", [])
                     work_id = best_work.get("id")
@@ -303,7 +300,6 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     # iTunes APIによる公式表記補正
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
 
-    # ★【ユーザー指定】MusicBrainzを曲名だけで検索したダイレクトリンク
     encoded_mb_title = urllib.parse.quote(f'work:"{final_title}"')
     mb_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
 
@@ -354,7 +350,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
         "jasrac_code": code_val,
         "status": status_val,
         "pub_date": pub_date,
-        "source_name": "MusicBrainz",      # ★情報源からYouTubeを排除
+        "source_name": "MusicBrainz",
         "source_url": src_url,
         "mb_search_url": mb_search_url,
         "jasrac_search_url": jasrac_search_url,
@@ -373,7 +369,6 @@ def export_master_to_csv(master_db):
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
-        # ★ ご指定通りの6つのカラムヘッダー
         writer.writerow([
             'トレンド動画タイトル', 
             '再生数 / 反応率', 
@@ -397,7 +392,7 @@ def export_master_to_csv(master_db):
             # 4. JASRAC/NexTone 検索用キーワード
             c4_jasrac = f"曲名: {r.get('jasrac_search_title')} / 歌手: {r.get('jasrac_search_artist')} (照合URL: {r.get('jasrac_search_url')})"
             
-            # 5. 情報源 / 期限 (MusicBrainzの曲名検索リンクのみ + 確認日/期限)
+            # 5. 情報源 / 期限
             mb_link = r.get('mb_search_url', '')
             c5_source = f"MusicBrainz: {mb_link} (確認日: {r.get('verified_at')} / 期限: {r.get('valid_until')})"
             

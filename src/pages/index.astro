@@ -107,29 +107,43 @@ const jsonLdData = {
           <table class="data-table">
             <thead>
               <tr>
-                <th scope="col">トレンド動画タイトル (生データ)</th>
-                <th scope="col">権利コード / 許諾ステータス</th>
-                <th scope="col">JASRAC/NexTone 検索用キーワード</th>
-                <th scope="col">原盤権対策 (音源)</th>
-                <th scope="col">情報源 / 期限</th>
-                <th scope="col" style="text-align: right;">再生数 / 反応率</th>
+                <th scope="col">1. トレンド動画タイトル (生データ)</th>
+                <th scope="col" style="text-align: right;">2. 再生数 / 反応率</th>
+                <th scope="col">3. 権利コード / 許諾ステータス</th>
+                <th scope="col">4. JASRAC/NexTone 検索用キーワード</th>
+                <th scope="col">5. 情報源 / 期限</th>
+                <th scope="col">6. 原盤権対策 (音源)</th>
               </tr>
             </thead>
             <tbody>
               {songs.map(song => (
                 <tr>
+                  {/* 1. トレンド動画タイトル */}
                   <td>
                     <strong class="song-title">{song.title}</strong><br />
                     <span class="song-meta">{song.artist} ({song.pub_date || '不明'} / {getSeasonTag(song.pub_date)})</span>
                   </td>
+                  {/* 2. 再生数 / 反応率 */}
+                  <td class="metrics-cell">
+                    <strong>{(song.metrics?.views ?? 0).toLocaleString()} 回再生</strong><br />
+                    <span class="engagement-pill">📈 {song.metrics?.engagement_rate ?? 0}%</span>
+                  </td>
+                  {/* 3. 権利コード / 許諾ステータス */}
                   <td>
                     <code>{song.jasrac_code}</code><br />
                     <span class={`badge ${getBadgeClass(song.rights_status)}`}>{song.rights_status}</span>
                   </td>
+                  {/* 4. JASRAC/NexTone 検索用キーワード */}
                   <td>
                     <span class="sub-text">曲: <code>{song.jasrac_search_title || song.title}</code></span><br />
                     <span class="sub-text">演: <code>{song.jasrac_search_artist || song.artist}</code></span>
                   </td>
+                  {/* 5. 情報源 / 期限 */}
+                  <td>
+                    <a href={song.source_url} target="_blank" rel="noopener noreferrer" class="link-primary">{song.source_name}</a><br />
+                    <span class="sub-text text-danger">期限: {song.valid_until}</span>
+                  </td>
+                  {/* 6. 原盤権対策 (音源) */}
                   <td>
                     {song.karaoke_search_url ? (
                       <a href={song.karaoke_search_url} target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
@@ -138,14 +152,6 @@ const jsonLdData = {
                     ) : (
                       <span class="sub-text">要自作伴奏</span>
                     )}
-                  </td>
-                  <td>
-                    <a href={song.source_url} target="_blank" rel="noopener noreferrer" class="link-primary">{song.source_name}</a><br />
-                    <span class="sub-text text-danger">期限: {song.valid_until}</span>
-                  </td>
-                  <td class="metrics-cell">
-                    <strong>{(song.metrics?.views ?? 0).toLocaleString()} 回再生</strong><br />
-                    <span class="engagement-pill">📈 {song.metrics?.engagement_rate ?? 0}%</span>
                   </td>
                 </tr>
               ))}
