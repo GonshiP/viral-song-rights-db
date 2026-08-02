@@ -5,14 +5,15 @@ interface SongMetrics { views?: number; likes?: number; comments?: number; engag
 interface Song {
   title: string; 
   artist: string; 
-  jasrac_search_title?: string;  // ★追加
-  jasrac_search_artist?: string; // ★追加
+  video_url?: string;            // ★動画URLを追加
+  jasrac_search_title?: string;
+  jasrac_search_artist?: string;
   jasrac_code: string; 
   rights_status: string; 
   pub_date: string;
   source_name: string; 
   source_url: string; 
-  karaoke_search_url?: string;   // ★追加
+  karaoke_search_url?: string;
   verified_at: string; 
   valid_until: string; 
   trend_score?: number; 
@@ -27,12 +28,12 @@ const getSeasonTag = (d: string) => {
 };
 
 const getBadgeClass = (s: string) => 
-  !s ? 'badge-neutral' : (s.includes('要個別確認') || s.includes('リスク') || s.includes('NG')) ? 'badge-warning' : 'badge-success';
+  !s ? 'badge-neutral' : (s.includes('要個別確認') || s.includes('リスク') || s.includes('NG') || s.includes('手動検索を推奨')) ? 'badge-warning' : 'badge-success';
 
 const specItems = [
   { title: 'データ収集', desc: 'YouTube Data API v3（JP/Music急上昇）と Google Gemini API（Web検索連動）によるリアルタイム抽出。' },
   { title: 'メタデータ照合', desc: 'MusicBrainz Open Registry（ISWC識別子）および iTunes Search API による公式補正。' },
-  { title: '権利判定ロジック', desc: 'ISWCコード未特定の楽曲を「要個別確認」に自動フォールバックさせる厳格な判定アルゴリズム。' },
+  { title: '権利判定ロジック', desc: 'ISWCコード未特定の楽曲を「手動検索を推奨」に自動フォールバックさせる厳格な判定アルゴリズム。' },
   { title: '原盤権対策', desc: '著作権（作詞・作曲）と原盤権（音源）の分離管理および歌枠利用可能カラオケ音源の検索導線提供。' },
   { title: 'ライフサイクル管理', desc: '検証タイムスタンプの記録および90日間の再検証推奨期限の自動算出。' }
 ];
@@ -107,7 +108,7 @@ const jsonLdData = {
           <table class="data-table">
             <thead>
               <tr>
-                <th scope="col">1. トレンド動画タイトル (生データ)</th>
+                <th scope="col">1. トレンド動画</th>
                 <th scope="col" style="text-align: right;">2. 再生数 / 反応率</th>
                 <th scope="col">3. 権利コード / 許諾ステータス</th>
                 <th scope="col">4. JASRAC/NexTone 検索用キーワード</th>
@@ -118,9 +119,16 @@ const jsonLdData = {
             <tbody>
               {songs.map(song => (
                 <tr>
-                  {/* 1. トレンド動画タイトル */}
+                  {/* 1. トレンド動画 (動画直リンク化) */}
                   <td>
-                    <strong class="song-title">{song.title}</strong><br />
+                    {song.video_url ? (
+                      <a href={song.video_url} target="_blank" rel="noopener noreferrer" class="song-title-link">
+                        <strong class="song-title">▶ {song.title}</strong>
+                      </a>
+                    ) : (
+                      <strong class="song-title">{song.title}</strong>
+                    )}
+                    <br />
                     <span class="song-meta">{song.artist} ({song.pub_date || '不明'} / {getSeasonTag(song.pub_date)})</span>
                   </td>
                   {/* 2. 再生数 / 反応率 */}
@@ -217,7 +225,12 @@ const jsonLdData = {
     th, td { padding: 12px; border: 1px solid #e0e0e0; vertical-align: middle; }
     th { background: #f8f9fa; color: #444; text-align: left; white-space: nowrap; }
   }
-  .song-title { font-size: 0.92rem; color: #111; }
+  .song-title-link {
+    text-decoration: none;
+    color: #0066cc;
+    &:hover { text-decoration: underline; color: #004499; }
+  }
+  .song-title { font-size: 0.92rem; }
   .song-meta { font-size: 0.8rem; color: #666; }
   .sub-text { font-size: 0.8rem; color: #555; }
   .link-primary { color: #0066cc; font-size: 0.8rem; text-decoration: underline; }

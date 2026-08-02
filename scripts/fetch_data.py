@@ -202,7 +202,6 @@ def get_iswc_musicbrainz(title, artist):
     for attempt in range(2):
         time.sleep(1.2)
         try:
-            # ★【改善】inc=artist-rels+recording-rels を指定し、録音・アーティスト情報も含めて取得
             params = {
                 "query": query,
                 "fmt": "json",
@@ -278,6 +277,7 @@ def load_master_db():
                     entry.setdefault("valid_until", valid_until_str)
                     entry.setdefault("jasrac_search_title", t)
                     entry.setdefault("jasrac_search_artist", a)
+                    entry.setdefault("video_url", "")
                     
                     encoded_mb = urllib.parse.quote(f'work:"{t}"')
                     entry.setdefault("mb_search_url", f"https://musicbrainz.org/search?query={encoded_mb}&type=work")
@@ -292,8 +292,8 @@ def load_master_db():
     print("[DEBUG - DB Load] マスターDBが存在しないため、新規空DB作成モードで開始します。")
     return []
 
-def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None):
-    """【客観ファクト記録】ステータスを「ISWCコード確認済み」「手動検索を推奨」の2種類のみに限定"""
+def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None, video_url=""):
+    """【客観ファクト記録】動画URLを含むメタデータと許諾ステータスを自動保持"""
     today_str, valid_until_str = get_dates()
     
     if not ai_info:
@@ -327,7 +327,8 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
                 "source_name": "MusicBrainz",
                 "mb_search_url": mb_search_url,
                 "jasrac_search_url": jasrac_search_url,
-                "karaoke_search_url": karaoke_url
+                "karaoke_search_url": karaoke_url,
+                "video_url": video_url or entry.get("video_url", "")
             })
             print(f"[DEBUG - Match Existing] 既存楽曲ヒット: '{final_title}' (メトリクス更新)")
             return entry, master_db, False
@@ -336,8 +337,6 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     print(f"\n★ [DEBUG - New Song Fact Record] 新曲検知: 生タイトル '{raw_title}' ➔ 照合用表記: '{final_title}' ({final_artist})")
     iswc_code, src_name, src_url = get_iswc_musicbrainz(final_title, final_artist)
 
-    # ★【許諾ステータスの2種類限定化】
-    # ISWC:T-xxx と完全確定した場合のみ「ISWCコード確認済み」、参考候補や未取得は「手動検索を推奨」
     if iswc_code and iswc_code.startswith("ISWC:"):
         code_val = iswc_code
         status_val = "ISWCコード確認済み"
@@ -348,6 +347,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     new_entry = {
         "title": raw_title,
         "artist": raw_artist,
+        "video_url": video_url,  # ★YouTube動画直リンクURLを保存
         "jasrac_search_title": final_title,
         "jasrac_search_artist": final_artist,
         "jasrac_code": code_val,
@@ -368,12 +368,12 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     return new_entry, master_db, True
 
 def export_master_to_csv(master_db):
-    """【全6カラム統合構成】README仕様書通りのカラム順でCSV出力"""
+    """【全6カラム統合構成】第1カラム名を「トレンド動画」に変更"""
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
         writer.writerow([
-            'トレンド動画タイトル', 
+            'トレンド動画', 
             '再生数 / 反応率', 
             '権利コード / 許諾ステータス', 
             'JASRAC/NexTone 検索用キーワード', 
@@ -383,8 +383,9 @@ def export_master_to_csv(master_db):
         for r in master_db:
             m = r.get('last_metrics', {})
             
-            # 1. トレンド動画タイトル
-            c1_title = f"{r.get('title')} (チャンネル: {r.get('artist')})"
+            # 1. トレンド動画 (動画URL付き)
+            v_url = r.get('video_url', '')
+            c1_title = f"{r.get('title')} (チャンネル: {r.get('artist')})" + (f" [動画URL: {v_url}]" if v_url else "")
             
             # 2. 再生数 / 反応率
             c2_metrics = f"再生数: {m.get('views', 0):,}回 | 反応率: {m.get('engagement_rate', 0.0)}% | 日速: {m.get('daily_views', 0):,}回"
@@ -408,7 +409,7 @@ def generate_llms_txt(songs, today_str):
     content = f"# Trend Song Rights & Verified Analytics Database\n\n> 最終更新日時: {today_str}\n> 本ファイルはAI検索エンジン向けの構造化ガイドです。\n\n> MusicBrainzについて: MetaBrainz Foundationが運営する国際音楽データベースであり、ISWCの照合において信頼性を備えています。\n\n## 直近のトレンド楽曲・許諾状況\n"
     for s in songs:
         m = s.get('metrics', {})
-        content += f"- **{s['title']}** ({s['artist']}) | JASRAC検索名: {s.get('jasrac_search_title')} | 識別コード: {s['jasrac_code']} | ステータス: {s['rights_status']} | 情報源(MusicBrainz曲名検索): {s.get('mb_search_url')} | JASRAC検索: {s.get('jasrac_search_url')} | 歌枠用カラオケ: {s.get('karaoke_search_url')} | 確認日: {s['verified_at']} | 有効期限: {s['valid_until']} | 再生数: {m.get('views', 0):,}回 | エンゲージメント率: {m.get('engagement_rate', 0)}%\n"
+        content += f"- **{s['title']}** ({s['artist']}) [動画: {s.get('video_url')}] | JASRAC検索名: {s.get('jasrac_search_title')} | 識別コード: {s['jasrac_code']} | ステータス: {s['rights_status']} | 情報源(MusicBrainz曲名検索): {s.get('mb_search_url')} | JASRAC検索: {s.get('jasrac_search_url')} | 歌枠用カラオケ: {s.get('karaoke_search_url')} | 確認日: {s['verified_at']} | 有効期限: {s['valid_until']} | 再生数: {m.get('views', 0):,}回 | エンゲージメント率: {m.get('engagement_rate', 0)}%\n"
     content += "\n## エンドポイント\n- JSON全データ: /api/v1/songs.json\n"
     os.makedirs('public', exist_ok=True)
     with open('public/llms.txt', 'w', encoding='utf-8') as f: f.write(content)
@@ -438,6 +439,8 @@ def get_real_youtube_trending_songs(master_db):
     song_requests = []
     prepared_items = []
     for idx, item in enumerate(items, 1):
+        v_id = item.get("id", "")
+        video_url = f"https://www.youtube.com/watch?v={v_id}" if v_id else ""
         snippet, stats = item["snippet"], item.get("statistics", {})
         raw_title = snippet.get("title", "")
         raw_artist = snippet.get("channelTitle", "").replace("Official", "").strip()
@@ -452,7 +455,11 @@ def get_real_youtube_trending_songs(master_db):
         }
 
         song_requests.append({"id": str(idx), "raw_title": raw_title, "raw_artist": raw_artist})
-        prepared_items.append({"raw_title": raw_title, "raw_artist": raw_artist, "pub_date": pub_date, "metrics": metrics, "req_id": str(idx)})
+        prepared_items.append({
+            "raw_title": raw_title, "raw_artist": raw_artist, 
+            "pub_date": pub_date, "metrics": metrics, "req_id": str(idx),
+            "video_url": video_url
+        })
 
     gemini_batch_results = analyze_songs_batch_with_gemini(song_requests)
 
@@ -462,12 +469,13 @@ def get_real_youtube_trending_songs(master_db):
         ai_info = gemini_batch_results.get(req_id, {})
         
         entry, master_db, was_added = auto_enrich_and_get_rights(
-            p_item["raw_title"], p_item["raw_artist"], p_item["pub_date"], p_item["metrics"], master_db, ai_info
+            p_item["raw_title"], p_item["raw_artist"], p_item["pub_date"], p_item["metrics"], master_db, ai_info, p_item["video_url"]
         )
         if was_added: db_updated = True
 
         trending_songs.append({
             "title": entry["title"], "artist": entry["artist"],
+            "video_url": entry.get("video_url", p_item["video_url"]),
             "jasrac_search_title": entry["jasrac_search_title"], "jasrac_search_artist": entry["jasrac_search_artist"],
             "jasrac_code": entry["jasrac_code"], "rights_status": entry["status"],
             "pub_date": entry["pub_date"], "source_name": entry["source_name"], "source_url": entry["source_url"],
