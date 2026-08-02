@@ -184,15 +184,18 @@ def get_official_info_itunes(title, artist):
 def get_iswc_musicbrainz(title, artist):
     """【2段階ファクト検索】歌手名も含めて紐づけデータを精密検索"""
     clean_title = re.sub(r'\(.*?\)|（.*?）', '', title)
-    clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title).strip()
+    clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title)
+    clean_title = re.sub(r'\s+', ' ', clean_title).strip()
     
     main_artist = re.sub(r'\(.*?\)|（.*?）', '', artist)
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
-    encoded_mb_title = urllib.parse.quote(f'work:"{clean_title}"')
-    mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
+    # ★【修正】WebダイレクトURLからは `work:` を完全に排除し、"曲名" のみを安全にエンコード
+    encoded_web_title = urllib.parse.quote(f'"{clean_title}"')
+    mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_web_title}&type=work"
 
+    # API内部検索用（APIでは Lucene 構文を使用）
     query = f'work:"{escape_lucene(clean_title)}"'
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
@@ -279,7 +282,9 @@ def load_master_db():
                     entry.setdefault("jasrac_search_artist", a)
                     entry.setdefault("video_url", "")
                     
-                    encoded_mb = urllib.parse.quote(f'work:"{t}"')
+                    clean_t = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', t)
+                    clean_t = re.sub(r'\s+', ' ', clean_t).strip()
+                    encoded_mb = urllib.parse.quote(f'"{clean_t}"')
                     entry.setdefault("mb_search_url", f"https://musicbrainz.org/search?query={encoded_mb}&type=work")
                     
                     encoded_jasrac = urllib.parse.quote(f"JASRAC 検索 {t} {a}")
@@ -306,7 +311,10 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     # iTunes APIによる公式表記補正
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
 
-    encoded_mb_title = urllib.parse.quote(f'work:"{final_title}"')
+    # ★Web用検索URLのクエリ生成（work: を完全に除外して安全にエンコード）
+    clean_t = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', final_title)
+    clean_t = re.sub(r'\s+', ' ', clean_t).strip()
+    encoded_mb_title = urllib.parse.quote(f'"{clean_t}"')
     mb_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
 
     encoded_jasrac_query = urllib.parse.quote(f"JASRAC 検索 {final_title} {final_artist}")
@@ -347,7 +355,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     new_entry = {
         "title": raw_title,
         "artist": raw_artist,
-        "video_url": video_url,  # ★YouTube動画直リンクURLを保存
+        "video_url": video_url,
         "jasrac_search_title": final_title,
         "jasrac_search_artist": final_artist,
         "jasrac_code": code_val,
