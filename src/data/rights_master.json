@@ -5,8 +5,8 @@
     "video_url": "https://www.youtube.com/watch?v=dePs7UPp6GQ",
     "jasrac_search_title": "Brand New",
     "jasrac_search_artist": "Mrs. GREEN APPLE",
-    "jasrac_code": "参考候補:T-909.260.362-8",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-31",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/0c9b4735-4e43-30db-b061-f4f4de6d70c3",
@@ -16,11 +16,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 1761274,
-      "likes": 89008,
-      "comments": 6111,
-      "engagement_rate": 5.4,
-      "daily_views": 1761274
+      "views": 1987143,
+      "likes": 92236,
+      "comments": 6370,
+      "engagement_rate": 4.96,
+      "daily_views": 993571
     },
     "added_date": "2026-08-02"
   },
@@ -30,8 +30,8 @@
     "video_url": "https://www.youtube.com/watch?v=JofSrfFV4Kw",
     "jasrac_search_title": "グッタイム",
     "jasrac_search_artist": "Snow Man",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
@@ -41,11 +41,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 5777976,
-      "likes": 171712,
-      "comments": 14093,
-      "engagement_rate": 3.22,
-      "daily_views": 722247
+      "views": 5826583,
+      "likes": 171886,
+      "comments": 14154,
+      "engagement_rate": 3.19,
+      "daily_views": 647398
     },
     "added_date": "2026-08-02"
   },
@@ -55,8 +55,8 @@
     "video_url": "https://www.youtube.com/watch?v=TfvYFX06Mes",
     "jasrac_search_title": "真夜中のZOO",
     "jasrac_search_artist": "ACEes",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-25",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%22&type=work",
@@ -66,11 +66,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 2320830,
-      "likes": 33856,
-      "comments": 83405,
-      "engagement_rate": 5.05,
-      "daily_views": 290103
+      "views": 2349415,
+      "likes": 34046,
+      "comments": 83564,
+      "engagement_rate": 5.01,
+      "daily_views": 293676
     },
     "added_date": "2026-08-02"
   },
@@ -80,22 +80,22 @@
     "video_url": "https://www.youtube.com/watch?v=gXNbJEYuoSw",
     "jasrac_search_title": "BRUCE WAYNE",
     "jasrac_search_artist": "BE:FIRST",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-31",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%20BE%3AFIRST",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 2095995,
-      "likes": 57756,
-      "comments": 4083,
-      "engagement_rate": 2.95,
-      "daily_views": 1047997
+      "views": 2446566,
+      "likes": 58635,
+      "comments": 4288,
+      "engagement_rate": 2.57,
+      "daily_views": 1223283
     },
     "added_date": "2026-08-02"
   },
@@ -105,8 +105,8 @@
     "video_url": "https://www.youtube.com/watch?v=gT5XyATc-Z8",
     "jasrac_search_title": "GO GHOST",
     "jasrac_search_artist": "King Gnu",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-28",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22GO%20GHOST%22&type=work",
@@ -116,11 +116,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 1121049,
-      "likes": 28741,
-      "comments": 1119,
-      "engagement_rate": 2.66,
-      "daily_views": 280262
+      "views": 1178434,
+      "likes": 29210,
+      "comments": 1126,
+      "engagement_rate": 2.57,
+      "daily_views": 235686
     },
     "added_date": "2026-08-02"
   },
@@ -130,8 +130,8 @@
     "video_url": "https://www.youtube.com/watch?v=eN2NlzPdcrs",
     "jasrac_search_title": "WHATCHA DOIN",
     "jasrac_search_artist": "JO1",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-31",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22WHATCHA%20DOIN%22&type=work",
@@ -141,11 +141,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 1068614,
-      "likes": 28155,
-      "comments": 6600,
-      "engagement_rate": 3.25,
-      "daily_views": 534307
+      "views": 1275964,
+      "likes": 28815,
+      "comments": 6939,
+      "engagement_rate": 2.8,
+      "daily_views": 637982
     },
     "added_date": "2026-08-02"
   },
@@ -155,8 +155,8 @@
     "video_url": "https://www.youtube.com/watch?v=lI7efayDEeU",
     "jasrac_search_title": "島のうた (セイレーンver.)",
     "jasrac_search_artist": "セイレーン(CV.鈴木みのり), 人魚(CV.大木咲絵子) & 人魚(CV.七瀬彩夏)",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%22&type=work",
@@ -166,11 +166,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 1255108,
-      "likes": 21234,
+      "views": 1327840,
+      "likes": 22084,
       "comments": 0,
-      "engagement_rate": 1.69,
-      "daily_views": 156888
+      "engagement_rate": 1.66,
+      "daily_views": 147537
     },
     "added_date": "2026-08-02"
   },
@@ -180,8 +180,8 @@
     "video_url": "https://www.youtube.com/watch?v=81CpK8nCvFw",
     "jasrac_search_title": "You!Joy!Parade!",
     "jasrac_search_artist": "M!LK",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22You%20Joy%20Parade%22&type=work",
@@ -191,11 +191,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 1600905,
-      "likes": 66139,
-      "comments": 6271,
-      "engagement_rate": 4.52,
-      "daily_views": 200113
+      "views": 1637738,
+      "likes": 66511,
+      "comments": 6294,
+      "engagement_rate": 4.45,
+      "daily_views": 181970
     },
     "added_date": "2026-08-02"
   },
@@ -206,7 +206,7 @@
     "jasrac_search_title": "モエチャッカファイア",
     "jasrac_search_artist": "弌誠",
     "jasrac_code": "ISWC:T-328.893.941-9",
-    "status": "ISWCコード確認済み",
+    "status": "MusicBrainzでISWCコード確認済み",
     "pub_date": "2026-07-25",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/3e789d6d-3b7a-4a29-b418-f907566516aa",
@@ -216,11 +216,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 2296893,
-      "likes": 86707,
-      "comments": 3209,
-      "engagement_rate": 3.91,
-      "daily_views": 328127
+      "views": 2621045,
+      "likes": 87607,
+      "comments": 3237,
+      "engagement_rate": 3.47,
+      "daily_views": 327630
     },
     "added_date": "2026-08-02"
   },
@@ -230,8 +230,8 @@
     "video_url": "https://www.youtube.com/watch?v=_Pk6xfju3l0",
     "jasrac_search_title": "I Got Your Back",
     "jasrac_search_artist": "ILLIT & HANA",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-26",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22I%20Got%20Your%20Back%22&type=work",
@@ -241,11 +241,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 6505878,
-      "likes": 389526,
-      "comments": 29027,
-      "engagement_rate": 6.43,
-      "daily_views": 929411
+      "views": 6668245,
+      "likes": 392541,
+      "comments": 29121,
+      "engagement_rate": 6.32,
+      "daily_views": 952606
     },
     "added_date": "2026-08-02"
   },
@@ -255,8 +255,8 @@
     "video_url": "https://www.youtube.com/watch?v=HZcpB0PfG6g",
     "jasrac_search_title": "うさぎラップ (リズム感のある者たちver.)",
     "jasrac_search_artist": "うさぎ(CV.小澤亜李), モモンガ(CV.井口裕香), 人魚(CV.大木咲絵子) & 人魚(CV.七瀬彩夏)",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%22&type=work",
@@ -266,11 +266,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 807389,
-      "likes": 15747,
+      "views": 841102,
+      "likes": 16168,
       "comments": 0,
-      "engagement_rate": 1.95,
-      "daily_views": 100923
+      "engagement_rate": 1.92,
+      "daily_views": 93455
     },
     "added_date": "2026-08-02"
   },
@@ -280,8 +280,8 @@
     "video_url": "https://www.youtube.com/watch?v=x3sOXlcrpLg",
     "jasrac_search_title": "机さする",
     "jasrac_search_artist": "青木遥",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E6%9C%BA%E3%81%95%E3%81%99%E3%82%8B%22&type=work",
@@ -291,11 +291,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 732929,
-      "likes": 13591,
+      "views": 768044,
+      "likes": 13944,
       "comments": 0,
-      "engagement_rate": 1.85,
-      "daily_views": 91616
+      "engagement_rate": 1.82,
+      "daily_views": 85338
     },
     "added_date": "2026-08-02"
   },
@@ -305,8 +305,8 @@
     "video_url": "https://www.youtube.com/watch?v=VdDPPWb5cF8",
     "jasrac_search_title": "好き",
     "jasrac_search_artist": "星野源",
-    "jasrac_code": "参考候補:T-101.319.727-6",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-28",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/af6db0df-5e73-4dc6-bf12-02cace686342",
@@ -316,11 +316,11 @@
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 417197,
-      "likes": 14305,
+      "views": 437324,
+      "likes": 14549,
       "comments": 0,
-      "engagement_rate": 3.43,
-      "daily_views": 83439
+      "engagement_rate": 3.33,
+      "daily_views": 87464
     },
     "added_date": "2026-08-02"
   },
@@ -330,22 +330,22 @@
     "video_url": "https://www.youtube.com/watch?v=9VoZ0BwjBbk",
     "jasrac_search_title": "くつずれ",
     "jasrac_search_artist": "Release - Topic",
-    "jasrac_code": "コード未取得",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%22&type=work",
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20Release%20-%20Topic",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=Release%20-%20Topic%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20%E4%B8%8D%E6%98%8E",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E4%B8%8D%E6%98%8E%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-02",
     "valid_until": "2026-10-31",
     "last_metrics": {
-      "views": 775902,
-      "likes": 10994,
+      "views": 808936,
+      "likes": 11276,
       "comments": 0,
-      "engagement_rate": 1.42,
-      "daily_views": 96987
+      "engagement_rate": 1.39,
+      "daily_views": 89881
     },
     "added_date": "2026-08-02"
   },
@@ -355,8 +355,8 @@
     "video_url": "https://www.youtube.com/watch?v=Lz24PqZkF2s",
     "jasrac_search_title": "HOT LIMIT",
     "jasrac_search_artist": "T.M.Revolution",
-    "jasrac_code": "参考候補:T-101.428.001-2",
-    "status": "手動検索を推奨",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
     "pub_date": "2026-07-10",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/d247635d-0ac1-4091-b182-a493a50424cf",
@@ -371,6 +371,31 @@
       "comments": 46216,
       "engagement_rate": 3.45,
       "daily_views": 1012474
+    },
+    "added_date": "2026-08-02"
+  },
+  {
+    "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
+    "artist": "M!LK - Topic",
+    "video_url": "https://www.youtube.com/watch?v=oFzP7YKS5gM",
+    "jasrac_search_title": "罪と罰",
+    "jasrac_search_artist": "椎名林檎",
+    "jasrac_code": "ISWC:T-101.649.409-8",
+    "status": "MusicBrainzでISWCコード確認済み",
+    "pub_date": "2026-08-02",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/8d2b5f56-c26f-496c-a667-b359f64a2d35",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-02",
+    "valid_until": "2026-10-31",
+    "last_metrics": {
+      "views": 139578,
+      "likes": 22906,
+      "comments": 2581,
+      "engagement_rate": 18.26,
+      "daily_views": 139578
     },
     "added_date": "2026-08-02"
   }
