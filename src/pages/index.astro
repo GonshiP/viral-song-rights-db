@@ -3,13 +3,24 @@ import rawSongs from '../data/songs.json';
 
 interface SongMetrics { views?: number; likes?: number; comments?: number; engagement_rate?: number; daily_views?: number; }
 interface Song {
-  title: string; artist: string; jasrac_code: string; rights_status: string; pub_date: string;
-  source_name: string; source_url: string; verified_at: string; valid_until: string; trend_score?: number; metrics?: SongMetrics;
+  title: string; 
+  artist: string; 
+  jasrac_search_title?: string;  // ★追加
+  jasrac_search_artist?: string; // ★追加
+  jasrac_code: string; 
+  rights_status: string; 
+  pub_date: string;
+  source_name: string; 
+  source_url: string; 
+  karaoke_search_url?: string;   // ★追加
+  verified_at: string; 
+  valid_until: string; 
+  trend_score?: number; 
+  metrics?: SongMetrics;
 }
 
 const songs = rawSongs as Song[];
 
-// ロジックの極小化
 const getSeasonTag = (d: string) => {
   const m = parseInt(d?.split('-')[1] || '0', 10);
   return !m ? '定番' : `${d.split('-')[0]}年${[3,4,5].includes(m) ? '春' : [6,7,8].includes(m) ? '夏' : [9,10,11].includes(m) ? '秋' : '冬'}`;
@@ -18,21 +29,12 @@ const getSeasonTag = (d: string) => {
 const getBadgeClass = (s: string) => 
   !s ? 'badge-neutral' : (s.includes('要個別確認') || s.includes('リスク') || s.includes('NG')) ? 'badge-warning' : 'badge-success';
 
-// 表示要素を配列化してHTMLを大幅削減
 const specItems = [
-  { title: 'データ収集', desc: 'YouTube Data API v3（地域: JP / カテゴリ: 10 Music / 急上昇）を介した日次自動抽出。' },
-  { title: 'メタデータ照合', desc: 'MusicBrainz Open Registry（ISWC識別子・ワークID）および公式利用規約URLの機械的紐付け。' },
-  { title: '権利判定ロジック', desc: '包括許諾ガイドラインおよび特定リスクキーワード自動照合に基づくステータス割り当て。' },
-  { title: '指標算出', desc: '再生数に対するエンゲージメント強度 ((高評価数 + コメント数) ÷ 総再生数 × 100) の計算。' },
-  { title: 'ライフサイクル管理', desc: '実行タイムスタンプの記録および照合日から90日間の再検証推奨期限の自動設定。' }
-];
-
-const schemaItems = [
-  { label: '権利コード', desc: '国際標準ISWC識別子または権利団体検索・包括照合指示コード' },
-  { label: 'プラットフォーム許諾', desc: '包括契約カバー状況および個別リスク機械判別結果' },
-  { label: '情報源エビデンス', desc: 'メタデータ検証のための一次ソースURL（MusicBrainz等）' },
-  { label: '確認日 / 期限', desc: '最終検証日時と再確認推奨期限（90日間）' },
-  { label: 'エンゲージメント率', desc: 'ユーザー反応強度 ((高評価 + コメント) ÷ 再生数 × 100)' }
+  { title: 'データ収集', desc: 'YouTube Data API v3（JP/Music急上昇）と Google Gemini API（Web検索連動）によるリアルタイム抽出。' },
+  { title: 'メタデータ照合', desc: 'MusicBrainz Open Registry（ISWC識別子）および iTunes Search API による公式補正。' },
+  { title: '権利判定ロジック', desc: 'ISWCコード未特定の楽曲を「要個別確認」に自動フォールバックさせる厳格な判定アルゴリズム。' },
+  { title: '原盤権対策', desc: '著作権（作詞・作曲）と原盤権（音源）の分離管理および歌枠利用可能カラオケ音源の検索導線提供。' },
+  { title: 'ライフサイクル管理', desc: '検証タイムスタンプの記録および90日間の再検証推奨期限の自動算出。' }
 ];
 
 const affiliateItems = [
@@ -43,8 +45,8 @@ const affiliateItems = [
 const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "トレンドソング権利＆トレンドアナリティクスデータベース",
-  "description": "一次ソースURL・確認日時・有効期限を含む、楽曲権利照合およびエンゲージメント指標の自動集約マトリクス。",
+  "name": "トレンドソング権利 ＆ トレンドアナリティクスデータベース",
+  "description": "一次ソースURL・確認日時・有効期限・原盤権対策リンクを含む、楽曲権利照合およびエンゲージメント指標の統合マトリクス。",
   "isAccessibleForFree": true,
   "hasPart": songs.map(s => ({
     "@type": "MusicComposition", "name": s.title, "composer": s.artist, "datePublished": s.pub_date,
@@ -62,14 +64,14 @@ const jsonLdData = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>トレンドソング権利 ＆ トレンドアナリティクスDB</title>
-    <meta name="description" content="リアルタイムのトレンド楽曲動向、権利識別コード、一次ソースURL、確認日時、エンゲージメント指標を自動集約したデータベース。" />
+    <meta name="description" content="リアルタイムのトレンド楽曲動向、権利識別コード、一次ソースURL、原盤権対策リンク、エンゲージメント指標を自動集約したデータベース。" />
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
   </head>
   <body>
     
     <header class="site-header">
       <h1>トレンドソング権利 ＆ トレンドアナリティクスDB</h1>
-      <p>一次ソースエビデンス・確認日時・有効期限付き メタデータ・アナリティクス統合マトリクス</p>
+      <p>一次ソースエビデンス・確認日時・原盤権対策リンク付き メタデータ統合マトリクス</p>
     </header>
 
     <main class="main-container">
@@ -79,21 +81,22 @@ const jsonLdData = {
         <a href="/downloads/viral_song_rights_master.csv" class="btn btn-success">📥 マスターDB (CSV) エクスポート</a>
       </nav>
 
-      <!-- システム仕様（配列マップ描画） -->
+      <!-- システム仕様 -->
       <section class="card spec-card">
         <h3>⚙️ システム仕様およびデータ生成パイプラインについて</h3>
-        <p>当データベースは、日次の自動バックグラウンド処理（GitHub Actions）に基づき、以下のアルゴリズムに沿って機械的に生成・更新されています。</p>
+        <p>当データベースは、GitHub Actions による日次自動パイプライン（Gemini AI × MusicBrainz × iTunes）に基づき生成されています。</p>
         <ul>
           {specItems.map(item => <li><strong>{item.title}:</strong> {item.desc}</li>)}
         </ul>
       </section>
 
-      <!-- スキーマ定義（配列マップ描画） -->
-      <section class="card schema-card">
-        <strong>📊 スキーマ定義（項目の見方）</strong>
-        <div class="schema-grid">
-          {schemaItems.map(item => <div>• <strong>{item.label}:</strong> {item.desc}</div>)}
-        </div>
+      <!-- 信頼性証明 (E-E-A-T) ＆ 原盤権注意書き -->
+      <section class="card notice-card">
+        <h3>🛡️ データ信頼性および原盤権（カラオケ音源）に関する重要な注意事項</h3>
+        <p><strong>【MusicBrainz レジストリについて】</strong><br />
+        当システムが参照する <strong>MusicBrainz</strong> は、MetaBrainz Foundationが運営する国際的なオープン音楽データベースであり、国際標準音源識別コード（ISWC）の追跡において高い信頼性を備えています。</p>
+        <p><strong>【原盤権（音源）の注意】</strong><br />
+        ステータスが「OK」と表示されている場合でも、それは<strong>「作詞・作曲の権利（著作権）」</strong>に関する許諾です。市販CDや公式MVの音源をそのまま配信で流すと<strong>原盤権侵害（アカウントBANリスク）</strong>になります。必ず表内のリンクより「歌枠用カラオケ音源」または「自作伴奏」をご使用ください。</p>
       </section>
 
       <!-- データテーブル -->
@@ -104,12 +107,12 @@ const jsonLdData = {
           <table class="data-table">
             <thead>
               <tr>
-                <th scope="col">楽曲名 / アーティスト (リリース)</th>
-                <th scope="col">権利コード</th>
-                <th scope="col">プラットフォーム許諾</th>
-                <th scope="col">情報源エビデンス</th>
-                <th scope="col">確認日時 / 期限</th>
-                <th scope="col" style="text-align: right;">メトリクス / エンゲージメント</th>
+                <th scope="col">トレンド動画タイトル (生データ)</th>
+                <th scope="col">権利コード / 許諾ステータス</th>
+                <th scope="col">JASRAC/NexTone 検索用キーワード</th>
+                <th scope="col">原盤権対策 (音源)</th>
+                <th scope="col">情報源 / 期限</th>
+                <th scope="col" style="text-align: right;">再生数 / 反応率</th>
               </tr>
             </thead>
             <tbody>
@@ -119,14 +122,25 @@ const jsonLdData = {
                     <strong class="song-title">{song.title}</strong><br />
                     <span class="song-meta">{song.artist} ({song.pub_date || '不明'} / {getSeasonTag(song.pub_date)})</span>
                   </td>
-                  <td><code>{song.jasrac_code}</code></td>
-                  <td><span class={`badge ${getBadgeClass(song.rights_status)}`}>{song.rights_status}</span></td>
                   <td>
-                    <span class="sub-text">{song.source_name}</span><br />
-                    <a href={song.source_url} target="_blank" rel="noopener noreferrer" class="link-primary">🔗 一次ソース確認</a>
+                    <code>{song.jasrac_code}</code><br />
+                    <span class={`badge ${getBadgeClass(song.rights_status)}`}>{song.rights_status}</span>
                   </td>
                   <td>
-                    <span class="sub-text">確認: {song.verified_at}</span><br />
+                    <span class="sub-text">曲: <code>{song.jasrac_search_title || song.title}</code></span><br />
+                    <span class="sub-text">演: <code>{song.jasrac_search_artist || song.artist}</code></span>
+                  </td>
+                  <td>
+                    {song.karaoke_search_url ? (
+                      <a href={song.karaoke_search_url} target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                        🎤 歌枠用音源を探す
+                      </a>
+                    ) : (
+                      <span class="sub-text">要自作伴奏</span>
+                    )}
+                  </td>
+                  <td>
+                    <a href={song.source_url} target="_blank" rel="noopener noreferrer" class="link-primary">{song.source_name}</a><br />
                     <span class="sub-text text-danger">期限: {song.valid_until}</span>
                   </td>
                   <td class="metrics-cell">
@@ -140,14 +154,14 @@ const jsonLdData = {
         )}
       </div>
 
-      <!-- 法人・API案内 -->
+      <!-- API案内 -->
       <section class="card api-card">
-        <h2>🔌 APIおよびデータ連携について</h2>
-        <p>一次ソースURL、タイムスタンプ、メトリクスを含む構造化データセットは、REST APIを介して直接取得可能です。</p>
+        <h2>🔌 REST API エンドポイント</h2>
+        <p>JASRAC検索名・一次ソースURL・確認期限を含む構造化データセットは、API経由で直接取得可能です。</p>
         <p><strong>エンドポイント:</strong> <code>/api/v1/songs.json</code></p>
       </section>
 
-      <!-- アフィリエイト案内（配列マップ描画） -->
+      <!-- 推奨機材（アフィリエイト） -->
       <section class="card affiliate-card">
         <h3>🎧 配信・音響制作の推奨機材</h3>
         <p>トレンド楽曲のカバー制作や高音質プラットフォーム配信を行うクリエイター向けの推奨機材一覧。</p>
@@ -172,54 +186,47 @@ const jsonLdData = {
 </html>
 
 <style>
-  /* Base & Header */
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f4f6f9; margin: 0; }
   .site-header { padding: 35px 20px; background: #111; color: #fff; text-align: center; h1 { margin: 0; font-size: 1.8rem; } p { margin: 8px 0 0; color: #aaa; font-size: 0.95rem; } }
   .main-container { max-width: 1200px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
 
-  /* Nav & Buttons */
   .nav-links { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
   .btn { display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s; &:hover { opacity: 0.85; } }
+  .btn-sm { padding: 5px 10px; font-size: 0.8rem; }
   .btn-primary { background: #0066cc; color: #fff; }
   .btn-success { background: #28a745; color: #fff; }
   .btn-outline { border: 1px solid #0066cc; color: #0066cc; background: #fff; }
 
-  /* Cards (Modern Nesting) */
   .card {
     margin-bottom: 25px; padding: 18px 20px; border-radius: 6px;
     &.spec-card { background: #fafbfc; border: 1px solid #e1e4e8; h3 { margin: 0 0 8px; font-size: 1rem; color: #24292e; } p { font-size: 0.85rem; color: #586069; margin-bottom: 8px; } ul { font-size: 0.85rem; color: #444; margin: 0; padding-left: 20px; } }
-    &.schema-card { background: #f6f8fa; border-left: 4px solid #6c757d; font-size: 0.85rem; }
+    &.notice-card { background: #fff8e6; border-left: 4px solid #f39c12; font-size: 0.85rem; h3 { margin: 0 0 8px; color: #b06000; font-size: 0.95rem; } p { margin: 0 0 8px; color: #555; } }
     &.api-card { margin-top: 40px; background: #f6f8fa; border-left: 5px solid #24292e; h2 { margin: 0 0 10px; font-size: 1.1rem; color: #24292e; } p { font-size: 0.9rem; margin: 0 0 5px; } }
     &.affiliate-card { border: 1px solid #e1e4e8; background: #fff; h3 { margin: 0 0 5px; font-size: 1.05rem; } p { font-size: 0.9rem; color: #586069; } }
   }
-  .schema-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px; color: #444; margin-top: 6px; }
 
-  /* Table */
   .table-wrapper { overflow-x: auto; margin-bottom: 25px; }
   .data-table {
-    width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; font-size: 0.9rem;
-    th, td { padding: 12px; border: 1px solid #e0e0e0; }
+    width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; font-size: 0.88rem;
+    th, td { padding: 12px; border: 1px solid #e0e0e0; vertical-align: middle; }
     th { background: #f8f9fa; color: #444; text-align: left; white-space: nowrap; }
   }
-  .song-title { font-size: 0.95rem; color: #111; }
+  .song-title { font-size: 0.92rem; color: #111; }
   .song-meta { font-size: 0.8rem; color: #666; }
   .sub-text { font-size: 0.8rem; color: #555; }
   .link-primary { color: #0066cc; font-size: 0.8rem; text-decoration: underline; }
   .text-danger { color: #d9534f; font-weight: bold; }
   .metrics-cell { text-align: right; white-space: nowrap; }
 
-  /* Badges & Pills */
-  .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: bold; }
   .badge-success { background: #e6f4ea; color: #137333; }
   .badge-warning { background: #fef7e0; color: #b06000; }
   .badge-neutral { background: #f1f3f4; color: #5f6368; }
   .engagement-pill { background: #eef6ff; color: #0066cc; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
 
-  /* Affiliate Grid */
   .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; }
   .affiliate-item { border: 1px solid #eee; padding: 15px; border-radius: 6px; background: #fafafa; h4 { margin: 0 0 5px; font-size: 0.95rem; } p { font-size: 0.85rem; color: #666; margin-bottom: 10px; } }
 
-  /* Footer & Empty */
   .empty-state { padding: 40px; text-align: center; background: #fafafa; border: 1px dashed #ccc; border-radius: 6px; color: #666; }
   .site-footer { margin-top: 50px; padding: 25px; background: #111; color: #888; font-size: 0.8rem; text-align: center; p { max-width: 900px; margin: 0 auto; line-height: 1.5; } }
 </style>
