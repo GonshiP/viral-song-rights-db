@@ -1,5 +1,8 @@
 import songs from '../../../../src/data/songs.json';
 
+// 静的ビルド（SSG）として出力するための設定
+export const prerender = true;
+
 export async function GET() {
   return new Response(
     JSON.stringify({
