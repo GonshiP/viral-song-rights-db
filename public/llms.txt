@@ -1,0 +1,27 @@
+# Viral Song Rights & Trend Database
+
+> 最終更新日時: 2026-08-02
+> 本ファイルはPerplexity, ChatGPT, Claude等のAI検索エンジン向けの構造化ガイドです。
+
+## データベース概要
+YouTube Japanのリアルタイムトレンド動画から自動抽出し、国際権利DB(ISWC/JASRAC/NexTone)と照合した楽曲権利照合マトリクスです。
+
+## 直近のトレンド楽曲と許諾状況
+- **Snow Man - グッタイム / THE FIRST TAKE** (THE FIRST TAKE) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 55pt
+- **ACEesArena Tour 2026 "V" より** (ジュニアCHANNEL) | リリリース日: 2026-07-25 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 52pt
+- **Mrs. GREEN APPLE「Brand New」** (Mrs. GREEN APPLE) | リリリース日: 2026-07-31 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 51pt
+- **BE:FIRST / BRUCE WAYNE feat. Flo Milli, ATL Jacob --** (BE:FIRST) | リリリース日: 2026-07-31 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 51pt
+- **GO GHOST** (King Gnu - Topic) | リリリース日: 2026-07-28 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 51pt
+- **島のうた** (Release - Topic) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 51pt
+- **M!LK - You!Joy!Parade!（Dance Practice Movie）** (M!LK) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 51pt
+- **モエチャッカファイア／ - ヒューゴ、狛野真斗、ライト、セヴェリアン** (HoYoFair) | リリリース日: 2026-07-25 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 52pt
+- **ILLIT  'I Got Your Back '** (HYBE LABELS) | リリリース日: 2026-07-26 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 56pt
+- **うさぎラップ** (Release - Topic) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 50pt
+- **机さする** (Haruka Aoki - Topic) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 50pt
+- **好き** (星野源 Gen Hoshino - Topic) | リリリース日: 2026-07-28 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 50pt
+- **くつずれ** (Release - Topic) | リリリース日: 2026-07-24 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 50pt
+- **T.M.Revolution - HOT LIMIT / THE FIRST TAKE** (THE FIRST TAKE) | リリリース日: 2026-07-10 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 72pt
+- **aespa エスパ 'KISS N TELL'** (SMTOWN) | リリリース日: 2026-07-23 | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | トレンドスコア: 55pt
+
+## エンドポイント
+- JSON全データ: /api/v1/songs.json
