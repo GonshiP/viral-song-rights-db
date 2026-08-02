@@ -190,6 +190,7 @@ def get_iswc_musicbrainz(title, artist):
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
+    # ★一段目のLucene検索クエリ（work:"曲名"）をWebダイレクトURLにも完全連動使用
     encoded_mb_title = urllib.parse.quote(f'work:"{clean_title}"')
     mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
 
@@ -229,6 +230,7 @@ def get_iswc_musicbrainz(title, artist):
                 if best_work:
                     iswcs = best_work.get("iswcs", [])
                     work_id = best_work.get("id")
+                    # ワークIDが判明している場合は特定ページへ直接リンク
                     src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else mb_web_search_url
 
                     if iswcs:
@@ -365,7 +367,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     return new_entry, master_db, True
 
 def export_master_to_csv(master_db):
-    """【ユーザー指定形式】指定の全6カラム構造でCSV出力"""
+    """【全6カラム統合構成】README仕様書通りのカラム順でCSV出力"""
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
