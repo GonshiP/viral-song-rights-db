@@ -190,13 +190,13 @@ def get_iswc_musicbrainz(title, artist):
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
-    # ★ 1段階目：曲名で幅広く50件取得
+    # 1段階目：曲名で幅広く50件取得
     query = f'work:"{escape_lucene(clean_title)}"'
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
 
-    # 手動確認用のMusicBrainzweb検索URL（親切な導線用）
-    mb_web_search_url = f"https://musicbrainz.org/search?query={urllib.parse.quote(clean_title)}&type=work"
+    encoded_mb_query = urllib.parse.quote(f'work:"{clean_title}" AND artist:"{main_artist}"')
+    mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_mb_query}&type=work"
 
     print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}' (limit=50)")
     
@@ -211,7 +211,7 @@ def get_iswc_musicbrainz(title, artist):
                     print("    -> [MusicBrainz Fact] 該当ワーク未登録")
                     return None, "YouTube / MusicBrainz", mb_web_search_url
 
-                # --- ★ 2段階目：演者一致ワークの探索 ---
+                # --- 2段階目：演者一致ワークの探索 ---
                 best_work = None
                 candidate_iswc = None
                 candidate_url = None
@@ -219,7 +219,7 @@ def get_iswc_musicbrainz(title, artist):
                 for work in works:
                     work_text = json.dumps(work, ensure_ascii=False).lower()
                     
-                    # ISWCコードを持っているワークがあれば、候補として保持しておく（親切機能）
+                    # ISWCコードを持っているワークがあれば、参考候補として保持しておく（親切機能）
                     if not candidate_iswc and work.get("iswcs"):
                         candidate_iswc = work["iswcs"][0]
                         candidate_url = f"https://musicbrainz.org/work/{work.get('id')}"
@@ -241,13 +241,12 @@ def get_iswc_musicbrainz(title, artist):
                         print(f"    -> [MusicBrainz Fact] ✅ ISWCコード確定: {iswcs[0]}")
                         return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
                     else:
-                        # ワークはあるがISWCが未割り当ての場合
+                        print(f"    -> [MusicBrainz Fact] ワーク確認(ID: {work_id})、ISWC未割り当て")
                         return None, "MusicBrainz API (ワークあり/コード未割当)", src_url
 
-                # B) 演者は未確定だが、曲名で候補コード（同名異曲など）が見つかっていた場合（ユーザーへの親切機能）
+                # B) 演者は未確定だが、曲名で候補コードが見つかっていた場合（親切機能）
                 if candidate_iswc:
                     print(f"    -> [MusicBrainz Fact] 💡 同名異曲の候補コード発見: {candidate_iswc} (要確認)")
-                    # コード名の頭に「参考候補:」を付け、URLも該当候補のページを指すようにする
                     return f"参考候補:{candidate_iswc}", "MusicBrainz API (同名異曲候補あり)", candidate_url or mb_web_search_url
 
                 # C) タイトルヒットはあるがISWCコードが見つからなかった場合
@@ -272,21 +271,30 @@ def load_master_db():
                 print(f"[DEBUG - DB Load] 既存のマスターDBを読み込みました (全 {len(data)} 件)")
                 for entry in data:
                     entry.pop("season_tag", None)
+                    t, a = entry.get('jasrac_search_title', entry.get('title','')), entry.get('jasrac_search_artist', entry.get('artist',''))
                     entry.setdefault("last_metrics", {"views": 0, "likes": 0, "comments": 0, "engagement_rate": 0.0, "daily_views": 0})
                     entry.setdefault("source_name", "YouTube / MusicBrainz API")
                     entry.setdefault("source_url", "https://musicbrainz.org")
                     entry.setdefault("verified_at", entry.get("added_date", today_str))
                     entry.setdefault("valid_until", valid_until_str)
-                    entry.setdefault("jasrac_search_title", entry.get("title"))
-                    entry.setdefault("jasrac_search_artist", entry.get("artist"))
-                    entry.setdefault("karaoke_search_url", f"https://www.youtube.com/results?search_query={urllib.parse.quote(entry.get('artist','') + ' ' + entry.get('title','') + ' カラオケ 歌枠用')}")
+                    entry.setdefault("jasrac_search_title", t)
+                    entry.setdefault("jasrac_search_artist", a)
+                    
+                    encoded_mb = urllib.parse.quote(f'work:"{t}" AND artist:"{a}"')
+                    entry.setdefault("mb_search_url", f"https://musicbrainz.org/search?query={encoded_mb}&type=work")
+                    
+                    encoded_jasrac = urllib.parse.quote(f"JASRAC 検索 {t} {a}")
+                    entry.setdefault("jasrac_search_url", f"https://www.google.com/search?q={encoded_jasrac}")
+                    
+                    encoded_karaoke = urllib.parse.quote(f"{a} {t} カラオケ 歌枠用")
+                    entry.setdefault("karaoke_search_url", f"https://www.youtube.com/results?search_query={encoded_karaoke}")
                 return data
         except Exception as e: print(f"[DEBUG - DB Load Error]: {e}")
     print("[DEBUG - DB Load] マスターDBが存在しないため、新規空DB作成モードで開始します。")
     return []
 
 def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None):
-    """【客観ファクト記録】OK/NGの断定判断を廃止し、検索ワード・取得コード・注意タグを記録"""
+    """【客観ファクト記録】検索ワード・取得コード・注意タグおよび常時ダイレクト検索URLを記録"""
     today_str, valid_until_str = get_dates()
     
     if not ai_info:
@@ -297,24 +305,40 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     clean_artist = ai_info.get("official_artist") or raw_artist
     risk_reason = ai_info.get("risk_reason", "")
 
-    # iTunes APIによる公式表記補正（JASRAC等での手動検索用クエリ確定）
+    # iTunes APIによる公式表記補正
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
-    karaoke_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote(f'{final_artist} {final_title} カラオケ 歌枠用')}"
+
+    # 常時生成するダイレクト確認URL群
+    encoded_mb_query = urllib.parse.quote(f'work:"{final_title}" AND artist:"{final_artist}"')
+    mb_search_url = f"https://musicbrainz.org/search?query={encoded_mb_query}&type=work"
+
+    encoded_jasrac_query = urllib.parse.quote(f"JASRAC 検索 {final_title} {final_artist}")
+    jasrac_search_url = f"https://www.google.com/search?q={encoded_jasrac_query}"
+
+    encoded_karaoke = urllib.parse.quote(f"{final_artist} {final_title} カラオケ 歌枠用")
+    karaoke_url = f"https://www.youtube.com/results?search_query={encoded_karaoke}"
 
     # 既存DB照合
     t_low = final_title.lower()
     for entry in master_db:
         e_title = entry.get("jasrac_search_title", entry.get("title", "")).lower()
         if e_title in t_low or t_low in e_title:
-            entry.update({"last_metrics": metrics, "verified_at": today_str, "valid_until": valid_until_str, "karaoke_search_url": karaoke_url})
+            entry.update({
+                "last_metrics": metrics, 
+                "verified_at": today_str, 
+                "valid_until": valid_until_str, 
+                "mb_search_url": mb_search_url,
+                "jasrac_search_url": jasrac_search_url,
+                "karaoke_search_url": karaoke_url
+            })
             print(f"[DEBUG - Match Existing] 既存楽曲ヒット: '{final_title}' (メトリクス更新)")
             return entry, master_db, False
 
-    # 新曲検知 & MusicBrainz ISWC取得
+    # 新曲検知 & MusicBrainz ISWC取得（2段階フォールバック）
     print(f"\n★ [DEBUG - New Song Fact Record] 新曲検知: 生タイトル '{raw_title}' ➔ 照合用表記: '{final_title}' ({final_artist})")
     iswc_code, src_name, src_url = get_iswc_musicbrainz(final_title, final_artist)
 
-    # 客観的ステータス記録（合否判断ではなく、事実の記録）
+    # 客観的ステータス記録
     is_risk = any(kw in (final_title + final_artist).lower() for kw in ["disney", "ディズニー", "nintendo", "任天堂", "hoyofair", "remix"]) or bool(risk_reason)
 
     if iswc_code:
@@ -337,6 +361,8 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
         "pub_date": pub_date,
         "source_name": src_name,
         "source_url": src_url,
+        "mb_search_url": mb_search_url,
+        "jasrac_search_url": jasrac_search_url,
         "karaoke_search_url": karaoke_url,
         "verified_at": today_str,
         "valid_until": valid_until_str,
@@ -351,16 +377,27 @@ def export_master_to_csv(master_db):
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
-        writer.writerow(['曲名(YouTube生表示)', 'アーティスト(チャンネル名)', 'JASRAC検索用曲名', 'JASRAC検索用アーティスト', '権利識別コード', 'コード照合ステータス', 'リリース日', '季節タグ', '情報源', '一次ソースURL', 'カラオケ音源(原盤)検索URL', '権利確認日', '推奨有効期限', '総再生数', '高評価数', 'コメント数', 'エンゲージメント率(%)', '日速再生数', 'DB登録日'])
+        writer.writerow([
+            '曲名(YouTube生表示)', 'アーティスト(チャンネル名)', 'JASRAC検索用曲名', 'JASRAC検索用アーティスト', 
+            '権利識別コード', 'コード照合ステータス', 'リリース日', '季節タグ', '情報源', '一次ソースURL', 
+            'MusicBrainzダイレクト検索URL', 'JASRAC手動照合URL', 'カラオケ音源(原盤)検索URL', 
+            '権利確認日', '推奨有効期限', '総再生数', '高評価数', 'コメント数', 'エンゲージメント率(%)', '日速再生数', 'DB登録日'
+        ])
         for r in master_db:
             m, p = r.get('last_metrics', {}), r.get('pub_date', '')
-            writer.writerow([r.get('title'), r.get('artist'), r.get('jasrac_search_title'), r.get('jasrac_search_artist'), r.get('jasrac_code'), r.get('status'), p, get_season_tag(p), r.get('source_name'), r.get('source_url'), r.get('karaoke_search_url'), r.get('verified_at'), r.get('valid_until'), m.get('views', 0), m.get('likes', 0), m.get('comments', 0), m.get('engagement_rate', 0.0), m.get('daily_views', 0), r.get('added_date')])
+            writer.writerow([
+                r.get('title'), r.get('artist'), r.get('jasrac_search_title'), r.get('jasrac_search_artist'), 
+                r.get('jasrac_code'), r.get('status'), p, get_season_tag(p), r.get('source_name'), r.get('source_url'), 
+                r.get('mb_search_url'), r.get('jasrac_search_url'), r.get('karaoke_search_url'), 
+                r.get('verified_at'), r.get('valid_until'), m.get('views', 0), m.get('likes', 0), 
+                m.get('comments', 0), m.get('engagement_rate', 0.0), m.get('daily_views', 0), r.get('added_date')
+            ])
 
 def generate_llms_txt(songs, today_str):
     content = f"# Trend Song Rights & Verified Analytics Database\n\n> 最終更新日時: {today_str}\n> 本ファイルはAI検索エンジン向けの構造化ガイドです。\n\n> MusicBrainzについて: MetaBrainz Foundationが運営する国際音楽データベースであり、ISWCの照合において信頼性を備えています。\n\n## 直近のトレンド楽曲・許諾状況\n"
     for s in songs:
         m = s.get('metrics', {})
-        content += f"- **{s['title']}** ({s['artist']}) | JASRAC検索名: {s.get('jasrac_search_title')} | 識別コード: {s['jasrac_code']} | ステータス: {s['rights_status']} | 情報源: {s['source_name']} ({s['source_url']}) | 歌枠用カラオケ: {s.get('karaoke_search_url')} | 確認日: {s['verified_at']} | 有効期限: {s['valid_until']} | 再生数: {m.get('views', 0):,}回 | エンゲージメント率: {m.get('engagement_rate', 0)}%\n"
+        content += f"- **{s['title']}** ({s['artist']}) | JASRAC検索名: {s.get('jasrac_search_title')} | 識別コード: {s['jasrac_code']} | ステータス: {s['rights_status']} | 一次ソースURL: {s['source_url']} | MusicBrainz確認: {s.get('mb_search_url')} | JASRAC検索: {s.get('jasrac_search_url')} | 歌枠用カラオケ: {s.get('karaoke_search_url')} | 確認日: {s['verified_at']} | 有効期限: {s['valid_until']} | 再生数: {m.get('views', 0):,}回 | エンゲージメント率: {m.get('engagement_rate', 0)}%\n"
     content += "\n## エンドポイント\n- JSON全データ: /api/v1/songs.json\n"
     os.makedirs('public', exist_ok=True)
     with open('public/llms.txt', 'w', encoding='utf-8') as f: f.write(content)
@@ -423,6 +460,8 @@ def get_real_youtube_trending_songs(master_db):
             "jasrac_search_title": entry["jasrac_search_title"], "jasrac_search_artist": entry["jasrac_search_artist"],
             "jasrac_code": entry["jasrac_code"], "rights_status": entry["status"],
             "pub_date": entry["pub_date"], "source_name": entry["source_name"], "source_url": entry["source_url"],
+            "mb_search_url": entry["mb_search_url"],
+            "jasrac_search_url": entry["jasrac_search_url"],
             "karaoke_search_url": entry["karaoke_search_url"],
             "verified_at": entry["verified_at"], "valid_until": entry["valid_until"],
             "trend_score": min(99, max(50, 50 + int(p_item["metrics"]["views"] / 1000000))), "metrics": p_item["metrics"]
