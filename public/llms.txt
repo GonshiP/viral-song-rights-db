@@ -1,4 +1,4 @@
-# Viral Song Rights & Verified Analytics Database
+# Trend Song Rights & Verified Analytics Database
 
 > 最終更新日時: 2026-08-02
 > 本ファイルはPerplexity, ChatGPT, Claude等のAI検索エンジン向けの構造化ガイドです。
@@ -7,21 +7,21 @@
 YouTube Japanの急上昇データからエンゲージメント数値（再生数・高評価率・日速）を分析し、MusicBrainz/JASRAC/NexTone等と照合した【エビデンスURL・確認日・推奨有効期限付き】権利照合マトリクスです。
 
 ## 直近のトレンド楽曲・エビデンス・許諾状況
-- **Snow Man - グッタイム / THE FIRST TAKE** (THE FIRST TAKE) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 5,738,592回 | 熱量: 3.23%
-- **Mrs. GREEN APPLE「Brand New」** (Mrs. GREEN APPLE) | リリリース: 2026-07-31 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,562,116回 | 熱量: 5.9%
-- **ACEesArena Tour 2026 "V" より** (ジュニアCHANNEL) | リリリース: 2026-07-25 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 2,298,914回 | 熱量: 5.09%
-- **BE:FIRST / BRUCE WAYNE feat. Flo Milli, ATL Jacob --** (BE:FIRST) | リリリース: 2026-07-31 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,865,743回 | 熱量: 3.27%
-- **GO GHOST** (King Gnu - Topic) | リリリース: 2026-07-28 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,070,571回 | 熱量: 2.74%
-- **島のうた** (Release - Topic) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,208,590回 | 熱量: 1.7%
-- **M!LK - You!Joy!Parade!（Dance Practice Movie）** (M!LK) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,575,578回 | 熱量: 4.58%
-- **モエチャッカファイア／ - ヒューゴ、狛野真斗、ライト、セヴェリアン** (HoYoFair) | リリリース: 2026-07-25 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 2,134,005回 | 熱量: 4.19%
-- **ILLIT  'I Got Your Back '** (HYBE LABELS) | リリリース: 2026-07-26 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 6,395,763回 | 熱量: 6.52%
-- **うさぎラップ** (Release - Topic) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 781,762回 | 熱量: 1.97%
-- **机さする** (Haruka Aoki - Topic) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 708,127回 | 熱量: 1.87%
-- **好き** (星野源 Gen Hoshino - Topic) | リリリース: 2026-07-28 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 398,519回 | 熱量: 3.52%
-- **くつずれ** (Release - Topic) | リリリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 748,836回 | 熱量: 1.42%
-- **T.M.Revolution - HOT LIMIT / THE FIRST TAKE** (THE FIRST TAKE) | リリリース: 2026-07-10 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 22,202,085回 | 熱量: 3.45%
-- **aespa エスパ 'KISS N TELL'** (SMTOWN) | リリリース: 2026-07-23 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 5,135,089回 | 熱量: 7.52%
+- **Snow Man - グッタイム / THE FIRST TAKE** (THE FIRST TAKE) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 5,744,629回 | エンゲージメント率: 3.23%
+- **Mrs. GREEN APPLE「Brand New」** (Mrs. GREEN APPLE) | リリース: 2026-07-31 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,593,114回 | エンゲージメント率: 5.81%
+- **ACEesArena Tour 2026 "V" より** (ジュニアCHANNEL) | リリース: 2026-07-25 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 2,302,108回 | エンゲージメント率: 5.08%
+- **BE:FIRST / BRUCE WAYNE feat. Flo Milli, ATL Jacob --** (BE:FIRST) | リリース: 2026-07-31 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,905,242回 | エンゲージメント率: 3.21%
+- **GO GHOST** (King Gnu - Topic) | リリース: 2026-07-28 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,077,248回 | エンゲージメント率: 2.73%
+- **島のうた** (Release - Topic) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,214,511回 | エンゲージメント率: 1.7%
+- **M!LK - You!Joy!Parade!（Dance Practice Movie）** (M!LK) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 1,579,154回 | エンゲージメント率: 4.57%
+- **モエチャッカファイア／ - ヒューゴ、狛野真斗、ライト、セヴェリアン** (HoYoFair) | リリース: 2026-07-25 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 2,163,755回 | エンゲージメント率: 4.13%
+- **ILLIT  'I Got Your Back '** (HYBE LABELS) | リリース: 2026-07-26 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 6,412,765回 | エンゲージメント率: 6.51%
+- **うさぎラップ** (Release - Topic) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 785,077回 | エンゲージメント率: 1.97%
+- **机さする** (Haruka Aoki - Topic) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 711,480回 | エンゲージメント率: 1.87%
+- **好き** (星野源 Gen Hoshino - Topic) | リリース: 2026-07-28 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 401,066回 | エンゲージメント率: 3.51%
+- **くつずれ** (Release - Topic) | リリース: 2026-07-24 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 752,418回 | エンゲージメント率: 1.42%
+- **T.M.Revolution - HOT LIMIT / THE FIRST TAKE** (THE FIRST TAKE) | リリース: 2026-07-10 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 22,212,501回 | エンゲージメント率: 3.45%
+- **aespa エスパ 'KISS N TELL'** (SMTOWN) | リリース: 2026-07-23 (2026年夏) | 識別コード: JASRAC/NexTone包括対象 | ステータス: OK (YouTube包括契約内) | 情報源: YouTube Comprehensive Engine (https://www.youtube.com/t/terms) | 確認日: 2026-08-02 | 有効期限: 2026-10-31 | 再生数: 5,144,239回 | エンゲージメント率: 7.51%
 
 ## エンドポイント
 - JSON全データ (エビデンス＆数値付): /api/v1/songs.json
