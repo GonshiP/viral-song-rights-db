@@ -33,13 +33,13 @@ def escape_lucene(text):
     return re.sub(r'[\+\-\!\(\)\{\}\[\]\^\"\~\*\?\:\&\|\\\/]', r'\\\g<0>', text)
 
 def clean_song_and_artist_advanced(raw_title, raw_artist):
-    """【完全版パターン解析】カギカッコ/引用符/スラッシュ/レーベル名の高精度分離"""
+    """【完全版パターン解析】カギカッコ/引用符/スラッシュ/カバー動画/レーベル名の高精度分離"""
     clean_artist = re.sub(r'\s*-\s*Topic$', '', raw_artist, flags=re.IGNORECASE).strip()
     clean_artist = re.sub(r'Release$|Official$', '', clean_artist, flags=re.IGNORECASE).strip()
 
     is_generic_channel = any(kw in clean_artist.lower() for kw in [
         "hybe", "smtown", "jyp", "ジュニアchannel", "the first take", "release", "topic", "avex", "universal", "sony", "hoyofair"
-    ]) or not clean_artist or clean_artist == raw_artist and "topic" in raw_artist.lower()
+    ]) or not clean_artist or (clean_artist == raw_artist and "topic" in raw_artist.lower())
 
     extracted_title = ""
     extracted_artist = clean_artist
@@ -65,6 +65,9 @@ def clean_song_and_artist_advanced(raw_title, raw_artist):
             if len(parts) >= 2:
                 if "cover" in parts[1].lower() or "カバー" in parts[1]:
                     extracted_title = parts[0].strip()
+                    artist_part = re.sub(r'cover\s*-\s*|カバー\s*-\s*|cover|カバー', '', parts[1], flags=re.IGNORECASE).strip()
+                    if artist_part:
+                        extracted_artist = artist_part
                 else:
                     extracted_artist = parts[0].strip()
                     extracted_title = parts[1].strip()
@@ -82,59 +85,73 @@ def clean_song_and_artist_advanced(raw_title, raw_artist):
 
     return final_title or raw_title, final_artist or raw_artist
 
-def analyze_single_song_with_gemini(raw_title, raw_artist):
-    """【Gemini API】404エラー対策ヘッダー追加＆最新gemini-2.0-flashモデル"""
-    fallback_title, fallback_artist = clean_song_and_artist_advanced(raw_title, raw_artist)
-    
-    if not GEMINI_API_KEY:
-        print("  [DEBUG - Gemini API] ⚠️ GEMINI_API_KEYが設定されていないため、高度パターン解析を適用します。")
-        return {"official_title": fallback_title, "official_artist": fallback_artist, "risk_reason": ""}
+def analyze_songs_batch_with_gemini(song_requests):
+    """【Gemini API】15曲を一括(1リクエスト)でAI解析してクォータ消費を15分の1に抑える"""
+    if not GEMINI_API_KEY or not song_requests:
+        return {}
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
-    headers = {"Content-Type": "application/json"}
+    # モデルは 2.0-flash ➔ 1.5-flash の順で試行（クォータエラー対策）
+    models = ["gemini-2.0-flash", "gemini-1.5-flash"]
     
+    songs_prompt_text = ""
+    for idx, item in enumerate(song_requests, 1):
+        songs_prompt_text += f"ID: {idx}\n動画タイトル: \"{item['raw_title']}\"\nチャンネル名: \"{item['raw_artist']}\"\n---\n"
+
     prompt = f"""
-以下のYouTube動画情報から、原曲の「正確な曲名」と「正確な原曲アーティスト名」を抽出してください。
+以下のYouTube動画リストから、各楽曲の原曲の「正確な曲名」と「正確な原曲アーティスト名」を抽出し、指定のJSON形式で出力してください。
 
-動画タイトル: "{raw_title}"
-チャンネル名: "{raw_artist}"
+【対象リスト】
+{songs_prompt_text}
 
 【重要ルール】
-1. チャンネル名に「HYBE LABELS」「ジュニアCHANNEL」「SMTOWN」「THE FIRST TAKE」「HoYoFair」等のレーベル/プラットフォーム名が入っている場合、動画タイトルから本当のアーティスト名（例: ILLIT, ACEes, aespa 等）を特定してください。
-2. 「MV」「Official」「歌ってみた」「Dance Practice」などのノイズは完全に除去してください。
-3. 以下のJSONのみ出力してください。
+1. チャンネル名が「Release - Topic」や「HYBE LABELS」「SMTOWN」「ジュニアCHANNEL」「THE FIRST TAKE」「HoYoFair」等の場合、動画タイトルから本当のアーティスト名（例: ILLIT, ACEes, aespa 等）を特定してください。
+2. カバー動画（「/ Cover」「歌ってみた」等）の場合、曲名は「原曲名」、アーティスト名は「原曲アーティスト」を抽出してください。
+3. 「MV」「Official」「歌ってみた」「Dance Practice」などのノイズは完全に除去してください。
+4. 返答は以下のJSON配列形式のみを出力してください（Markdownの装飾等は不要）。
 
-{{
-  "official_title": "正式な曲名",
-  "official_artist": "正式な原曲アーティスト名",
-  "risk_reason": "ディズニー・任天堂・ゲームBGM等のリスク（無ければ空文字）"
-}}
+[
+  {{
+    "id": 1,
+    "official_title": "正式な曲名",
+    "official_artist": "正式な原曲アーティスト名",
+    "risk_reason": "ディズニー・任天堂・ゲームBGM等のリスク（無ければ空文字）"
+  }}
+]
 """
+
+    headers = {"Content-Type": "application/json"}
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {"response_mime_type": "application/json", "temperature": 0.0}
     }
 
-    try:
-        time.sleep(1.0)
-        res = requests.post(url, headers=headers, json=payload, timeout=8)
-        if res.status_code == 200:
-            text = res.json()["candidates"][0]["content"]["parts"][0]["text"]
-            json_match = re.search(r'\{.*\}', text, re.DOTALL)
-            if json_match:
-                parsed = json.loads(json_match.group(0))
-                print(f"  [DEBUG - Gemini Hit] ✅ 曲名='{parsed.get('official_title')}' / 演者='{parsed.get('official_artist')}'")
-                return {
-                    "official_title": parsed.get("official_title") or fallback_title,
-                    "official_artist": parsed.get("official_artist") or fallback_artist,
-                    "risk_reason": parsed.get("risk_reason", "")
-                }
-        else:
-            print(f"  [DEBUG - Gemini Status {res.status_code}]: {res.text[:150]}")
-    except Exception as e:
-        print(f"  [DEBUG - Gemini Exception]: {e}")
+    for model_name in models:
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={GEMINI_API_KEY}"
+        print(f"  [DEBUG - Gemini API] 🤖 一括AI解析リクエスト送信中 (モデル: {model_name})...")
+        try:
+            res = requests.post(url, headers=headers, json=payload, timeout=15)
+            if res.status_code == 200:
+                text = res.json()["candidates"][0]["content"]["parts"][0]["text"]
+                json_match = re.search(r'\[.*\]', text, re.DOTALL)
+                if json_match:
+                    parsed_list = json.loads(json_match.group(0))
+                    result_map = {}
+                    for p in parsed_list:
+                        item_id = str(p.get("id"))
+                        result_map[item_id] = {
+                            "official_title": p.get("official_title", ""),
+                            "official_artist": p.get("official_artist", ""),
+                            "risk_reason": p.get("risk_reason", "")
+                        }
+                    print(f"    -> [Gemini Batch Hit] ✅ {len(result_map)} 件の一括解析に成功しました。")
+                    return result_map
+            else:
+                print(f"  [DEBUG - Gemini Status {res.status_code} ({model_name})]: {res.text[:150]}")
+        except Exception as e:
+            print(f"  [DEBUG - Gemini Exception ({model_name})]: {e}")
 
-    return {"official_title": fallback_title, "official_artist": fallback_artist, "risk_reason": ""}
+    print("  [DEBUG - Gemini API] ⚠️ すべてのGeminiモデルで解析に失敗したため、高度ローカルパースへフォールバックします。")
+    return {}
 
 def get_official_info_itunes(title, artist):
     """【iTunes API】誤爆防止フィルタ付き照合"""
@@ -160,9 +177,14 @@ def get_official_info_itunes(title, artist):
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【MusicBrainz API】503リトライ付き ISWC 照合"""
-    clean_artist = artist.split()[0] if artist else ""
-    query = f'work:"{escape_lucene(title)}"' + (f' AND artist:"{escape_lucene(clean_artist)}"' if clean_artist else "")
+    """【MusicBrainz API】クエリ最適化 ＆ 503リトライ付き ISWC 照合"""
+    clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]]', ' ', title).strip()
+    clean_artist = re.sub(r'[\!\?\'"\:\(\)\[\]]', ' ', artist).strip()
+    
+    query = f'work:"{escape_lucene(clean_title)}"'
+    if clean_artist and "topic" not in clean_artist.lower():
+        query += f' AND artist:"{escape_lucene(clean_artist)}"'
+
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
     
@@ -170,19 +192,24 @@ def get_iswc_musicbrainz(title, artist):
     for attempt in range(2):
         time.sleep(1.2)
         try:
-            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 1}, headers=headers, timeout=8)
+            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 3}, headers=headers, timeout=8)
             print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
             if res.status_code == 200:
                 works = res.json().get("works", [])
-                if works:
-                    work_id = works[0].get("id")
+                for work in works:
+                    iswcs = work.get("iswcs", [])
+                    work_id = work.get("id")
                     src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
-                    iswcs = works[0].get("iswcs", [])
                     if iswcs:
                         print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]}")
                         return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
+                
+                if works:
+                    work_id = works[0].get("id")
+                    src_url = f"https://musicbrainz.org/work/{work_id}"
                     print(f"    -> [MusicBrainz Work Found] ワーク発見(ID: {work_id})、しかしISWCコード未登録")
                     return None, "MusicBrainz API", src_url
+
                 print("    -> [MusicBrainz Miss] 該当ワークなし")
                 return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
             elif res.status_code == 503:
@@ -314,8 +341,10 @@ def get_real_youtube_trending_songs(master_db):
     items = data.get("items", [])
     print(f"[DEBUG - YouTube API Success] ✅ {len(items)} 件の急上昇動画データを取得しました。")
 
-    db_updated, trending_songs = False, []
-    for item in items:
+    # 1. まず15曲分のリクエストリストを作成
+    song_requests = []
+    prepared_items = []
+    for idx, item in enumerate(items, 1):
         snippet, stats = item["snippet"], item.get("statistics", {})
         raw_title = snippet.get("title", "")
         raw_artist = snippet.get("channelTitle", "").replace("Official", "").strip()
@@ -323,9 +352,27 @@ def get_real_youtube_trending_songs(master_db):
         
         pub_date, pub_dt = parse_pub_date(snippet.get("publishedAt", ""))
         days = max(1, (datetime.datetime.now(datetime.timezone.utc) - pub_dt).days)
-        metrics = {"views": views, "likes": likes, "comments": comments, "engagement_rate": round(((likes + comments) / views * 100), 2) if views > 0 else 0.0, "daily_views": int(metrics_views / days) if (metrics_views := views) else 0}
+        metrics = {
+            "views": views, "likes": likes, "comments": comments, 
+            "engagement_rate": round(((likes + comments) / views * 100), 2) if views > 0 else 0.0, 
+            "daily_views": int(views / days) if views > 0 else 0
+        }
 
-        entry, master_db, was_added = auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db)
+        song_requests.append({"id": str(idx), "raw_title": raw_title, "raw_artist": raw_artist})
+        prepared_items.append({"raw_title": raw_title, "raw_artist": raw_artist, "pub_date": pub_date, "metrics": metrics, "req_id": str(idx)})
+
+    # 2. Gemini API を 1回だけ呼び出して一括解析
+    gemini_batch_results = analyze_songs_batch_with_gemini(song_requests)
+
+    # 3. 解析結果を紐付けて後続処理（iTunes / MusicBrainz）を実行
+    db_updated, trending_songs = False, []
+    for p_item in prepared_items:
+        req_id = p_item["req_id"]
+        ai_info = gemini_batch_results.get(req_id, {})
+        
+        entry, master_db, was_added = auto_enrich_and_get_rights(
+            p_item["raw_title"], p_item["raw_artist"], p_item["pub_date"], p_item["metrics"], master_db, ai_info
+        )
         if was_added: db_updated = True
 
         trending_songs.append({
@@ -335,7 +382,7 @@ def get_real_youtube_trending_songs(master_db):
             "pub_date": entry["pub_date"], "source_name": entry["source_name"], "source_url": entry["source_url"],
             "karaoke_search_url": entry["karaoke_search_url"],
             "verified_at": entry["verified_at"], "valid_until": entry["valid_until"],
-            "trend_score": min(99, max(50, 50 + int(metrics["views"] / 1000000))), "metrics": metrics
+            "trend_score": min(99, max(50, 50 + int(p_item["metrics"]["views"] / 1000000))), "metrics": p_item["metrics"]
         })
 
     return master_db, db_updated, trending_songs
