@@ -86,11 +86,17 @@ def clean_song_and_artist_advanced(raw_title, raw_artist):
     return final_title or raw_title, final_artist or raw_artist
 
 def analyze_songs_batch_with_gemini(song_requests):
-    """【Gemini API】15曲を一括(1リクエスト)でAI解析してクォータ消費を15分の1に抑える"""
+    """【Gemini API】15曲を一括(1リクエスト)でAI解析してクォータ消費を最小化"""
     if not GEMINI_API_KEY or not song_requests:
         return {}
 
-    models = ["gemini-2.0-flash", "gemini-2.5-flash", "gemini-flash-latest"]
+    # 多重モデル指定（404/429全自動回避）
+    models = [
+        "gemini-flash-latest",
+        "gemini-2.0-flash",
+        "gemini-2.0-flash-lite",
+        "gemini-flash-lite-latest"
+    ]
     
     songs_prompt_text = ""
     for item in song_requests:
@@ -142,10 +148,10 @@ def analyze_songs_batch_with_gemini(song_requests):
                             "official_artist": p.get("official_artist", ""),
                             "risk_reason": p.get("risk_reason", "")
                         }
-                    print(f"    -> [Gemini Batch Hit] ✅ {len(result_map)} 件の一括解析に成功しました。")
+                    print(f"    -> [Gemini Batch Hit] ✅ 成功モデル: '{model_name}' / {len(result_map)} 件一括解析完了")
                     return result_map
             else:
-                print(f"  [DEBUG - Gemini Status {res.status_code} ({model_name})]: {res.text[:150]}")
+                print(f"  [DEBUG - Gemini Status {res.status_code} ({model_name})]: {res.text[:120]}")
         except Exception as e:
             print(f"  [DEBUG - Gemini Exception ({model_name})]: {e}")
 
@@ -154,7 +160,8 @@ def analyze_songs_batch_with_gemini(song_requests):
 
 def get_official_info_itunes(title, artist):
     """【iTunes API】誤爆防止フィルタ付き照合"""
-    query = f"{artist} {title}".strip()
+    clean_search_artist = re.sub(r'\(.*?\)|（.*?）', '', artist).split('&')[0].split(',')[0].strip()
+    query = f"{clean_search_artist} {title}".strip()
     url = "https://itunes.apple.com/search"
     params = {"term": query, "country": "JP", "media": "music", "entity": "song", "limit": 1}
     
@@ -176,47 +183,64 @@ def get_official_info_itunes(title, artist):
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【MusicBrainz API】クエリ最適化 ＆ 503リトライ付き ISWC 照合"""
-    clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]]', ' ', title).strip()
-    clean_artist = re.sub(r'[\!\?\'"\:\(\)\[\]]', ' ', artist).strip()
+    """【MusicBrainz API】タイトル優先検索 ＆ 複数ヒット時アーティストスマート判定"""
+    clean_title = re.sub(r'\(.*?\)|（.*?）', '', title)
+    clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title).strip()
     
-    query = f'work:"{escape_lucene(clean_title)}"'
-    if clean_artist and "topic" not in clean_artist.lower():
-        query += f' AND artist:"{escape_lucene(clean_artist)}"'
+    main_artist = re.sub(r'\(.*?\)|（.*?）', '', artist)
+    main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
+    main_artist_low = main_artist.lower()
 
+    query = f'work:"{escape_lucene(clean_title)}"'
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
-    
-    print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
-    for attempt in range(2):
-        time.sleep(1.2)
-        try:
-            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 3}, headers=headers, timeout=8)
-            print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
-            if res.status_code == 200:
-                works = res.json().get("works", [])
-                for work in works:
-                    iswcs = work.get("iswcs", [])
-                    work_id = work.get("id")
-                    src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
-                    if iswcs:
-                        print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]}")
-                        return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
-                
-                if works:
-                    work_id = works[0].get("id")
-                    src_url = f"https://musicbrainz.org/work/{work_id}"
-                    print(f"    -> [MusicBrainz Work Found] ワーク発見(ID: {work_id})、しかしISWCコード未登録")
-                    return None, "MusicBrainz API", src_url
 
+    print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
+    time.sleep(1.2)
+    try:
+        res = requests.get(url, params={"query": query, "fmt": "json", "limit": 10}, headers=headers, timeout=15)
+        print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
+        if res.status_code == 200:
+            works = res.json().get("works", [])
+            
+            if not works:
                 print("    -> [MusicBrainz Miss] 該当ワークなし")
                 return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
-            elif res.status_code == 503:
-                print("    -> [MusicBrainz 503] 一時的負荷。1.5秒後にリトライ...")
-                time.sleep(1.5)
-        except Exception as e:
-            print(f"    -> [MusicBrainz Exception]: {e}")
+
+            best_work = None
+
+            if len(works) == 1:
+                best_work = works[0]
+                print(f"    -> [MusicBrainz Single Hit] 1件のみヒット")
+            else:
+                print(f"    -> [MusicBrainz Multi Hit] {len(works)} 件候補あり。演者 ('{main_artist}') で照合中...")
+                for work in works:
+                    work_text = json.dumps(work, ensure_ascii=False).lower()
+                    if main_artist_low and main_artist_low in work_text:
+                        best_work = work
+                        print(f"    -> [MusicBrainz Match] 演者一致ワークを検出: ID={work.get('id')}")
+                        break
+                
+                if not best_work:
+                    best_work = next((w for w in works if w.get("iswcs")), works[0])
+                    print(f"    -> [MusicBrainz Fallback] ISWC保有候補を採用: ID={best_work.get('id')}")
+
+            iswcs = best_work.get("iswcs", [])
+            work_id = best_work.get("id")
+            src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
+
+            if iswcs:
+                print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]}")
+                return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
             
+            print(f"    -> [MusicBrainz Work Found] ワーク選択完了(ID: {work_id})、しかしISWCコード未登録")
+            return None, "MusicBrainz API", src_url
+
+        elif res.status_code == 503:
+            print("    -> [MusicBrainz 503] 一時的負荷。")
+    except Exception as e:
+        print(f"    -> [MusicBrainz Exception]: {e}")
+
     return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
 
 def load_master_db():
@@ -242,7 +266,6 @@ def load_master_db():
     return []
 
 def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None):
-    """【自動増殖＆権利判定】ai_infoが渡された場合はGemini解析結果を優先適用"""
     today_str, valid_until_str = get_dates()
     
     if not ai_info:
