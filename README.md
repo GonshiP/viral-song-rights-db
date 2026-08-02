@@ -1,3 +1,7 @@
+これまでのやり取りで明確になった**「Antigravity IDEとVS Codeの関係性」「Google AI Studioとの役割分担」「利用可能なマルチモデル体系」「無料枠および料金仕様」**を反映し、レビューの上で再整理した完成版のREADMEを出力します。
+
+---
+
 # トレンドソング権利 ＆ アナリティクス統合データメディア 構築・全自動運用手順書
 
 ---
@@ -136,7 +140,7 @@ viral-song-rights-db/
 ## 4. フロントエンド ＆ エッジ配信仕様
 
 ### 4.1 B2C Web画面 (`src/pages/index.astro`)
-* **トレンド動画直リンク対応**: 第1カラム「トレンド動画」のタイトルをクリックすると、YouTubeの対象動画（`https://www.youtube.com/watch?v=...`）へ直接遷移。
+* **トレンド動画直リンク対応**: 第1カラム「トレンド動画」のタイトルをクリックすると、YouTubeの対象動画へ直接遷移。
 * **許諾ステータスバッジ**: 表示バッジを `ISWCコード確認済み`（緑）と `手動検索を推奨`（黄）の2種類に統一。
 * **E-E-A-T信頼性表示 ＆ 原盤権注意書き**: MetaBrainz Foundation（ISWC）の客観性と、市販音源使用（原盤権侵害）のリスク警告を明記。
 * **Dataset Schema.org (JSON-LD)**: 検索エンジン・AIクローラー向け構造化データを自動埋め込み。
@@ -170,35 +174,66 @@ viral-song-rights-db/
 
 ---
 
-## 7. Google Antigravity による自律開発 ＆ 運用保守手順
+## 7. Google Antigravity IDE による自律開発 ＆ 運用保守手順
 
-本プロジェクトの開発・コードリファクタリング・デバッグ・機能拡張においては、Googleの自律型AIエージェントプラットフォーム **「Google Antigravity」（Antigravity IDE / CLI / Agent）** を活用することで、人間が手動でコードを記述することなく自律的にシステム開発・保守を実行できます。
-
-### 7.1 Antigravity の初期セットアップ
-1. **インストール**:
-   * [Google Antigravity 公式サイト](https://antigravity.google/) より `Antigravity IDE`（または Antigravity 2.0 スタンドアロンアプリ）をダウンロードしインストール。
-2. **アカウント連携**:
-   * アプリ起動後、右上 `[Log in with Google]` より Google アカウントでログイン。
-3. **ワークスペースの作成**:
-   * 本リポジトリのルートフォルダ（`viral-song-rights-db`）を Antigravity で開く。
-4. **モデル選択**:
-   * エージェントのメインAIモデルとして `Gemini 3 Pro` または `Gemini 3 Flash` を選択。
+本プロジェクトの開発・リファクタリング・デバッグ・機能拡張においては、Googleの次世代AIエージェントプラットフォーム **「Google Antigravity IDE」** を活用することで、人間が手動でコードを記述することなく自律的に開発・保守を実行できます。
 
 ---
 
-### 7.2 Antigravity によるプロンプト指示・自動開発手順
+### 7.1 Antigravity IDE の特徴・VS Codeとの関係
 
-Antigravity では、自然言語で指示（プロンプト）を与えるだけで、エージェントが自律的にファイルの読込・構文解析・コード修正・ターミナルコマンド実行・ブラウザテストまでを一貫して代行します。
+#### ① VS Code ユーザー向け環境（VS Code Fork）
+* **高い互換性**: Antigravity IDE は VS Code のオープンソース版をベースに構築（Fork）されているため、操作画面、ショートカットキー、設定（`settings.json`）、拡張機能の互換性を完全に備えています。VS Code ユーザーは移行コストゼロで即座に導入可能です。
+* **純正 VS Code との併用**: 純正 VS Code をメインエディタとして使い続けたい場合は、VS Code の統合ターミナルから `Antigravity CLI` (`agy`) を呼び出すか、Antigravity スタンドアロンアプリを並行起動して開発・運用を行うことができます。
+
+#### ② Google AI Studio との関係性
+* **Google AI Studio（プロトタイピングの場）**: ブラウザ上で動作し、プロンプトの調整や単一 API/関数の動作検証を行うテスト環境。
+* **Antigravity IDE（本開発・自動実装の場）**: ローカル環境でAIエージェントが複数ファイル編集、ターミナル自動テスト、ブラウザ検証を行い、製品コードへと仕上げる自律型開発環境。
+
+#### ③ 利用可能な AI モデル体系（マルチモデル対応）
+Antigravity IDE では、目的に応じて以下の最先端 AI モデル（Reasoning Models）を切り替えて利用できます。
+
+* **Google 純正モデル（フラッグシップ）**:
+  * `Gemini 3.1 Pro`: 高度なロジック構築、大規模リファクタリング、複雑なコード解析用。
+  * `Gemini 3.6 Flash` / `Gemini 3.5 Flash`: 高速応答。日々の軽微なコード補完やデバッグ用。
+* **サードパーティモデル**:
+  * `Claude Sonnet 4.6 (Thinking)` / `Claude Opus 4.6 (Thinking)`
+* **オープンソースモデル**:
+  * `GPT-OSS 120B`
+* **補助メディアモデル（バックグラウンド動作）**:
+  * `Nano Banana 2`: UIモックアップ作成や構成図描画、画像生成時にエージェントが自動呼出。
+
+#### ④ コスト ＆ 無料枠（Free Tier）仕様
+* **完全無料からスタート可能**: クレジットカード登録不要で利用開始可能。
+* **レートリミット（クォータ）**: 無料枠でも主要モデルおよびエージェント機能が利用可能（約5時間ごとに利用枠が自動リフレッシュ）。
+* **有料プラン拡張**: 長時間・大規模にエージェントを自動稼働させたい場合は、Google AI サブスクリプション（Pro $20/月、Ultra $100/月〜）と連携することで利用上限を最大5〜20倍以上に引き上げ可能。
+
+---
+
+### 7.2 Antigravity IDE の初期セットアップ
+1. **インストール**:
+   * [Google Antigravity 公式サイト](https://antigravity.google/) より `Antigravity IDE`（または Antigravity スタンドアロンアプリ）をダウンロードしてインストール。
+2. **アカウント連携**:
+   * アプリ起動後、右上 `[Log in with Google]` から Google アカウントでログイン。
+3. **ワークスペースの作成**:
+   * 本リポジトリのルートフォルダ（`viral-song-rights-db`）を Antigravity IDE で開く。
+4. **モデル選択**:
+   * エージェントのメインAIモデルとして `Gemini 3.1 Pro` や `Claude Sonnet 4.6` などを選択。
+
+---
+
+### 7.3 プロンプト指示・自動開発手順
+
+Antigravity IDE では自然言語で指示を与えるだけで、エージェントがファイル読込・構文解析・コード修正・ターミナルコマンド実行・ブラウザテストを代行します。
 
 #### 【ケース①】データパイプライン（Python）の改修・バグ修正
 1. **指示例**:
    > 「`scripts/fetch_data.py` を解析し、MusicBrainz API の Web 検索ダイレクトリンクから `work:` 表記を完全に除去してください。また、`WHATCHA DOIN` のようにスペースや括弧が含まれるタイトルでもURLエンコードが崩れないよう正規化処理を追加してください。」
 2. **Antigravity の自律動作**:
    * エージェントが `scripts/fetch_data.py` を自動検索・読込。
-   * プランニング（計画立案）を行い、コード差分を生成。
-   * **Artifacts（成果物パネル）** にて修正コードの Visual Diff（差分）を表示。
+   * 修正プランを生成し、**Artifacts（成果物パネル）** に Visual Diff（差分）を表示。
 3. **安全確認と承認**:
-   * 人間が画面上で Artifacts のコード差分を確認し、`[Accept]` または `[Run Terminal]` を承認クリック。
+   * 人間が画面上で Visual Diff を確認し、`[Accept]` または `[Run Terminal]` をクリックして承認。
 
 #### 【ケース②】フロントエンド（Astro）UI・テーブルレイアウトの変更
 1. **指示例**:
@@ -209,9 +244,9 @@ Antigravity では、自然言語で指示（プロンプト）を与えるだ�
 
 ---
 
-### 7.3 Agentic SDLC（システム開発ライフサイクルの全自動化）
+### 7.4 Agentic SDLC（システム開発ライフサイクルの全自動化）
 
-Antigravity 2.0 の多重エージェント機能（Multi-Agent）および CLI / SDK を活用した定型運用手順です。
+Antigravity の多重エージェント機能（Multi-Agent）および CLI / SDK を活用した定型運用手順です。
 
 ```text
 [開発・保守タスクの自然言語指示]
@@ -229,8 +264,8 @@ Antigravity 2.0 の多重エージェント機能（Multi-Agent）および CLI 
 
 1. **ローカル環境テストの自動化**:
    * エージェントに「`python scripts/fetch_data.py` を実行して生成された `songs.json` と CSV のフォーマットが正しいかテストして」と指示。
-   * ターミナルでのテスト実行結果・ログを解析し、構文エラー（SyntaxError等）が発生した場合はAIが自律的に即座に自己修復。
+   * ターミナルでのテスト実行結果・ログを解析し、構文エラー（SyntaxError等）が発生した場合は AI が自律的に即座に自己修復。
 2. **運用コードレビュー ＆ セキュリティチェック**:
    * APIキーがコード内にハードコーディングされていないか（`os.environ.get()` を使用しているか）を AI Agent が常時監視。
 3. **Vercel デプロイ前の自動ビルドテスト**:
-   * `npx astro build` をエージェントが裏で実行し、SSGプリレンダーエラー（`songs.json.ts` や `index.astro`）がないかを完全に自動で事前検証。
+   * `npx astro build` をエージェントが裏で実行し、SSGプリレンダーエラー（`songs.json.ts` や `index.astro`）がないかを完全自動で事前検証。
