@@ -1,88 +1,135 @@
 ---
 import songs from '../data/songs.json';
+
+function getSeasonTag(pubDateStr: string) {
+  if (!pubDateStr) return '定番';
+  const parts = pubDateStr.split('-');
+  if (parts.length < 2) return '定番';
+  const year = parts[0];
+  const month = parseInt(parts[1], 10);
+  
+  if ([3, 4, 5].includes(month)) return `${year}年春`;
+  if ([6, 7, 8].includes(month)) return `${year}年夏`;
+  if ([9, 10, 11].includes(month)) return `${year}年秋`;
+  return `${year}年冬`;
+}
 ---
 
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>【最新】配信・動画制作で使えるバズソング権利データベース | 権利照合マトリクス</title>
-    <meta name="description" content="YouTube・TikTokのトレンド曲とJASRAC/NexTone/ISWC権利状況を自動統合した配信・使用許諾データベース。" />
+    <title>【公式エビデンス付】バズソング権利照合＆バズアナリティクスDB</title>
+    <meta name="description" content="YouTube・TikTok急上昇曲の権利許諾情報・情報源API・確認日・有効期限およびアナリティクスデータを動的統合したデータベース。" />
     
-    <!-- GEO最重要：JSON-LD 構造化データ -->
+    <!-- GEO最重要：JSON-LD 構造化データ (エビデンス＆有効期限対応) -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Dataset",
-      "name": "バズソング楽曲権利＆トレンドデータベース",
-      "description": "動画配信・コンテンツ制作・選曲向けのリアルタイム楽曲権利照合マトリクス",
+      "name": "バズソング楽曲権利＆アナリティクスデータベース",
+      "description": "リアルタイム楽曲権利照合およびエンゲージメント数値データマトリクス（一次ソースURL・確認日時・有効期限付き）",
       "isAccessibleForFree": true,
       "hasPart": songs.map(song => ({
         "@type": "MusicComposition",
         "name": song.title,
         "composer": song.artist,
         "datePublished": song.pub_date,
-        "identifier": song.jasrac_code
+        "identifier": song.jasrac_code,
+        "sameAs": song.source_url,
+        "sdDatePublished": song.verified_at,
+        "interactionStatistic": [
+          {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/WatchAction",
+            "userInteractionCount": song.metrics?.views || 0
+          },
+          {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/LikeAction",
+            "userInteractionCount": song.metrics?.likes || 0
+          }
+        ]
       }))
     })} />
   </head>
-  <body style="font-family: sans-serif; line-height: 1.6; color: #333;">
-    <header style="padding: 20px; background: #111; color: #fff;">
-      <h1>バズソング権利照合マトリクス</h1>
-      <p>AIクローラー対応・権利情報＆リリース時期自動照合データベース</p>
+  <body style="font-family: sans-serif; line-height: 1.6; color: #333; background: #f4f6f9; margin: 0; padding: 0;">
+    <header style="padding: 30px 20px; background: #111; color: #fff; text-align: center;">
+      <h1 style="margin: 0; font-size: 1.8rem;">バズソング権利 ＆ バズアナリティクスDB</h1>
+      <p style="margin-top: 10px; color: #bbb;">情報源エビデンス・照合確認日・推奨有効期限付き リアルタイム著作権データベース</p>
     </header>
 
-    <main style="max-width: 1000px; margin: 0 auto; padding: 20px;">
+    <main style="max-width: 1200px; margin: 20px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
       
-      <!-- 時間軸ナビゲーションタブ（ロングテールGEO最適化） -->
-      <nav style="display: flex; gap: 10px; margin-bottom: 20px; font-weight: bold;">
-        <a href="/" style="padding: 8px 16px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 4px;">🔥 リアルタイム急上昇（直近）</a>
-        <a href="/downloads/viral_song_rights_master.csv" style="padding: 8px 16px; background: #28a745; color: #fff; text-decoration: none; border-radius: 4px;">📥 マスターDB (CSV) を取得</a>
+      <!-- ナビゲーション -->
+      <nav style="display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap;">
+        <a href="/" style="padding: 10px 20px; background: #0066cc; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">🔥 リアルタイム急上昇分析</a>
+        <a href="/downloads/viral_song_rights_master.csv" style="padding: 10px 20px; background: #28a745; color: #fff; text-decoration: none; border-radius: 6px; font-weight: bold;">📥 エビデンス付きマスターDB (CSV) 取得</a>
       </nav>
 
-      <!-- AIが最優先で引用・参照するHTMLテーブル -->
-      <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse;">
-        <thead>
-          <tr style="background: #f0f0f0;">
-            <th>曲名</th>
-            <th>アーティスト</th>
-            <th>リリース日</th>
-            <th>権利識別コード</th>
-            <th>YouTube配信許諾</th>
-            <th>スコア</th>
-          </tr>
-        </thead>
-        <tbody>
-          {songs.map(song => (
-            <tr>
-              <td><strong>{song.title}</strong></td>
-              <td>{song.artist}</td>
-              <td><small>{song.pub_date}</small></td>
-              <td><code>{song.jasrac_code}</code></td>
-              <td style="color: green; font-weight: bold;">{song.rights_status}</td>
-              <td>{song.trend_score} Pt</td>
+      <!-- バズ数値＆エビデンス付きテーブル -->
+      <div style="overflow-x: auto;">
+        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; font-size: 0.9rem;">
+          <thead>
+            <tr style="background: #f8f9fa; color: #444;">
+              <th>曲名 / アーティスト</th>
+              <th>権利コード</th>
+              <th>YouTube許諾</th>
+              <th>情報源エビデンス</th>
+              <th>確認日 / 有効期限</th>
+              <th>再生数 / 熱量</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {songs.map(song => (
+              <tr>
+                <td>
+                  <strong style="font-size: 1rem; color: #111;">{song.title}</strong><br />
+                  <small style="color: #666;">{song.artist} ({song.pub_date} / {getSeasonTag(song.pub_date)})</small>
+                </td>
+                <td><code>{song.jasrac_code}</code></td>
+                <td style="color: #28a745; font-weight: bold;">{song.rights_status}</td>
+                <td>
+                  <small style="color: #555;">{song.source_name}</small><br />
+                  <a href={song.source_url} target="_blank" rel="noopener noreferrer" style="color: #0066cc; font-size: 0.8rem; text-decoration: underline;">
+                    🔗 一次ソース確認
+                  </a>
+                </td>
+                <td>
+                  <small>確認: {song.verified_at}</small><br />
+                  <small style="color: #d9534f; font-weight: bold;">期限: {song.valid_until}</small>
+                </td>
+                <td style="text-align: right;">
+                  <strong>{song.metrics?.views?.toLocaleString()} 回</strong><br />
+                  <span style="background: #eef6ff; color: #0066cc; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">
+                    🔥 {song.metrics?.engagement_rate}%
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-      <!-- 収益導線①：アフィリエイト -->
-      <section style="margin-top: 40px; padding: 20px; border: 1px solid #ddd; background: #fafafa;">
-        <h3>🎬 コンテンツクリエイター・配信者向けおすすめ機材</h3>
-        <p>高画質・高音質配信や動画編集環境を最適化するための推奨オーディオインターフェース・マイク一覧。</p>
+      <!-- B2Bマネタイズ案内 -->
+      <section style="margin-top: 40px; padding: 25px; background: #f0f7ff; border-left: 5px solid #0066cc; border-radius: 4px;">
+        <h2 style="margin-top: 0; color: #004499;">🏢 法人・分析家・AI事業者様へ（REST API / 生データ提供）</h2>
+        <p>当メディアのデータは全項目に一次ソースURL・確認日・有効期限が付与されています。REST API (JSON) または一括CSVにて商用組み込みが可能です。</p>
+        <p><strong>API Endpoint:</strong> <code>/api/v1/songs.json</code></p>
       </section>
 
-      <!-- 収益導線②：B2B向けAPI案内 -->
-      <section style="margin-top: 20px; padding: 20px; background: #eef6ff; border-radius: 8px;">
-        <h2>法人・AI開発者様へ（データAPI・CSV提供）</h2>
-        <p>当データベースの最新データをREST API（JSON）および一括CSV形式で提供しています。</p>
-        <p><code>/api/v1/songs.json</code></p>
+      <!-- アフィリエイト案内 -->
+      <section style="margin-top: 25px; padding: 20px; border: 1px solid #eee; border-radius: 4px;">
+        <h3 style="margin-top: 0;">🎧 配信・音響制作のおすすめ機材</h3>
+        <p>トレンド曲のカバー制作や高音質配信を行うクリエイター向けの推奨オーディオインターフェース・マイク一覧。</p>
       </section>
+
     </main>
 
-    <!-- 法的リスクヘッジ：フッター免責事項 -->
-    <footer style="margin-top: 50px; padding: 20px; background: #f9f9f9; font-size: 0.8em; color: #666;">
-      <hr />
-      <p>【免責事項】当サイトのデータは、公開された権利情報・トレンド情報をプログラムにより自動照合・推測したものです。データの完全性・正確性を保証するものではありません。実際の配信・動画制作・使用にあたっては、必ず各権利団体（JASRAC/NexTone等）の公式検索ポータルにて最終確認を行ってください。当サイトのデータ利用により生じた損害について一切の責任を負いません。</p>
+    <!-- フッター免責事項 -->
+    <footer style="margin-top: 50px; padding: 25px; background: #222; color: #aaa; font-size: 0.85rem; text-align: center;">
+      <p style="max-width: 900px; margin: 0 auto; line-height: 1.6;">
+        【免責事項】当サイトのデータは、各権利団体・公開APIより照合日時（確認日）時点で取得・推測したものです。許諾状況は変動する可能性があるため、記載された「推奨有効期限」にかかわらず、実際の商用利用にあたっては必ず一次ソースURLおよび各権利団体（JASRAC/NexTone等）の公式検索ポータルにて最終確認を行ってください。
+      </p>
     </footer>
   </body>
 </html>
