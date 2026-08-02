@@ -33,11 +33,11 @@ def escape_lucene(text):
     return re.sub(r'[\+\-\!\(\)\{\}\[\]\^\"\~\*\?\:\&\|\\\/]', r'\\\g<0>', text)
 
 def analyze_trending_songs_batch_with_gemini(raw_songs_list):
-    """【Gemini API】デバッグログ付き一括AI分析＆Web検索"""
+    """【Gemini API】超高速＆429エラー回避版 1リクエスト一括AI分析"""
     print(f"\n[DEBUG - Gemini API] ===== 1リクエスト一括AI分析を開始 ({len(raw_songs_list)}曲) =====")
     
     if not GEMINI_API_KEY or not raw_songs_list:
-        print("  [DEBUG - Gemini API] ⚠️ GEMINI_API_KEYが未設定のため、簡易正規表現フォールバックを適用します。")
+        print("  [DEBUG - Gemini API] ⚠️ GEMINI_API_KEY未設定のため、簡易正規表現フォールバック適用")
         return [{"official_title": re.sub(r'【.*?】|\[.*?\]|\(.*?\)', '', s["raw_title"]).strip() or s["raw_title"],
                  "official_artist": s["raw_artist"], "risk_reason": ""} for s in raw_songs_list]
 
@@ -45,21 +45,18 @@ def analyze_trending_songs_batch_with_gemini(raw_songs_list):
     songs_text = "\n".join([f"{i+1}. タイトル: \"{s['raw_title']}\" / チャンネル: \"{s['raw_artist']}\"" for i, s in enumerate(raw_songs_list)])
 
     prompt = f"""
-【重要指示】必要に応じてGoogle検索（Web検索）を実行し、最新の楽曲情報や公式MV、リリースニュースを確認した上で回答してください。
-
-以下のYouTube動画リスト（全{len(raw_songs_list)}件）から、それぞれの原曲の「正確な曲名」と「正確な原曲アーティスト名」を特定し、権利リスクを判断してください。
+以下のYouTube動画リスト（全{len(raw_songs_list)}件）から、それぞれの原曲の「正確な原曲タイトル」と「正確な原曲アーティスト名（またはボカロP/作詞作曲者名）」を分析・抽出してください。
 
 【対象動画リスト】
 {songs_text}
 
-【ルール】
-1. 最新曲やカバー曲の可能性があるため、Web検索で原曲情報を特定してください。
-2. 「MV」「歌ってみた」「Official」「Cover」などのノイズ表記は完全に除去してください。
-3. カバー動画や歌枠の場合、カバー歌手ではなく「原曲のアーティスト名/ボカロP名」を特定してください。
-4. ディズニー・任天堂・ゲームBGM・東方Project等、個別許諾が必要な場合は risk_reason に明記してください。
-5. 必ず対象動画リストと同じ順番の配列（JSONリスト）で回答してください。
+【抽出ルール】
+1. 「MV」「歌ってみた」「Official」「Cover」「Live」「特報」などのノイズ表記は完全に除去してください。
+2. カバー動画や歌枠、ダンス動画等の場合、出演配信者ではなく「原曲のアーティスト名/ボカロP名」を抽出してください。
+3. 任天堂・ディズニー・ゲームBGM・東方Project等、個別許諾が必要な場合は risk_reason に明記してください。
+4. 必ず入力されたリストと同じ順番のJSON配列（リスト）のみを出力してください（解説文不要）。
 
-【出力形式（JSON配列のみを出力）】
+【出力形式】
 [
   {{
     "index": 1,
@@ -71,18 +68,15 @@ def analyze_trending_songs_batch_with_gemini(raw_songs_list):
 """
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "tools": [{"googleSearch": {}}],
+        # ★429回避のため googleSearch ツールを外し、Gemini高精度テキスト抽出に専念
         "generationConfig": {"temperature": 0.0}
     }
-
-    print("  [DEBUG - Gemini API Request] Payload (一部): googleSearch有効 / 全15曲プロンプト送信中...")
 
     for attempt in range(3):
         try:
             start_time = time.time()
-            res = requests.post(url, json=payload, timeout=15)
+            res = requests.post(url, json=payload, timeout=12)
             elapsed = round(time.time() - start_time, 2)
-            
             print(f"  [DEBUG - Gemini API Response] HTTP Status: {res.status_code} (応答時間: {elapsed}秒)")
             
             if res.status_code == 200:
@@ -91,25 +85,24 @@ def analyze_trending_songs_batch_with_gemini(raw_songs_list):
                 if json_match:
                     parsed_data = json.loads(json_match.group(0))
                     print(f"  [DEBUG - Gemini API Success] ✅ {len(parsed_data)}件の正解情報を抽出しました。")
-                    for item in parsed_data[:3]: # 先頭3件のログプレビュー
+                    for item in parsed_data[:3]:
                         print(f"    - Preview: '{item.get('official_title')}' ({item.get('official_artist')}) [Risk: '{item.get('risk_reason', 'なし')}']")
                     return parsed_data
             elif res.status_code == 429:
-                wait_time = (attempt + 1) * 5
-                print(f"  [DEBUG - Gemini API 429] ⚠️ レート制限検知。{wait_time}秒待機後にリトライします ({attempt + 1}/3)...")
+                wait_time = (attempt + 1) * 3
+                print(f"  [DEBUG - Gemini API 429] レート制限検知。{wait_time}秒待機後にリトライ ({attempt + 1}/3)...")
                 time.sleep(wait_time)
             else:
-                print(f"  [DEBUG - Gemini API Error Body]: {res.text[:300]}")
+                print(f"  [DEBUG - Gemini API Error]: {res.text[:200]}")
         except Exception as e:
             print(f"  [DEBUG - Gemini API Exception]: {e}")
-            time.sleep(3)
+            time.sleep(2)
 
-    print("  [DEBUG - Gemini API Fallback] リトライ上限に達したため、安全フォールバックを適用します。")
     return [{"official_title": re.sub(r'【.*?】|\[.*?\]|\(.*?\)', '', s["raw_title"]).strip() or s["raw_title"],
              "official_artist": s["raw_artist"], "risk_reason": ""} for s in raw_songs_list]
 
 def get_official_info_itunes(title, artist):
-    """【iTunes Search API】デバッグログ付き照合"""
+    """【iTunes API】誤爆防止フィルタ付き照合"""
     query = f"{artist} {title}".strip()
     url = "https://itunes.apple.com/search"
     params = {"term": query, "country": "JP", "media": "music", "entity": "song", "limit": 1}
@@ -117,46 +110,54 @@ def get_official_info_itunes(title, artist):
     print(f"  [DEBUG - iTunes API Request] Query: '{query}'")
     try:
         res = requests.get(url, params=params, timeout=5)
-        print(f"  [DEBUG - iTunes API Response] Status: {res.status_code}")
-        if res.status_code == 200:
-            results = res.json().get("results", [])
-            if results:
-                t_name = results[0].get("trackName", title)
-                a_name = results[0].get("artistName", artist)
+        if res.status_code == 200 and (results := res.json().get("results")):
+            t_name = results[0].get("trackName", title)
+            a_name = results[0].get("artistName", artist)
+            
+            # ★誤爆防止フィルタ：iTunesが全く関係ない曲を返した場合は不採用にする
+            # 検索クエリの単語が全くヒットに含まれない場合はスキップ
+            t_low, q_low = t_name.lower(), title.lower()
+            if any(part in t_low for part in q_low.split() if len(part) > 1) or any(part in q_low for part in t_low.split() if len(part) > 1):
                 print(f"    -> [iTunes Hit] 公式表記確定: '{t_name}' ({a_name})")
                 return t_name, a_name
-            print("    -> [iTunes Miss] 該当データなし (元のタイトルを保持します)")
+            else:
+                print(f"    -> [iTunes Filtered] 誤判定リスク回避（不採用）: '{t_name}' ➔ 元のタイトル保持: '{title}'")
     except Exception as e:
         print(f"    -> [iTunes Exception]: {e}")
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【MusicBrainz API】デバッグログ付き ISWC 照合"""
-    time.sleep(1.2) # Rate Limit 遵守
+    """【MusicBrainz API】503リトライ付き ISWC 照合"""
     clean_artist = artist.split()[0] if artist else ""
     query = f'work:"{escape_lucene(title)}"' + (f' AND artist:"{escape_lucene(clean_artist)}"' if clean_artist else "")
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.2 (https://github.com/example/viral-song-rights-db)"}
     
     print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
-    try:
-        res = requests.get(url, params={"query": query, "fmt": "json", "limit": 1}, headers=headers, timeout=8)
-        print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
-        if res.status_code == 200:
-            works = res.json().get("works", [])
-            if works:
-                work_id = works[0].get("id")
-                src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
-                iswcs = works[0].get("iswcs", [])
-                if iswcs:
-                    print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]} (Work ID: {work_id})")
-                    return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
-                print(f"    -> [MusicBrainz Work Found] ワーク発見(ID: {work_id})、しかしISWCコードは未登録")
-                return None, "MusicBrainz API", src_url
-            print("    -> [MusicBrainz Miss] 該当するワークが見つかりません")
-    except Exception as e:
-        print(f"    -> [MusicBrainz Exception]: {e}")
-        
+    for attempt in range(2): # 503エラー時最大2回リトライ
+        time.sleep(1.2) # Rate Limit 遵守
+        try:
+            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 1}, headers=headers, timeout=8)
+            print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
+            if res.status_code == 200:
+                works = res.json().get("works", [])
+                if works:
+                    work_id = works[0].get("id")
+                    src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
+                    iswcs = works[0].get("iswcs", [])
+                    if iswcs:
+                        print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]}")
+                        return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
+                    print(f"    -> [MusicBrainz Work Found] ワーク発見(ID: {work_id})、しかしISWCコード未登録")
+                    return None, "MusicBrainz API", src_url
+                print("    -> [MusicBrainz Miss] 該当ワークなし")
+                return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
+            elif res.status_code == 503:
+                print("    -> [MusicBrainz 503] 一時的サーバー負荷。1.5秒後にリトライします...")
+                time.sleep(1.5)
+        except Exception as e:
+            print(f"    -> [MusicBrainz Exception]: {e}")
+            
     return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
 
 def load_master_db():
@@ -177,8 +178,7 @@ def load_master_db():
                     entry.setdefault("jasrac_search_artist", entry.get("artist"))
                     entry.setdefault("karaoke_search_url", f"https://www.youtube.com/results?search_query={urllib.parse.quote(entry.get('artist','') + ' ' + entry.get('title','') + ' カラオケ 歌枠用')}")
                 return data
-        except Exception as e:
-            print(f"[DEBUG - DB Load Error]: {e}")
+        except Exception as e: print(f"[DEBUG - DB Load Error]: {e}")
     print("[DEBUG - DB Load] マスターDBが存在しないため、新規空DB作成モードで開始します。")
     return []
 
@@ -189,7 +189,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, ai_info, pub_date, metrics
     clean_artist = ai_info.get("official_artist", raw_artist)
     risk_reason = ai_info.get("risk_reason", "")
 
-    # iTunes ダブルチェック
+    # iTunes ダブルチェック & 誤爆フィルタ
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
     karaoke_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote(f'{final_artist} {final_title} カラオケ 歌枠用')}"
 
@@ -203,7 +203,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, ai_info, pub_date, metrics
             return entry, master_db, False
 
     # 新曲検知 & MusicBrainz 検索
-    print(f"\n★ [DEBUG - New Song Detect] 新曲検知: 生タイトル '{raw_title}' ➔ AI/iTunes補正: '{final_title}' ({final_artist})")
+    print(f"\n★ [DEBUG - New Song Detect] 新曲検知: 生タイトル '{raw_title}' ➔ Gemini補正: '{final_title}' ({final_artist})")
     iswc_code, src_name, src_url = get_iswc_musicbrainz(final_title, final_artist)
 
     # シビア判定
@@ -247,7 +247,6 @@ def export_master_to_csv(master_db):
         for r in master_db:
             m, p = r.get('last_metrics', {}), r.get('pub_date', '')
             writer.writerow([r.get('title'), r.get('artist'), r.get('jasrac_search_title'), r.get('jasrac_search_artist'), r.get('jasrac_code'), r.get('status'), p, get_season_tag(p), r.get('source_name'), r.get('source_url'), r.get('karaoke_search_url'), r.get('verified_at'), r.get('valid_until'), m.get('views', 0), m.get('likes', 0), m.get('comments', 0), m.get('engagement_rate', 0.0), m.get('daily_views', 0), r.get('added_date')])
-    print(f"[DEBUG - Export CSV] {CSV_OUTPUT_PATH} への書き出し完了")
 
 def generate_llms_txt(songs, today_str):
     content = f"# Trend Song Rights & Verified Analytics Database\n\n> 最終更新日時: {today_str}\n> 本ファイルはAI検索エンジン向けの構造化ガイドです。\n\n> MusicBrainzについて: MetaBrainz Foundationが運営する国際音楽データベースであり、ISWCの照合において信頼性を備えています。\n\n## 直近のトレンド楽曲・許諾状況\n"
@@ -257,7 +256,6 @@ def generate_llms_txt(songs, today_str):
     content += "\n## エンドポイント\n- JSON全データ: /api/v1/songs.json\n"
     os.makedirs('public', exist_ok=True)
     with open('public/llms.txt', 'w', encoding='utf-8') as f: f.write(content)
-    print(f"[DEBUG - Export llms.txt] public/llms.txt への書き出し完了")
 
 def get_real_youtube_trending_songs(master_db):
     print("\n[DEBUG - YouTube API] ===== 日本地域・音楽急上昇ランキングの取得を開始 =====")
@@ -272,7 +270,6 @@ def get_real_youtube_trending_songs(master_db):
         res = requests.get(url, params=params, timeout=10)
         print(f"[DEBUG - YouTube API Response] HTTP Status: {res.status_code}")
         if res.status_code != 200:
-            print(f"[DEBUG - YouTube API Error Body]: {res.text[:300]}")
             return master_db, False, []
         data = res.json()
     except Exception as e:
