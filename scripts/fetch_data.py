@@ -90,12 +90,11 @@ def analyze_songs_batch_with_gemini(song_requests):
     if not GEMINI_API_KEY or not song_requests:
         return {}
 
-    # 多重モデル指定（404/429全自動回避）
     models = [
+        "gemini-flash-lite-latest",
         "gemini-flash-latest",
         "gemini-2.0-flash",
-        "gemini-2.0-flash-lite",
-        "gemini-flash-lite-latest"
+        "gemini-2.0-flash-lite"
     ]
     
     songs_prompt_text = ""
@@ -183,7 +182,7 @@ def get_official_info_itunes(title, artist):
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【MusicBrainz API】タイトル優先検索 ＆ 複数ヒット時アーティストスマート判定"""
+    """【MusicBrainz API】ファクト取得（照合キーワード＋ISWCコード有無の客観記録）"""
     clean_title = re.sub(r'\(.*?\)|（.*?）', '', title)
     clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title).strip()
     
@@ -196,50 +195,54 @@ def get_iswc_musicbrainz(title, artist):
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
 
     print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
-    time.sleep(1.2)
-    try:
-        res = requests.get(url, params={"query": query, "fmt": "json", "limit": 10}, headers=headers, timeout=15)
-        print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
-        if res.status_code == 200:
-            works = res.json().get("works", [])
+    
+    for attempt in range(2):
+        time.sleep(1.2)
+        try:
+            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 10}, headers=headers, timeout=30)
+            print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
             
-            if not works:
-                print("    -> [MusicBrainz Miss] 該当ワークなし")
-                return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
+            if res.status_code == 200:
+                works = res.json().get("works", [])
+                if not works:
+                    print("    -> [MusicBrainz Fact] 該当ワーク未登録")
+                    return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
 
-            best_work = None
-
-            if len(works) == 1:
-                best_work = works[0]
-                print(f"    -> [MusicBrainz Single Hit] 1件のみヒット")
-            else:
-                print(f"    -> [MusicBrainz Multi Hit] {len(works)} 件候補あり。演者 ('{main_artist}') で照合中...")
+                best_work = None
+                
+                # 演者キーワードが含まれるワークを探索
                 for work in works:
                     work_text = json.dumps(work, ensure_ascii=False).lower()
-                    if main_artist_low and main_artist_low in work_text:
+                    if main_artist_low and len(main_artist_low) >= 2 and main_artist_low in work_text:
                         best_work = work
-                        print(f"    -> [MusicBrainz Match] 演者一致ワークを検出: ID={work.get('id')}")
+                        print(f"    -> [MusicBrainz Fact] 演者一致ワーク確認: ID={work.get('id')}")
                         break
                 
                 if not best_work:
-                    best_work = next((w for w in works if w.get("iswcs")), works[0])
-                    print(f"    -> [MusicBrainz Fallback] ISWC保有候補を採用: ID={best_work.get('id')}")
+                    if len(works) == 1 and len(clean_title) >= 4 and main_artist_low not in ["不明", "unknown", ""]:
+                        best_work = works[0]
+                        print(f"    -> [MusicBrainz Fact] 単一ワーク確認: ID={best_work.get('id')}")
+                    else:
+                        print(f"    -> [MusicBrainz Fact] 同名異曲の可能性があるためコード未確定として記録")
+                        return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
 
-            iswcs = best_work.get("iswcs", [])
-            work_id = best_work.get("id")
-            src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
+                iswcs = best_work.get("iswcs", [])
+                work_id = best_work.get("id")
+                src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
 
-            if iswcs:
-                print(f"    -> [MusicBrainz Hit] ✅ ISWC取得成功: {iswcs[0]}")
-                return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
-            
-            print(f"    -> [MusicBrainz Work Found] ワーク選択完了(ID: {work_id})、しかしISWCコード未登録")
-            return None, "MusicBrainz API", src_url
+                if iswcs:
+                    print(f"    -> [MusicBrainz Fact] ✅ ISWCコード取得成功: {iswcs[0]}")
+                    return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
+                
+                print(f"    -> [MusicBrainz Fact] ワーク確認(ID: {work_id})、ISWC未割り当て")
+                return None, "MusicBrainz API", src_url
 
-        elif res.status_code == 503:
-            print("    -> [MusicBrainz 503] 一時的負荷。")
-    except Exception as e:
-        print(f"    -> [MusicBrainz Exception]: {e}")
+            elif res.status_code == 503:
+                print(f"    -> [MusicBrainz 503] 5.0秒待機して再試行... (Attempt {attempt+1})")
+                time.sleep(5.0)
+        except Exception as e:
+            print(f"    -> [MusicBrainz Exception ({type(e).__name__})]: {e}")
+            time.sleep(3.0)
 
     return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
 
@@ -266,6 +269,7 @@ def load_master_db():
     return []
 
 def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None):
+    """【客観ファクト記録】OK/NGの断定判断を廃止し、検索ワード・取得コード・注意タグを記録"""
     today_str, valid_until_str = get_dates()
     
     if not ai_info:
@@ -276,7 +280,7 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     clean_artist = ai_info.get("official_artist") or raw_artist
     risk_reason = ai_info.get("risk_reason", "")
 
-    # iTunes APIによる公式表記補正
+    # iTunes APIによる公式表記補正（JASRAC等での手動検索用クエリ確定）
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
     karaoke_url = f"https://www.youtube.com/results?search_query={urllib.parse.quote(f'{final_artist} {final_title} カラオケ 歌枠用')}"
 
@@ -289,30 +293,30 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
             print(f"[DEBUG - Match Existing] 既存楽曲ヒット: '{final_title}' (メトリクス更新)")
             return entry, master_db, False
 
-    # 新曲検知 & MusicBrainz 検索
-    print(f"\n★ [DEBUG - New Song Detect] 新曲検知: 生タイトル '{raw_title}' ➔ 確定曲名: '{final_title}' (演者: '{final_artist}')")
+    # 新曲検知 & MusicBrainz ISWC取得
+    print(f"\n★ [DEBUG - New Song Fact Record] 新曲検知: 生タイトル '{raw_title}' ➔ 照合用表記: '{final_title}' ({final_artist})")
     iswc_code, src_name, src_url = get_iswc_musicbrainz(final_title, final_artist)
 
-    # シビア判定
-    is_ng = any(kw in (final_title + final_artist).lower() for kw in ["disney", "ディズニー", "nintendo", "任天堂", "hoyofair", "remix"]) or bool(risk_reason)
+    # 客観的ステータス記録（合否判断ではなく、事実の記録）
+    is_risk = any(kw in (final_title + final_artist).lower() for kw in ["disney", "ディズニー", "nintendo", "任天堂", "hoyofair", "remix"]) or bool(risk_reason)
 
-    if is_ng:
-        code = "権利注意 (要権利者個別確認)"
-        status = f"NG / 要個別確認 ({risk_reason or 'ディズニー・任天堂・ゲーム音源等リスク'})"
-    elif iswc_code:
-        code = iswc_code
-        status = "OK (ISWC照合完了 / YouTube包括対象)"
+    if iswc_code:
+        code_val = iswc_code
+        status_val = "ISWCコード確認済み"
     else:
-        code = "JASRAC/NexToneポータル要検索"
-        status = "要個別確認 (自動照合未完了 / 手動検索を推奨)"
+        code_val = "コード未取得"
+        status_val = "手動検索を推奨 (JASRAC/NexTone等)"
+
+    if is_risk:
+        status_val += f" [注意: {risk_reason or '原盤・商標等確認推奨'}]"
 
     new_entry = {
         "title": raw_title,
         "artist": raw_artist,
         "jasrac_search_title": final_title,
         "jasrac_search_artist": final_artist,
-        "jasrac_code": code,
-        "status": status,
+        "jasrac_code": code_val,
+        "status": status_val,
         "pub_date": pub_date,
         "source_name": src_name,
         "source_url": src_url,
@@ -323,14 +327,14 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
         "added_date": today_str
     }
     master_db.append(new_entry)
-    print(f"[DEBUG - Rights Final Status] 判定結果: {status} | Code: {code}")
+    print(f"[DEBUG - Fact Recorded] ステータス: {status_val} | コード: {code_val}")
     return new_entry, master_db, True
 
 def export_master_to_csv(master_db):
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
-        writer.writerow(['曲名(YouTube生表示)', 'アーティスト(チャンネル名)', 'JASRAC検索用曲名', 'JASRAC検索用アーティスト', '権利識別コード', '配信許諾ステータス', 'リリース日', '季節タグ', '情報源', '一次ソースURL', 'カラオケ音源(原盤)検索URL', '権利確認日', '推奨有効期限', '総再生数', '高評価数', 'コメント数', 'エンゲージメント率(%)', '日速再生数', 'DB登録日'])
+        writer.writerow(['曲名(YouTube生表示)', 'アーティスト(チャンネル名)', 'JASRAC検索用曲名', 'JASRAC検索用アーティスト', '権利識別コード', 'コード照合ステータス', 'リリース日', '季節タグ', '情報源', '一次ソースURL', 'カラオケ音源(原盤)検索URL', '権利確認日', '推奨有効期限', '総再生数', '高評価数', 'コメント数', 'エンゲージメント率(%)', '日速再生数', 'DB登録日'])
         for r in master_db:
             m, p = r.get('last_metrics', {}), r.get('pub_date', '')
             writer.writerow([r.get('title'), r.get('artist'), r.get('jasrac_search_title'), r.get('jasrac_search_artist'), r.get('jasrac_code'), r.get('status'), p, get_season_tag(p), r.get('source_name'), r.get('source_url'), r.get('karaoke_search_url'), r.get('verified_at'), r.get('valid_until'), m.get('views', 0), m.get('likes', 0), m.get('comments', 0), m.get('engagement_rate', 0.0), m.get('daily_views', 0), r.get('added_date')])
