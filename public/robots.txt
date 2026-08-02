@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# GEO最適化：主要AI検索クローラーの巡回を全面許可
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: /sitemap-index.xml
