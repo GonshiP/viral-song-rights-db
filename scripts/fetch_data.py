@@ -182,7 +182,7 @@ def get_official_info_itunes(title, artist):
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【2段階ファクト検索】演者完全一致で確定し、不一致でも候補コード・参考URLを親切に提示"""
+    """【2段階ファクト検索】歌手名も含めて紐づけデータを精密検索"""
     clean_title = re.sub(r'\(.*?\)|（.*?）', '', title)
     clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title).strip()
     
@@ -190,7 +190,6 @@ def get_iswc_musicbrainz(title, artist):
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
-    # ★一段目のLucene検索クエリ（work:"曲名"）をWebダイレクトURLにも完全連動使用
     encoded_mb_title = urllib.parse.quote(f'work:"{clean_title}"')
     mb_web_search_url = f"https://musicbrainz.org/search?query={encoded_mb_title}&type=work"
 
@@ -203,7 +202,14 @@ def get_iswc_musicbrainz(title, artist):
     for attempt in range(2):
         time.sleep(1.2)
         try:
-            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 50}, headers=headers, timeout=30)
+            # ★【改善】inc=artist-rels+recording-rels を指定し、録音・アーティスト情報も含めて取得
+            params = {
+                "query": query,
+                "fmt": "json",
+                "limit": 50,
+                "inc": "artist-rels+recording-rels"
+            }
+            res = requests.get(url, params=params, headers=headers, timeout=30)
             
             if res.status_code == 200:
                 works = res.json().get("works", [])
@@ -230,7 +236,6 @@ def get_iswc_musicbrainz(title, artist):
                 if best_work:
                     iswcs = best_work.get("iswcs", [])
                     work_id = best_work.get("id")
-                    # ワークIDが判明している場合は特定ページへ直接リンク
                     src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else mb_web_search_url
 
                     if iswcs:
@@ -288,7 +293,7 @@ def load_master_db():
     return []
 
 def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None):
-    """【客観ファクト記録】検索ワード・取得コード・注意タグおよびダイレクト検索URLを記録"""
+    """【客観ファクト記録】ステータスを「ISWCコード確認済み」「手動検索を推奨」の2種類のみに限定"""
     today_str, valid_until_str = get_dates()
     
     if not ai_info:
@@ -297,7 +302,6 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
 
     clean_title = ai_info.get("official_title") or raw_title
     clean_artist = ai_info.get("official_artist") or raw_artist
-    risk_reason = ai_info.get("risk_reason", "")
 
     # iTunes APIによる公式表記補正
     final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
@@ -332,17 +336,14 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     print(f"\n★ [DEBUG - New Song Fact Record] 新曲検知: 生タイトル '{raw_title}' ➔ 照合用表記: '{final_title}' ({final_artist})")
     iswc_code, src_name, src_url = get_iswc_musicbrainz(final_title, final_artist)
 
-    is_risk = any(kw in (final_title + final_artist).lower() for kw in ["disney", "ディズニー", "nintendo", "任天堂", "hoyofair", "remix"]) or bool(risk_reason)
-
-    if iswc_code:
+    # ★【許諾ステータスの2種類限定化】
+    # ISWC:T-xxx と完全確定した場合のみ「ISWCコード確認済み」、参考候補や未取得は「手動検索を推奨」
+    if iswc_code and iswc_code.startswith("ISWC:"):
         code_val = iswc_code
         status_val = "ISWCコード確認済み"
     else:
-        code_val = "コード未取得"
-        status_val = "手動検索を推奨 (JASRAC/NexTone等)"
-
-    if is_risk:
-        status_val += f" [注意: {risk_reason or '原盤・商標等確認推奨'}]"
+        code_val = iswc_code if iswc_code else "コード未取得"
+        status_val = "手動検索を推奨"
 
     new_entry = {
         "title": raw_title,
