@@ -182,7 +182,7 @@ def get_official_info_itunes(title, artist):
     return title, artist
 
 def get_iswc_musicbrainz(title, artist):
-    """【MusicBrainz API】ファクト取得（照合キーワード＋ISWCコード有無の客観記録）"""
+    """【2段階ファクト検索】演者完全一致で確定し、不一致でも候補コード・参考URLを親切に提示"""
     clean_title = re.sub(r'\(.*?\)|（.*?）', '', title)
     clean_title = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', clean_title).strip()
     
@@ -190,52 +190,69 @@ def get_iswc_musicbrainz(title, artist):
     main_artist = re.split(r'[,&/]|feat', main_artist, flags=re.IGNORECASE)[0].strip()
     main_artist_low = main_artist.lower()
 
+    # ★ 1段階目：曲名で幅広く50件取得
     query = f'work:"{escape_lucene(clean_title)}"'
     url = "https://musicbrainz.org/ws/2/work/"
     headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
 
-    print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
+    # 手動確認用のMusicBrainzweb検索URL（親切な導線用）
+    mb_web_search_url = f"https://musicbrainz.org/search?query={urllib.parse.quote(clean_title)}&type=work"
+
+    print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}' (limit=50)")
     
     for attempt in range(2):
         time.sleep(1.2)
         try:
-            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 10}, headers=headers, timeout=30)
-            print(f"  [DEBUG - MusicBrainz API Response] Status: {res.status_code}")
+            res = requests.get(url, params={"query": query, "fmt": "json", "limit": 50}, headers=headers, timeout=30)
             
             if res.status_code == 200:
                 works = res.json().get("works", [])
                 if not works:
                     print("    -> [MusicBrainz Fact] 該当ワーク未登録")
-                    return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
+                    return None, "YouTube / MusicBrainz", mb_web_search_url
 
+                # --- ★ 2段階目：演者一致ワークの探索 ---
                 best_work = None
-                
-                # 演者キーワードが含まれるワークを探索
+                candidate_iswc = None
+                candidate_url = None
+
                 for work in works:
                     work_text = json.dumps(work, ensure_ascii=False).lower()
+                    
+                    # ISWCコードを持っているワークがあれば、候補として保持しておく（親切機能）
+                    if not candidate_iswc and work.get("iswcs"):
+                        candidate_iswc = work["iswcs"][0]
+                        candidate_url = f"https://musicbrainz.org/work/{work.get('id')}"
+
+                    # 演者名が合致するか検証
                     if main_artist_low and len(main_artist_low) >= 2 and main_artist_low in work_text:
                         best_work = work
-                        print(f"    -> [MusicBrainz Fact] 演者一致ワーク確認: ID={work.get('id')}")
+                        print(f"    -> [MusicBrainz Fact] ✅ 演者一致ワーク発見: ID={work.get('id')}")
                         break
-                
-                if not best_work:
-                    if len(works) == 1 and len(clean_title) >= 4 and main_artist_low not in ["不明", "unknown", ""]:
-                        best_work = works[0]
-                        print(f"    -> [MusicBrainz Fact] 単一ワーク確認: ID={best_work.get('id')}")
+
+                # --- 判定処理 ---
+                # A) 演者完全一致が見つかった場合（確定処理）
+                if best_work:
+                    iswcs = best_work.get("iswcs", [])
+                    work_id = best_work.get("id")
+                    src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else mb_web_search_url
+
+                    if iswcs:
+                        print(f"    -> [MusicBrainz Fact] ✅ ISWCコード確定: {iswcs[0]}")
+                        return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
                     else:
-                        print(f"    -> [MusicBrainz Fact] 同名異曲の可能性があるためコード未確定として記録")
-                        return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
+                        # ワークはあるがISWCが未割り当ての場合
+                        return None, "MusicBrainz API (ワークあり/コード未割当)", src_url
 
-                iswcs = best_work.get("iswcs", [])
-                work_id = best_work.get("id")
-                src_url = f"https://musicbrainz.org/work/{work_id}" if work_id else "https://musicbrainz.org"
+                # B) 演者は未確定だが、曲名で候補コード（同名異曲など）が見つかっていた場合（ユーザーへの親切機能）
+                if candidate_iswc:
+                    print(f"    -> [MusicBrainz Fact] 💡 同名異曲の候補コード発見: {candidate_iswc} (要確認)")
+                    # コード名の頭に「参考候補:」を付け、URLも該当候補のページを指すようにする
+                    return f"参考候補:{candidate_iswc}", "MusicBrainz API (同名異曲候補あり)", candidate_url or mb_web_search_url
 
-                if iswcs:
-                    print(f"    -> [MusicBrainz Fact] ✅ ISWCコード取得成功: {iswcs[0]}")
-                    return f"ISWC:{iswcs[0]}", "MusicBrainz API", src_url
-                
-                print(f"    -> [MusicBrainz Fact] ワーク確認(ID: {work_id})、ISWC未割り当て")
-                return None, "MusicBrainz API", src_url
+                # C) タイトルヒットはあるがISWCコードが見つからなかった場合
+                print("    -> [MusicBrainz Fact] タイトル一致ワークあり（コード未登録）")
+                return None, "MusicBrainz API", mb_web_search_url
 
             elif res.status_code == 503:
                 print(f"    -> [MusicBrainz 503] 5.0秒待機して再試行... (Attempt {attempt+1})")
@@ -244,7 +261,7 @@ def get_iswc_musicbrainz(title, artist):
             print(f"    -> [MusicBrainz Exception ({type(e).__name__})]: {e}")
             time.sleep(3.0)
 
-    return None, "YouTube Comprehensive Engine", "https://www.youtube.com/t/terms"
+    return None, "YouTube / MusicBrainz", mb_web_search_url
 
 def load_master_db():
     today_str, valid_until_str = get_dates()
