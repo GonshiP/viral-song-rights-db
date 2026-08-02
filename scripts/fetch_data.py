@@ -33,61 +33,65 @@ def escape_lucene(text):
     return re.sub(r'[\+\-\!\(\)\{\}\[\]\^\"\~\*\?\:\&\|\\\/]', r'\\\g<0>', text)
 
 def clean_song_and_artist_advanced(raw_title, raw_artist):
-    """【高精度クレンジング】Topic消去、レーベル名回避、曲名・アーティスト名の完全抽出"""
-    # 1. チャンネル名から "- Topic" や不要ノイズを削除
+    """【完全版パターン解析】カギカッコ/引用符/スラッシュ/レーベル名の高精度分離"""
     clean_artist = re.sub(r'\s*-\s*Topic$', '', raw_artist, flags=re.IGNORECASE).strip()
     clean_artist = re.sub(r'Release$|Official$', '', clean_artist, flags=re.IGNORECASE).strip()
 
-    # レーベル名やプラットフォーム名の場合はタイトルから探すフラグ
     is_generic_channel = any(kw in clean_artist.lower() for kw in [
-        "hybe", "smtown", "jyp", "ジュニアchannel", "the first take", "release", "topic", "avex", "universal", "sony"
-    ]) or not clean_artist
+        "hybe", "smtown", "jyp", "ジュニアchannel", "the first take", "release", "topic", "avex", "universal", "sony", "hoyofair"
+    ]) or not clean_artist or clean_artist == raw_artist and "topic" in raw_artist.lower()
 
-    # 2. カギカッコ 「曲名」 または 『曲名』 の抽出
-    title_match = re.search(r'「(.*?)」|『(.*?)』', raw_title)
     extracted_title = ""
-    if title_match:
-        extracted_title = title_match.group(1) or title_match.group(2)
-        # カギカッコ前後のテキストからアーティスト名を推測
-        artist_part = raw_title.replace(f"「{extracted_title}」", "").replace(f"『{extracted_title}』", "")
-        artist_part = re.sub(r'【.*?】|\[.*?\]|\(.*?\)|Official.*|MV.*', '', artist_part, flags=re.IGNORECASE).strip(" -/–—〜")
-        if artist_part and (is_generic_channel or len(artist_part) < 30):
-            clean_artist = artist_part
+    extracted_artist = clean_artist
 
-    # 3. カギカッコが無い場合：ハイフン "-" や Slash "/" で分割解析
+    quote_match = re.search(r'「(.*?)」|『(.*?)』|【(.*?)】|\'(.*?)\'|"(.*?)"', raw_title)
+    if quote_match:
+        extracted_title = next(g for g in quote_match.groups() if g is not None)
+        if extracted_title.lower() in ["mv", "official", "特報", "live"]:
+            extracted_title = ""
+        else:
+            prefix_text = raw_title[:quote_match.start()].strip()
+            prefix_artist = re.sub(r'【.*?】|\[.*?\]|\(.*?\)', '', prefix_text).strip(" -/–—〜")
+            if prefix_artist and (is_generic_channel or len(prefix_artist) < 30):
+                extracted_artist = prefix_artist.split('(')[0].strip()
+
     if not extracted_title:
         title_work = re.sub(r'【.*?】|\[.*?\]|\(.*?\)|（.*?）', '', raw_title)
         noise = r'MV|Music Video|Official|歌ってみた|オリジナル曲|Cover|カバー|THE FIRST TAKE|Dance Practice.*|Dance Video|Performance.*|Live.*|Teaser|Audio|Lyric Video|より|feat\..*'
-        title_work = re.sub(noise, '', title_work, flags=re.IGNORECASE).strip()
+        title_work = re.sub(noise, '', title_work, flags=re.IGNORECASE).strip(" -/–—〜")
 
-        if '-' in title_work:
+        if '/' in title_work or '／' in title_work:
+            parts = re.split(r'[/／]', title_work)
+            if len(parts) >= 2:
+                if "cover" in parts[1].lower() or "カバー" in parts[1]:
+                    extracted_title = parts[0].strip()
+                else:
+                    extracted_artist = parts[0].strip()
+                    extracted_title = parts[1].strip()
+        elif '-' in title_work:
             parts = title_work.split('-')
             if is_generic_channel and len(parts) >= 2:
-                clean_artist, extracted_title = parts[0].strip(), parts[1].strip()
+                extracted_artist, extracted_title = parts[0].strip(), parts[1].strip()
             else:
                 extracted_title = parts[1].strip() if len(parts) > 1 else parts[0].strip()
-        elif '/' in title_work:
-            parts = title_work.split('/')
-            if is_generic_channel and len(parts) >= 2:
-                clean_artist, extracted_title = parts[0].strip(), parts[1].strip()
-            else:
-                extracted_title = parts[0].strip()
         else:
             extracted_title = title_work
 
-    final_title = re.sub(r'Official.*|MV.*|Music Video.*', '', extracted_title, flags=re.IGNORECASE).strip(" -/–—〜")
-    final_artist = clean_artist.strip(" -/–—〜") or raw_artist
+    final_title = re.sub(r'Official.*|MV.*|Music Video.*|Feat\..*', '', extracted_title, flags=re.IGNORECASE).strip(" -/–—〜")
+    final_artist = re.sub(r'Official.*|Topic.*', '', extracted_artist, flags=re.IGNORECASE).strip(" -/–—〜")
 
-    return final_title or raw_title, final_artist
+    return final_title or raw_title, final_artist or raw_artist
 
 def analyze_single_song_with_gemini(raw_title, raw_artist):
-    """【Gemini 1曲ずつ安全呼び出し】429回避＆高精度抽出"""
+    """【Gemini API】404エラー対策ヘッダー追加＆最新gemini-2.0-flashモデル"""
     fallback_title, fallback_artist = clean_song_and_artist_advanced(raw_title, raw_artist)
     
     if not GEMINI_API_KEY:
+        print("  [DEBUG - Gemini API] ⚠️ GEMINI_API_KEYが設定されていないため、高度パターン解析を適用します。")
         return {"official_title": fallback_title, "official_artist": fallback_artist, "risk_reason": ""}
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={GEMINI_API_KEY}"
+    headers = {"Content-Type": "application/json"}
     
     prompt = f"""
 以下のYouTube動画情報から、原曲の「正確な曲名」と「正確な原曲アーティスト名」を抽出してください。
@@ -96,7 +100,7 @@ def analyze_single_song_with_gemini(raw_title, raw_artist):
 チャンネル名: "{raw_artist}"
 
 【重要ルール】
-1. チャンネル名に「- Topic」「HYBE LABELS」「ジュニアCHANNEL」「THE FIRST TAKE」等のレーベル/プラットフォーム名が入っている場合、動画タイトルから本当のアーティスト名（例: ILLIT, ACEes, King Gnu 等）を特定してください。
+1. チャンネル名に「HYBE LABELS」「ジュニアCHANNEL」「SMTOWN」「THE FIRST TAKE」「HoYoFair」等のレーベル/プラットフォーム名が入っている場合、動画タイトルから本当のアーティスト名（例: ILLIT, ACEes, aespa 等）を特定してください。
 2. 「MV」「Official」「歌ってみた」「Dance Practice」などのノイズは完全に除去してください。
 3. 以下のJSONのみ出力してください。
 
@@ -112,20 +116,23 @@ def analyze_single_song_with_gemini(raw_title, raw_artist):
     }
 
     try:
-        time.sleep(1.0) # 429回避の安全待機
-        res = requests.post(url, json=payload, timeout=8)
+        time.sleep(1.0)
+        res = requests.post(url, headers=headers, json=payload, timeout=8)
         if res.status_code == 200:
             text = res.json()["candidates"][0]["content"]["parts"][0]["text"]
             json_match = re.search(r'\{.*\}', text, re.DOTALL)
             if json_match:
                 parsed = json.loads(json_match.group(0))
+                print(f"  [DEBUG - Gemini Hit] ✅ 曲名='{parsed.get('official_title')}' / 演者='{parsed.get('official_artist')}'")
                 return {
                     "official_title": parsed.get("official_title") or fallback_title,
                     "official_artist": parsed.get("official_artist") or fallback_artist,
                     "risk_reason": parsed.get("risk_reason", "")
                 }
+        else:
+            print(f"  [DEBUG - Gemini Status {res.status_code}]: {res.text[:150]}")
     except Exception as e:
-        print(f"  [Gemini API Error]: {e}")
+        print(f"  [DEBUG - Gemini Exception]: {e}")
 
     return {"official_title": fallback_title, "official_artist": fallback_artist, "risk_reason": ""}
 
@@ -142,7 +149,6 @@ def get_official_info_itunes(title, artist):
             t_name = results[0].get("trackName", title)
             a_name = results[0].get("artistName", artist)
             
-            # 誤爆防止フィルタ：タイトルまたはアーティスト名の単語が1つも含まれない検索結果は不採用
             t_low, q_low = t_name.lower(), title.lower()
             if any(part in t_low for part in q_low.split() if len(part) > 1) or any(part in q_low for part in t_low.split() if len(part) > 1):
                 print(f"    -> [iTunes Hit] 公式表記確定: '{t_name}' ({a_name})")
@@ -158,7 +164,7 @@ def get_iswc_musicbrainz(title, artist):
     clean_artist = artist.split()[0] if artist else ""
     query = f'work:"{escape_lucene(title)}"' + (f' AND artist:"{escape_lucene(clean_artist)}"' if clean_artist else "")
     url = "https://musicbrainz.org/ws/2/work/"
-    headers = {"User-Agent": "ViralSongRightsBot/2.3 (https://github.com/example/viral-song-rights-db)"}
+    headers = {"User-Agent": "ViralSongRightsBot/2.5 (https://github.com/example/viral-song-rights-db)"}
     
     print(f"  [DEBUG - MusicBrainz API Request] Query: '{query}'")
     for attempt in range(2):
@@ -212,7 +218,7 @@ def load_master_db():
 def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db):
     today_str, valid_until_str = get_dates()
     
-    # 1. Gemini / 高精度ローカルクレンジングによる抽出
+    # 1. Gemini AI / 高精度ローカルクレンジングによる抽出
     ai_info = analyze_single_song_with_gemini(raw_title, raw_artist)
     clean_title = ai_info.get("official_title", raw_title)
     clean_artist = ai_info.get("official_artist", raw_artist)
@@ -317,7 +323,7 @@ def get_real_youtube_trending_songs(master_db):
         
         pub_date, pub_dt = parse_pub_date(snippet.get("publishedAt", ""))
         days = max(1, (datetime.datetime.now(datetime.timezone.utc) - pub_dt).days)
-        metrics = {"views": views, "likes": likes, "comments": comments, "engagement_rate": round(((likes + comments) / views * 100), 2) if views > 0 else 0.0, "daily_views": int(views / days)}
+        metrics = {"views": views, "likes": likes, "comments": comments, "engagement_rate": round(((likes + comments) / views * 100), 2) if views > 0 else 0.0, "daily_views": int(metrics_views / days) if (metrics_views := views) else 0}
 
         entry, master_db, was_added = auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db)
         if was_added: db_updated = True
