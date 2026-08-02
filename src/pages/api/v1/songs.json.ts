@@ -1,4 +1,4 @@
-import songs from '../../../../data/songs.json';
+import songs from '../../../../src/data/songs.json';
 
 export async function GET() {
   return new Response(
