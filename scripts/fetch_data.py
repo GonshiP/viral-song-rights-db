@@ -174,12 +174,12 @@ def get_official_info_itunes(title, artist):
             t_low, q_low = t_name.lower(), title.lower()
             if any(part in t_low for part in q_low.split() if len(part) > 1) or any(part in q_low for part in t_low.split() if len(part) > 1):
                 print(f"    -> [iTunes Hit] 公式表記確定: '{t_name}' ({a_name})")
-                return t_name, a_name
+                return t_name, a_name, True
             else:
                 print(f"    -> [iTunes Filtered] 誤判定不採用: '{t_name}' ➔ 元のタイトル保持: '{title}'")
     except Exception as e:
         print(f"    -> [iTunes Exception]: {e}")
-    return title, artist
+    return title, artist, False
 
 def get_iswc_musicbrainz(title, artist):
     """【2段階ファクト検索】歌手名も含めて紐づけデータを精密検索"""
@@ -282,6 +282,18 @@ def load_master_db():
                     entry.setdefault("jasrac_search_artist", a)
                     entry.setdefault("video_url", "")
                     
+                    code = entry.get("jasrac_code", "")
+                    status = entry.get("status", "")
+                    if status in ["手動検索を推奨", "登録済み", "確認済み", "ISWCコード確認済み"] or not status:
+                        if code and code.startswith("ISWC:"):
+                            entry["status"] = "MusicBrainzでISWCコード確認済み"
+                        elif t and a:
+                            entry["status"] = "iTunesで公式表記確認済み"
+                            if code == "コード未取得" or "参考候補" in code:
+                                entry["jasrac_code"] = "公式表記確認済み (J-WID検索推奨)"
+                        else:
+                            entry["status"] = "未登録・非管理曲の可能性あり"
+
                     clean_t = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', t)
                     clean_t = re.sub(r'\s+', ' ', clean_t).strip()
                     encoded_mb = urllib.parse.quote(f'"{clean_t}"')
@@ -309,9 +321,9 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     clean_artist = ai_info.get("official_artist") or raw_artist
 
     # iTunes APIによる公式表記補正
-    final_title, final_artist = get_official_info_itunes(clean_title, clean_artist)
+    final_title, final_artist, itunes_hit = get_official_info_itunes(clean_title, clean_artist)
 
-    # ★Web用検索URLのクエリ生成（work: を完全に除外して安全にエンコード）
+    # Web用検索URLのクエリ生成
     clean_t = re.sub(r'[\!\?\'"\:\(\)\[\]\/\-]', ' ', final_title)
     clean_t = re.sub(r'\s+', ' ', clean_t).strip()
     encoded_mb_title = urllib.parse.quote(f'"{clean_t}"')
@@ -328,6 +340,15 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     for entry in master_db:
         e_title = entry.get("jasrac_search_title", entry.get("title", "")).lower()
         if e_title in t_low or t_low in e_title:
+            # 最新の判定結果でステータス補正
+            code = entry.get("jasrac_code", "")
+            if code and code.startswith("ISWC:"):
+                entry["status"] = "MusicBrainzでISWCコード確認済み"
+            elif itunes_hit or (final_title and final_artist):
+                entry["status"] = "iTunesで公式表記確認済み"
+                if code == "コード未取得" or "参考候補" in code:
+                    entry["jasrac_code"] = "公式表記確認済み (J-WID検索推奨)"
+
             entry.update({
                 "last_metrics": metrics, 
                 "verified_at": today_str, 
@@ -347,10 +368,13 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
 
     if iswc_code and iswc_code.startswith("ISWC:"):
         code_val = iswc_code
-        status_val = "ISWCコード確認済み"
+        status_val = "MusicBrainzでISWCコード確認済み"
+    elif itunes_hit:
+        code_val = iswc_code if (iswc_code and not iswc_code.startswith("参考候補")) else "公式表記確認済み (J-WID検索推奨)"
+        status_val = "iTunesで公式表記確認済み"
     else:
         code_val = iswc_code if iswc_code else "コード未取得"
-        status_val = "手動検索を推奨"
+        status_val = "未登録・非管理曲の可能性あり"
 
     new_entry = {
         "title": raw_title,
@@ -376,17 +400,16 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
     return new_entry, master_db, True
 
 def export_master_to_csv(master_db):
-    """【全6カラム統合構成】第1カラム名を「トレンド動画」に変更"""
+    """【再編成構成】著作権（作詞・作曲）と原盤権（音源）を明確に分離"""
     os.makedirs('public/downloads', exist_ok=True)
     with open(CSV_OUTPUT_PATH, 'w', newline='', encoding='utf-8-sig') as f:
         writer = csv.writer(f)
         writer.writerow([
-            'トレンド動画', 
-            '再生数 / 反応率', 
-            '権利コード / 許諾ステータス', 
-            'JASRAC/NexTone 検索用キーワード', 
-            '情報源 / 期限', 
-            '原盤権対策 (音源)'
+            '1. トレンド動画', 
+            '2. 再生数 / 反応率', 
+            '3. 著作権（作詞・作曲）', 
+            '4. 原盤権（音源）', 
+            '5. 情報源 / 期限'
         ])
         for r in master_db:
             m = r.get('last_metrics', {})
@@ -398,20 +421,17 @@ def export_master_to_csv(master_db):
             # 2. 再生数 / 反応率
             c2_metrics = f"再生数: {m.get('views', 0):,}回 | 反応率: {m.get('engagement_rate', 0.0)}% | 日速: {m.get('daily_views', 0):,}回"
             
-            # 3. 権利コード / 許諾ステータス
-            c3_rights = f"コード: {r.get('jasrac_code')} | ステータス: {r.get('status')}"
+            # 3. 著作権（作詞・作曲）
+            c3_rights = f"ステータス: {r.get('status')} | コード: {r.get('jasrac_code')} | 検索用表記: {r.get('jasrac_search_title')} / {r.get('jasrac_search_artist')} (J-WID検索URL: {r.get('jasrac_search_url')})"
             
-            # 4. JASRAC/NexTone 検索用キーワード
-            c4_jasrac = f"曲名: {r.get('jasrac_search_title')} / 歌手: {r.get('jasrac_search_artist')} (照合URL: {r.get('jasrac_search_url')})"
-            
+            # 4. 原盤権（音源）
+            c4_karaoke = f"歌枠用音源検索: {r.get('karaoke_search_url')}"
+
             # 5. 情報源 / 期限
             mb_link = r.get('mb_search_url', '')
             c5_source = f"MusicBrainz: {mb_link} (確認日: {r.get('verified_at')} / 期限: {r.get('valid_until')})"
             
-            # 6. 原盤権対策 (音源)
-            c6_karaoke = r.get('karaoke_search_url', '')
-            
-            writer.writerow([c1_title, c2_metrics, c3_rights, c4_jasrac, c5_source, c6_karaoke])
+            writer.writerow([c1_title, c2_metrics, c3_rights, c4_karaoke, c5_source])
 
 def generate_llms_txt(songs, today_str):
     content = f"# Trend Song Rights & Verified Analytics Database\n\n> 最終更新日時: {today_str}\n> 本ファイルはAI検索エンジン向けの構造化ガイドです。\n\n> MusicBrainzについて: MetaBrainz Foundationが運営する国際音楽データベースであり、ISWCの照合において信頼性を備えています。\n\n## 直近のトレンド楽曲・許諾状況\n"
