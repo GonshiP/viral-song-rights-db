@@ -17,11 +17,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 52,
     "metrics": {
-      "views": 2536818,
-      "likes": 97891,
-      "comments": 6720,
-      "engagement_rate": 4.12,
-      "daily_views": 845606
+      "views": 2734062,
+      "likes": 98690,
+      "comments": 6787,
+      "engagement_rate": 3.86,
+      "daily_views": 911354
     },
     "metrics_history": [
       {
@@ -34,16 +34,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 2536818,
-        "likes": 97891,
-        "comments": 6720,
-        "engagement_rate": 4.12,
-        "daily_views": 845606
+        "views": 2734062,
+        "likes": 98690,
+        "comments": 6787,
+        "engagement_rate": 3.86,
+        "daily_views": 911354
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "zbmQfQV0OpRZIi04CQlt3eXUGwA",
+      "etag": "RuI3AVFDMctdOLc9bSGF5isGSKY",
       "id": "dePs7UPp6GQ",
       "snippet": {
         "publishedAt": "2026-07-31T12:00:06Z",
@@ -111,10 +111,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2536818",
-        "likeCount": "97891",
+        "viewCount": "2734062",
+        "likeCount": "98690",
         "favoriteCount": "0",
-        "commentCount": "6720"
+        "commentCount": "6787"
       },
       "topicDetails": {
         "topicCategories": [
@@ -127,6 +127,131 @@
         "actualStartTime": "2026-07-31T12:00:06Z",
         "actualEndTime": "2026-07-31T12:05:47Z",
         "scheduledStartTime": "2026-07-31T12:00:00Z"
+      }
+    }
+  },
+  {
+    "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
+    "artist": "M!LK - Topic",
+    "video_url": "https://www.youtube.com/watch?v=7VqCdhFGE78",
+    "jasrac_search_title": "罪と罰",
+    "jasrac_search_artist": "椎名林檎",
+    "jasrac_code": "ISWC:T-101.649.409-8",
+    "rights_status": "MusicBrainzでISWCコード確認済み",
+    "pub_date": "2026-08-02",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/8d2b5f56-c26f-496c-a667-b359f64a2d35",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20M%21LK",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-03",
+    "valid_until": "2026-11-01",
+    "trend_score": 51,
+    "metrics": {
+      "views": 1152113,
+      "likes": 102262,
+      "comments": 11220,
+      "engagement_rate": 9.85,
+      "daily_views": 1152113
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-02",
+        "views": 139578,
+        "likes": 22906,
+        "comments": 2581,
+        "engagement_rate": 18.26,
+        "daily_views": 139578
+      },
+      {
+        "date": "2026-08-03",
+        "views": 1152113,
+        "likes": 102262,
+        "comments": 11220,
+        "engagement_rate": 9.85,
+        "daily_views": 1152113
+      }
+    ],
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "ArvB-B2GyMpPGt4-aip2E9HlZFo",
+      "id": "7VqCdhFGE78",
+      "snippet": {
+        "publishedAt": "2026-08-03T09:00:06Z",
+        "channelId": "UCFvSFbT8okMrpuFxBEIB2lg",
+        "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
+        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "M!LK",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
+          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT3M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1152113",
+        "likeCount": "102262",
+        "favoriteCount": "0",
+        "commentCount": "11220"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      },
+      "liveStreamingDetails": {
+        "actualStartTime": "2026-08-03T09:00:06Z",
+        "actualEndTime": "2026-08-03T09:05:54Z",
+        "scheduledStartTime": "2026-08-03T09:00:00Z"
       }
     }
   },
@@ -146,13 +271,13 @@
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-03",
     "valid_until": "2026-11-01",
-    "trend_score": 55,
+    "trend_score": 56,
     "metrics": {
-      "views": 5960069,
-      "likes": 172440,
-      "comments": 14307,
-      "engagement_rate": 3.13,
-      "daily_views": 596006
+      "views": 6014335,
+      "likes": 172526,
+      "comments": 14336,
+      "engagement_rate": 3.11,
+      "daily_views": 601433
     },
     "metrics_history": [
       {
@@ -165,16 +290,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 5960069,
-        "likes": 172440,
-        "comments": 14307,
-        "engagement_rate": 3.13,
-        "daily_views": 596006
+        "views": 6014335,
+        "likes": 172526,
+        "comments": 14336,
+        "engagement_rate": 3.11,
+        "daily_views": 601433
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "PAIwOVkShxvQKv60pJtV4rmH0gQ",
+      "etag": "ctmEAwcHTAyGcZDSdWsXiyJjmT4",
       "id": "JofSrfFV4Kw",
       "snippet": {
         "publishedAt": "2026-07-24T13:00:06Z",
@@ -248,10 +373,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "5960069",
-        "likeCount": "172440",
+        "viewCount": "6014335",
+        "likeCount": "172526",
         "favoriteCount": "0",
-        "commentCount": "14307"
+        "commentCount": "14336"
       },
       "topicDetails": {
         "topicCategories": [
@@ -285,11 +410,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 52,
     "metrics": {
-      "views": 2397623,
-      "likes": 34323,
-      "comments": 83910,
-      "engagement_rate": 4.93,
-      "daily_views": 266402
+      "views": 2418585,
+      "likes": 34364,
+      "comments": 83967,
+      "engagement_rate": 4.89,
+      "daily_views": 268731
     },
     "metrics_history": [
       {
@@ -302,16 +427,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 2397623,
-        "likes": 34323,
-        "comments": 83910,
-        "engagement_rate": 4.93,
-        "daily_views": 266402
+        "views": 2418585,
+        "likes": 34364,
+        "comments": 83967,
+        "engagement_rate": 4.89,
+        "daily_views": 268731
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "mHMvwkgtik663mT-hvB6lUr4jR4",
+      "etag": "egr2a5P87brpIS5BjPTBELmFs3c",
       "id": "TfvYFX06Mes",
       "snippet": {
         "publishedAt": "2026-07-25T11:00:28Z",
@@ -376,10 +501,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2397623",
-        "likeCount": "34323",
+        "viewCount": "2418585",
+        "likeCount": "34364",
         "favoriteCount": "0",
-        "commentCount": "83910"
+        "commentCount": "83967"
       },
       "topicDetails": {
         "topicCategories": [
@@ -401,18 +526,18 @@
     "pub_date": "2026-07-31",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%20BE%3AFIRST",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-03",
     "valid_until": "2026-11-01",
-    "trend_score": 52,
+    "trend_score": 53,
     "metrics": {
-      "views": 2955782,
-      "likes": 60324,
-      "comments": 5104,
-      "engagement_rate": 2.21,
-      "daily_views": 985260
+      "views": 3135321,
+      "likes": 60626,
+      "comments": 5162,
+      "engagement_rate": 2.1,
+      "daily_views": 1045107
     },
     "metrics_history": [
       {
@@ -425,16 +550,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 2955782,
-        "likes": 60324,
-        "comments": 5104,
-        "engagement_rate": 2.21,
-        "daily_views": 985260
+        "views": 3135321,
+        "likes": 60626,
+        "comments": 5162,
+        "engagement_rate": 2.1,
+        "daily_views": 1045107
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "1Cyu-5m9ZDbMYcAqHvSFK3jjQ2U",
+      "etag": "VXrQ4MUMjPzTN4Aec56x0O9LEj4",
       "id": "gXNbJEYuoSw",
       "snippet": {
         "publishedAt": "2026-07-31T04:00:06Z",
@@ -496,10 +621,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2955782",
-        "likeCount": "60324",
+        "viewCount": "3135321",
+        "likeCount": "60626",
         "favoriteCount": "0",
-        "commentCount": "5104"
+        "commentCount": "5162"
       },
       "topicDetails": {
         "topicCategories": [
@@ -514,509 +639,6 @@
         "actualStartTime": "2026-07-31T04:00:06Z",
         "actualEndTime": "2026-07-31T04:06:17Z",
         "scheduledStartTime": "2026-07-31T04:00:00Z"
-      }
-    }
-  },
-  {
-    "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
-    "artist": "M!LK - Topic",
-    "video_url": "https://www.youtube.com/watch?v=oFzP7YKS5gM",
-    "jasrac_search_title": "罪と罰",
-    "jasrac_search_artist": "椎名林檎",
-    "jasrac_code": "ISWC:T-101.649.409-8",
-    "rights_status": "MusicBrainzでISWCコード確認済み",
-    "pub_date": "2026-08-02",
-    "source_name": "MusicBrainz",
-    "source_url": "https://musicbrainz.org/work/8d2b5f56-c26f-496c-a667-b359f64a2d35",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
-    "trend_score": 50,
-    "metrics": {
-      "views": 671289,
-      "likes": 45578,
-      "comments": 3930,
-      "engagement_rate": 7.38,
-      "daily_views": 671289
-    },
-    "metrics_history": [
-      {
-        "date": "2026-08-02",
-        "views": 139578,
-        "likes": 22906,
-        "comments": 2581,
-        "engagement_rate": 18.26,
-        "daily_views": 139578
-      },
-      {
-        "date": "2026-08-03",
-        "views": 682413,
-        "likes": 93876,
-        "comments": 10150,
-        "engagement_rate": 15.24,
-        "daily_views": 682413
-      }
-    ],
-    "raw_youtube": {
-      "kind": "youtube#video",
-      "etag": "v09qPvlSfNS2OFuEZSMaA4lhM90",
-      "id": "oFzP7YKS5gM",
-      "snippet": {
-        "publishedAt": "2026-08-02T10:00:05Z",
-        "channelId": "UChbU0n7P86fWdZtlzCNCeGg",
-        "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
-        "description": "Provided to YouTube by Victor Entertainment, Inc.\n\n罪と罰と雨とキス (佐野勇斗&吉田仁人) · M!LK\n\n罪と罰と雨とキス (佐野勇斗&吉田仁人)\n\n℗ 2026 Victor Entertainment\n\nReleased on: 2026-08-03\n\nComposer: 三好啓太\nLyricist: 児玉雨子, 三好啓太\n\nAuto-generated by YouTube.",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/oFzP7YKS5gM/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/oFzP7YKS5gM/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/oFzP7YKS5gM/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/oFzP7YKS5gM/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/oFzP7YKS5gM/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "M!LK - Topic",
-        "tags": [
-          "M!LK",
-          "ミルク",
-          "罪と罰と雨とキス (佐野勇斗&吉田仁人)"
-        ],
-        "categoryId": "10",
-        "liveBroadcastContent": "none",
-        "defaultLanguage": "ja",
-        "localized": {
-          "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
-          "description": "Provided to YouTube by Victor Entertainment, Inc.\n\n罪と罰と雨とキス (佐野勇斗&吉田仁人) · M!LK\n\n罪と罰と雨とキス (佐野勇斗&吉田仁人)\n\n℗ 2026 Victor Entertainment\n\nReleased on: 2026-08-03\n\nComposer: 三好啓太\nLyricist: 児玉雨子, 三好啓太\n\nAuto-generated by YouTube."
-        },
-        "defaultAudioLanguage": "ja"
-      },
-      "contentDetails": {
-        "duration": "PT3M43S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "false",
-        "licensedContent": true,
-        "regionRestriction": {
-          "allowed": [
-            "AD",
-            "AE",
-            "AF",
-            "AG",
-            "AI",
-            "AL",
-            "AM",
-            "AO",
-            "AQ",
-            "AR",
-            "AS",
-            "AT",
-            "AU",
-            "AW",
-            "AX",
-            "AZ",
-            "BA",
-            "BB",
-            "BD",
-            "BE",
-            "BF",
-            "BG",
-            "BH",
-            "BI",
-            "BJ",
-            "BL",
-            "BM",
-            "BN",
-            "BO",
-            "BQ",
-            "BR",
-            "BS",
-            "BT",
-            "BV",
-            "BW",
-            "BY",
-            "BZ",
-            "CA",
-            "CC",
-            "CD",
-            "CF",
-            "CG",
-            "CH",
-            "CI",
-            "CK",
-            "CL",
-            "CM",
-            "CN",
-            "CO",
-            "CR",
-            "CU",
-            "CV",
-            "CW",
-            "CX",
-            "CY",
-            "CZ",
-            "DE",
-            "DJ",
-            "DK",
-            "DM",
-            "DO",
-            "DZ",
-            "EC",
-            "EE",
-            "EG",
-            "EH",
-            "ER",
-            "ES",
-            "ET",
-            "FI",
-            "FJ",
-            "FK",
-            "FM",
-            "FO",
-            "FR",
-            "GA",
-            "GB",
-            "GD",
-            "GE",
-            "GF",
-            "GG",
-            "GH",
-            "GI",
-            "GL",
-            "GM",
-            "GN",
-            "GP",
-            "GQ",
-            "GR",
-            "GS",
-            "GT",
-            "GU",
-            "GW",
-            "GY",
-            "HK",
-            "HM",
-            "HN",
-            "HR",
-            "HT",
-            "HU",
-            "ID",
-            "IE",
-            "IL",
-            "IM",
-            "IN",
-            "IO",
-            "IQ",
-            "IR",
-            "IS",
-            "IT",
-            "JE",
-            "JM",
-            "JO",
-            "JP",
-            "KE",
-            "KG",
-            "KH",
-            "KI",
-            "KM",
-            "KN",
-            "KP",
-            "KR",
-            "KW",
-            "KY",
-            "KZ",
-            "LA",
-            "LB",
-            "LC",
-            "LI",
-            "LK",
-            "LR",
-            "LS",
-            "LT",
-            "LU",
-            "LV",
-            "LY",
-            "MA",
-            "MC",
-            "MD",
-            "ME",
-            "MF",
-            "MG",
-            "MH",
-            "MK",
-            "ML",
-            "MM",
-            "MN",
-            "MO",
-            "MP",
-            "MQ",
-            "MR",
-            "MS",
-            "MT",
-            "MU",
-            "MV",
-            "MW",
-            "MX",
-            "MY",
-            "MZ",
-            "NA",
-            "NC",
-            "NE",
-            "NF",
-            "NG",
-            "NI",
-            "NL",
-            "NO",
-            "NP",
-            "NR",
-            "NU",
-            "NZ",
-            "OM",
-            "PA",
-            "PE",
-            "PF",
-            "PG",
-            "PH",
-            "PK",
-            "PL",
-            "PM",
-            "PN",
-            "PR",
-            "PS",
-            "PT",
-            "PW",
-            "PY",
-            "QA",
-            "RE",
-            "RO",
-            "RS",
-            "RU",
-            "RW",
-            "SA",
-            "SB",
-            "SC",
-            "SD",
-            "SE",
-            "SG",
-            "SH",
-            "SI",
-            "SJ",
-            "SK",
-            "SL",
-            "SM",
-            "SN",
-            "SO",
-            "SR",
-            "SS",
-            "ST",
-            "SV",
-            "SX",
-            "SY",
-            "SZ",
-            "TC",
-            "TD",
-            "TF",
-            "TG",
-            "TH",
-            "TJ",
-            "TK",
-            "TL",
-            "TM",
-            "TN",
-            "TO",
-            "TR",
-            "TT",
-            "TV",
-            "TW",
-            "TZ",
-            "UA",
-            "UG",
-            "UM",
-            "US",
-            "UY",
-            "UZ",
-            "VA",
-            "VC",
-            "VE",
-            "VG",
-            "VI",
-            "VN",
-            "VU",
-            "WF",
-            "WS",
-            "YE",
-            "YT",
-            "ZA",
-            "ZM",
-            "ZW"
-          ]
-        },
-        "contentRating": {},
-        "projection": "rectangular"
-      },
-      "status": {
-        "uploadStatus": "processed",
-        "privacyStatus": "public",
-        "license": "youtube",
-        "embeddable": true,
-        "publicStatsViewable": true,
-        "madeForKids": false
-      },
-      "statistics": {
-        "viewCount": "671289",
-        "likeCount": "45578",
-        "favoriteCount": "0",
-        "commentCount": "3930"
-      },
-      "topicDetails": {
-        "topicCategories": [
-          "https://en.wikipedia.org/wiki/Music",
-          "https://en.wikipedia.org/wiki/Music_of_Asia",
-          "https://en.wikipedia.org/wiki/Pop_music"
-        ]
-      }
-    }
-  },
-  {
-    "title": "罪と罰と雨とキス (佐野勇斗&吉田仁人)",
-    "artist": "M!LK - Topic",
-    "video_url": "https://www.youtube.com/watch?v=7VqCdhFGE78",
-    "jasrac_search_title": "罪と罰",
-    "jasrac_search_artist": "椎名林檎",
-    "jasrac_code": "ISWC:T-101.649.409-8",
-    "rights_status": "MusicBrainzでISWCコード確認済み",
-    "pub_date": "2026-08-02",
-    "source_name": "MusicBrainz",
-    "source_url": "https://musicbrainz.org/work/8d2b5f56-c26f-496c-a667-b359f64a2d35",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E6%A4%8E%E5%90%8D%E6%9E%97%E6%AA%8E%20%E7%BD%AA%E3%81%A8%E7%BD%B0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
-    "trend_score": 50,
-    "metrics": {
-      "views": 682413,
-      "likes": 93876,
-      "comments": 10150,
-      "engagement_rate": 15.24,
-      "daily_views": 682413
-    },
-    "metrics_history": [
-      {
-        "date": "2026-08-02",
-        "views": 139578,
-        "likes": 22906,
-        "comments": 2581,
-        "engagement_rate": 18.26,
-        "daily_views": 139578
-      },
-      {
-        "date": "2026-08-03",
-        "views": 682413,
-        "likes": 93876,
-        "comments": 10150,
-        "engagement_rate": 15.24,
-        "daily_views": 682413
-      }
-    ],
-    "raw_youtube": {
-      "kind": "youtube#video",
-      "etag": "H9ViCE1md-1oEtikMQY6r6vgE34",
-      "id": "7VqCdhFGE78",
-      "snippet": {
-        "publishedAt": "2026-08-03T09:00:06Z",
-        "channelId": "UCFvSFbT8okMrpuFxBEIB2lg",
-        "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          },
-          "standard": {
-            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/sddefault.jpg",
-            "width": 640,
-            "height": 480
-          },
-          "maxres": {
-            "url": "https://i.ytimg.com/vi/7VqCdhFGE78/maxresdefault.jpg",
-            "width": 1280,
-            "height": 720
-          }
-        },
-        "channelTitle": "M!LK",
-        "categoryId": "10",
-        "liveBroadcastContent": "none",
-        "defaultLanguage": "ja",
-        "localized": {
-          "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
-        },
-        "defaultAudioLanguage": "ja"
-      },
-      "contentDetails": {
-        "duration": "PT3M48S",
-        "dimension": "2d",
-        "definition": "hd",
-        "caption": "true",
-        "licensedContent": true,
-        "contentRating": {},
-        "projection": "rectangular"
-      },
-      "status": {
-        "uploadStatus": "processed",
-        "privacyStatus": "public",
-        "license": "youtube",
-        "embeddable": true,
-        "publicStatsViewable": true,
-        "madeForKids": false
-      },
-      "statistics": {
-        "viewCount": "682413",
-        "likeCount": "93876",
-        "favoriteCount": "0",
-        "commentCount": "10150"
-      },
-      "topicDetails": {
-        "topicCategories": [
-          "https://en.wikipedia.org/wiki/Music",
-          "https://en.wikipedia.org/wiki/Music_of_Asia",
-          "https://en.wikipedia.org/wiki/Pop_music"
-        ]
-      },
-      "liveStreamingDetails": {
-        "actualStartTime": "2026-08-03T09:00:06Z",
-        "actualEndTime": "2026-08-03T09:05:54Z",
-        "scheduledStartTime": "2026-08-03T09:00:00Z"
       }
     }
   },
@@ -1038,11 +660,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 51,
     "metrics": {
-      "views": 1294733,
-      "likes": 30293,
-      "comments": 1157,
-      "engagement_rate": 2.43,
-      "daily_views": 258946
+      "views": 1327935,
+      "likes": 30432,
+      "comments": 1163,
+      "engagement_rate": 2.38,
+      "daily_views": 221322
     },
     "metrics_history": [
       {
@@ -1055,16 +677,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 1294733,
-        "likes": 30293,
-        "comments": 1157,
-        "engagement_rate": 2.43,
-        "daily_views": 258946
+        "views": 1327935,
+        "likes": 30432,
+        "comments": 1163,
+        "engagement_rate": 2.38,
+        "daily_views": 221322
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "IH9VHS0wv09GraAWgT4jtbGVBlI",
+      "etag": "hyI_rYYpS7-71u8ss4kXX7uhyO4",
       "id": "gT5XyATc-Z8",
       "snippet": {
         "publishedAt": "2026-07-28T15:00:29Z",
@@ -1136,10 +758,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1294733",
-        "likeCount": "30293",
+        "viewCount": "1327935",
+        "likeCount": "30432",
         "favoriteCount": "0",
-        "commentCount": "1157"
+        "commentCount": "1163"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1170,11 +792,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 51,
     "metrics": {
-      "views": 1711471,
-      "likes": 29647,
-      "comments": 7579,
-      "engagement_rate": 2.18,
-      "daily_views": 570490
+      "views": 1846395,
+      "likes": 29874,
+      "comments": 7660,
+      "engagement_rate": 2.03,
+      "daily_views": 615465
     },
     "metrics_history": [
       {
@@ -1187,16 +809,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 1711471,
-        "likes": 29647,
-        "comments": 7579,
-        "engagement_rate": 2.18,
-        "daily_views": 570490
+        "views": 1846395,
+        "likes": 29874,
+        "comments": 7660,
+        "engagement_rate": 2.03,
+        "daily_views": 615465
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "PInplMosS2kT_6c8zucLVA_w1o8",
+      "etag": "1xUSBaX3lI_0sMzS9o0plhrYhro",
       "id": "eN2NlzPdcrs",
       "snippet": {
         "publishedAt": "2026-07-31T03:59:32Z",
@@ -1286,10 +908,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1711471",
-        "likeCount": "29647",
+        "viewCount": "1846395",
+        "likeCount": "29874",
         "favoriteCount": "0",
-        "commentCount": "7579"
+        "commentCount": "7660"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1311,18 +933,18 @@
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%22&type=work",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%E4%B8%8D%E6%98%8E",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E4%B8%8D%E6%98%8E%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-03",
     "valid_until": "2026-11-01",
     "trend_score": 51,
     "metrics": {
-      "views": 1434607,
-      "likes": 23886,
+      "views": 1479764,
+      "likes": 24207,
       "comments": 0,
-      "engagement_rate": 1.66,
-      "daily_views": 159400
+      "engagement_rate": 1.64,
+      "daily_views": 147976
     },
     "metrics_history": [
       {
@@ -1335,16 +957,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 1434607,
-        "likes": 23886,
+        "views": 1479764,
+        "likes": 24207,
         "comments": 0,
-        "engagement_rate": 1.66,
-        "daily_views": 159400
+        "engagement_rate": 1.64,
+        "daily_views": 147976
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "sbZCm3eMvtN0nQlcz-bZtdswamk",
+      "etag": "nHWfzefMVnSvB7MkqMWIjU7IiIo",
       "id": "lI7efayDEeU",
       "snippet": {
         "publishedAt": "2026-07-24T15:03:34Z",
@@ -1423,8 +1045,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1434607",
-        "likeCount": "23886",
+        "viewCount": "1479764",
+        "likeCount": "24207",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -1454,11 +1076,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 51,
     "metrics": {
-      "views": 1706495,
-      "likes": 67402,
-      "comments": 6318,
-      "engagement_rate": 4.32,
-      "daily_views": 170649
+      "views": 1732862,
+      "likes": 67531,
+      "comments": 6321,
+      "engagement_rate": 4.26,
+      "daily_views": 173286
     },
     "metrics_history": [
       {
@@ -1471,16 +1093,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 1706495,
-        "likes": 67402,
-        "comments": 6318,
-        "engagement_rate": 4.32,
-        "daily_views": 170649
+        "views": 1732862,
+        "likes": 67531,
+        "comments": 6321,
+        "engagement_rate": 4.26,
+        "daily_views": 173286
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "ujMlFfsRfp2sw5r9lalZjCo1RU0",
+      "etag": "cLxytHhYPodIZpIZ4xws5G3dZOo",
       "id": "81CpK8nCvFw",
       "snippet": {
         "publishedAt": "2026-07-24T12:00:25Z",
@@ -1542,10 +1164,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1706495",
-        "likeCount": "67402",
+        "viewCount": "1732862",
+        "likeCount": "67531",
         "favoriteCount": "0",
-        "commentCount": "6318"
+        "commentCount": "6321"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1568,17 +1190,17 @@
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/3e789d6d-3b7a-4a29-b418-f907566516aa",
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E5%BC%8C%E8%AA%A0",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E5%BC%8C%E8%AA%A0%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E7%AB%A5%E8%A9%B1%E3%83%9E%E3%82%A8%E3%82%B9%E3%83%88%E3%83%AD",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E7%AB%A5%E8%A9%B1%E3%83%9E%E3%82%A8%E3%82%B9%E3%83%88%E3%83%AD%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-03",
     "valid_until": "2026-11-01",
     "trend_score": 53,
     "metrics": {
-      "views": 3090681,
-      "likes": 88567,
-      "comments": 3262,
-      "engagement_rate": 2.97,
-      "daily_views": 343409
+      "views": 3319389,
+      "likes": 88857,
+      "comments": 3268,
+      "engagement_rate": 2.78,
+      "daily_views": 368821
     },
     "metrics_history": [
       {
@@ -1591,16 +1213,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 3090681,
-        "likes": 88567,
-        "comments": 3262,
-        "engagement_rate": 2.97,
-        "daily_views": 343409
+        "views": 3319389,
+        "likes": 88857,
+        "comments": 3268,
+        "engagement_rate": 2.78,
+        "daily_views": 368821
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "Kw2lLc7WOHjCe8auAOfg5kmNNJc",
+      "etag": "N8eW10nw7wgENoOIbrUwQOh6X74",
       "id": "uWKFyDPajeo",
       "snippet": {
         "publishedAt": "2026-07-25T14:00:20Z",
@@ -1662,10 +1284,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3090681",
-        "likeCount": "88567",
+        "viewCount": "3319389",
+        "likeCount": "88857",
         "favoriteCount": "0",
-        "commentCount": "3262"
+        "commentCount": "3268"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1692,11 +1314,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 56,
     "metrics": {
-      "views": 6867703,
-      "likes": 396228,
-      "comments": 29228,
-      "engagement_rate": 6.2,
-      "daily_views": 858462
+      "views": 6931852,
+      "likes": 397585,
+      "comments": 29285,
+      "engagement_rate": 6.16,
+      "daily_views": 866481
     },
     "metrics_history": [
       {
@@ -1709,16 +1331,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 6867703,
-        "likes": 396228,
-        "comments": 29228,
-        "engagement_rate": 6.2,
-        "daily_views": 858462
+        "views": 6931852,
+        "likes": 397585,
+        "comments": 29285,
+        "engagement_rate": 6.16,
+        "daily_views": 866481
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "WMgfnwnmS0o3WWbCVDtfpRce_dI",
+      "etag": "44v0-ITgctBjgFA8sW_9Xth9qio",
       "id": "_Pk6xfju3l0",
       "snippet": {
         "publishedAt": "2026-07-26T11:00:03Z",
@@ -1786,10 +1408,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "6867703",
-        "likeCount": "396228",
+        "viewCount": "6931852",
+        "likeCount": "397585",
         "favoriteCount": "0",
-        "commentCount": "29228"
+        "commentCount": "29285"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1811,18 +1433,18 @@
     "pub_date": "2026-07-24",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%22&type=work",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%20%E4%B8%8D%E6%98%8E",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E4%B8%8D%E6%98%8E%20%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%20%E3%83%AA%E3%82%BA%E3%83%A0%E6%84%9F%E3%81%AE%E3%81%82%E3%82%8B%E8%80%85%E3%81%9F%E3%81%A1ver.%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%20%28%E3%83%AA%E3%82%BA%E3%83%A0%E6%84%9F%E3%81%AE%E3%81%82%E3%82%8B%E8%80%85%E3%81%9F%E3%81%A1ver.%29%20%E3%81%86%E3%81%95%E3%81%8E%28CV.%E5%B0%8F%E6%BE%A4%E4%BA%9C%E6%9D%8E%29%2C%20%E3%83%A2%E3%83%A2%E3%83%B3%E3%82%AC%28CV.%E4%BA%95%E5%8F%A3%E8%A3%95%E9%A6%99%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%81%86%E3%81%95%E3%81%8E%28CV.%E5%B0%8F%E6%BE%A4%E4%BA%9C%E6%9D%8E%29%2C%20%E3%83%A2%E3%83%A2%E3%83%B3%E3%82%AC%28CV.%E4%BA%95%E5%8F%A3%E8%A3%95%E9%A6%99%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29%20%E3%81%86%E3%81%95%E3%81%8E%E3%83%A9%E3%83%83%E3%83%97%20%28%E3%83%AA%E3%82%BA%E3%83%A0%E6%84%9F%E3%81%AE%E3%81%82%E3%82%8B%E8%80%85%E3%81%9F%E3%81%A1ver.%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
     "verified_at": "2026-08-03",
     "valid_until": "2026-11-01",
     "trend_score": 50,
     "metrics": {
-      "views": 904582,
-      "likes": 17354,
+      "views": 928144,
+      "likes": 17529,
       "comments": 0,
-      "engagement_rate": 1.92,
-      "daily_views": 100509
+      "engagement_rate": 1.89,
+      "daily_views": 92814
     },
     "metrics_history": [
       {
@@ -1835,16 +1457,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 904582,
-        "likes": 17354,
+        "views": 928144,
+        "likes": 17529,
         "comments": 0,
-        "engagement_rate": 1.92,
-        "daily_views": 100509
+        "engagement_rate": 1.89,
+        "daily_views": 92814
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "rALkJzG-RnRIKrivOt0B5VKP_FU",
+      "etag": "WQIbQ1-kNKC6aoDHaqH7MK6vkRM",
       "id": "HZcpB0PfG6g",
       "snippet": {
         "publishedAt": "2026-07-24T15:03:27Z",
@@ -1925,8 +1547,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "904582",
-        "likeCount": "17354",
+        "viewCount": "928144",
+        "likeCount": "17529",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -1955,11 +1577,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 50,
     "metrics": {
-      "views": 479126,
-      "likes": 15076,
+      "views": 490618,
+      "likes": 15166,
       "comments": 0,
-      "engagement_rate": 3.15,
-      "daily_views": 79854
+      "engagement_rate": 3.09,
+      "daily_views": 81769
     },
     "metrics_history": [
       {
@@ -1972,16 +1594,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 479126,
-        "likes": 15076,
+        "views": 490618,
+        "likes": 15166,
         "comments": 0,
-        "engagement_rate": 3.15,
-        "daily_views": 79854
+        "engagement_rate": 3.09,
+        "daily_views": 81769
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "gkImWckjbeN7a7Lvvl-HYMuEm54",
+      "etag": "t_gW4UfzGPdTDqUT4CTfICG1j0w",
       "id": "VdDPPWb5cF8",
       "snippet": {
         "publishedAt": "2026-07-28T10:01:53Z",
@@ -2300,8 +1922,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "479126",
-        "likeCount": "15076",
+        "viewCount": "490618",
+        "likeCount": "15166",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -2332,11 +1954,11 @@
     "valid_until": "2026-11-01",
     "trend_score": 50,
     "metrics": {
-      "views": 831882,
-      "likes": 14682,
+      "views": 854280,
+      "likes": 14785,
       "comments": 0,
-      "engagement_rate": 1.76,
-      "daily_views": 92431
+      "engagement_rate": 1.73,
+      "daily_views": 85428
     },
     "metrics_history": [
       {
@@ -2349,16 +1971,16 @@
       },
       {
         "date": "2026-08-03",
-        "views": 831882,
-        "likes": 14682,
+        "views": 854280,
+        "likes": 14785,
         "comments": 0,
-        "engagement_rate": 1.76,
-        "daily_views": 92431
+        "engagement_rate": 1.73,
+        "daily_views": 85428
       }
     ],
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "LoLbAO66s99zo687XZRX65P-yyg",
+      "etag": "Yiw50f0-A91GS9EyyTgnEKh_7Is",
       "id": "x3sOXlcrpLg",
       "snippet": {
         "publishedAt": "2026-07-24T15:02:25Z",
@@ -2431,8 +2053,138 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "831882",
-        "likeCount": "14682",
+        "viewCount": "854280",
+        "likeCount": "14785",
+        "favoriteCount": "0",
+        "commentCount": "0"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia"
+        ]
+      }
+    }
+  },
+  {
+    "title": "くつずれ",
+    "artist": "Release - Topic",
+    "video_url": "https://www.youtube.com/watch?v=9VoZ0BwjBbk",
+    "jasrac_search_title": "くつずれ",
+    "jasrac_search_artist": "Release - Topic",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "rights_status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-07-24",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20Release",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Release%20%E3%81%8F%E3%81%A4%E3%81%9A%E3%82%8C%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-03",
+    "valid_until": "2026-11-01",
+    "trend_score": 50,
+    "metrics": {
+      "views": 893495,
+      "likes": 12070,
+      "comments": 0,
+      "engagement_rate": 1.35,
+      "daily_views": 89349
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-02",
+        "views": 808936,
+        "likes": 11276,
+        "comments": 0,
+        "engagement_rate": 1.39,
+        "daily_views": 89881
+      },
+      {
+        "date": "2026-08-03",
+        "views": 893495,
+        "likes": 12070,
+        "comments": 0,
+        "engagement_rate": 1.35,
+        "daily_views": 89349
+      }
+    ],
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "Jr3p92NvlmxcG-Kwv8MM2gzv4a4",
+      "id": "9VoZ0BwjBbk",
+      "snippet": {
+        "publishedAt": "2026-07-24T15:04:58Z",
+        "channelId": "UCHIghtlfPyAn1pzvPTg2SYw",
+        "title": "くつずれ",
+        "description": "Provided to YouTube by QTORY RECORDS\n\nくつずれ · Hachiware(CV:Tanaka Makoto)\n\n[Chiikawa the Movie: The Secret of the Mermaid Island] Original Soundtrack Part1\n\n℗ 2026 QTORY RECORDS\n\nReleased on: 2026-07-25\n\nComposer: SHUGO TOKUMARU\nLyricist: nagano\n\nAuto-generated by YouTube.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9VoZ0BwjBbk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9VoZ0BwjBbk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9VoZ0BwjBbk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9VoZ0BwjBbk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9VoZ0BwjBbk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Release - Topic",
+        "tags": [
+          "Hachiware(CV:Tanaka Makoto)",
+          "ハチワレ（CV.田中誠人）",
+          "ハチワレ シーブイ タナカマコト",
+          "[Chiikawa the Movie: The Secret of the Mermaid Island] Original Soundtrack Part1",
+          "Kutsuzure"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "くつずれ",
+          "description": "Provided to YouTube by QTORY RECORDS\n\nくつずれ · Hachiware(CV:Tanaka Makoto)\n\n[Chiikawa the Movie: The Secret of the Mermaid Island] Original Soundtrack Part1\n\n℗ 2026 QTORY RECORDS\n\nReleased on: 2026-07-25\n\nComposer: SHUGO TOKUMARU\nLyricist: nagano\n\nAuto-generated by YouTube."
+        }
+      },
+      "contentDetails": {
+        "duration": "PT3M1S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "regionRestriction": {
+          "allowed": [
+            "JP"
+          ]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "893495",
+        "likeCount": "12070",
         "favoriteCount": "0",
         "commentCount": "0"
       },
