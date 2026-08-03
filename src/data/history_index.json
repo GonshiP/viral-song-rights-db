@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-08-02",
+    "count": 2,
+    "path": "src/data/history/2026-08-02.json"
+  },
+  {
+    "date": "2026-08-03",
+    "count": 15,
+    "path": "src/data/history/2026-08-03.json"
+  }
+]

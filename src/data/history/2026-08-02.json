@@ -1,0 +1,111 @@
+[
+  {
+    "title": "Mrs. GREEN APPLE「Brand New」Official Music Video",
+    "artist": "Mrs. GREEN APPLE",
+    "video_url": "https://www.youtube.com/watch?v=dePs7UPp6GQ",
+    "jasrac_search_title": "Brand New",
+    "jasrac_search_artist": "Mrs. GREEN APPLE",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "rights_status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-07-31",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/0c9b4735-4e43-30db-b061-f4f4de6d70c3",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22Brand%20New%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Brand%20New%20Mrs.%20GREEN%20APPLE",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20Brand%20New%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-02",
+    "valid_until": "2026-10-31",
+    "trend_score": 51,
+    "metrics": {
+      "views": 1987143,
+      "likes": 92236,
+      "comments": 6370,
+      "engagement_rate": 4.96,
+      "daily_views": 993571
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-02",
+        "views": 1987143,
+        "likes": 92236,
+        "comments": 6370,
+        "engagement_rate": 4.96,
+        "daily_views": 993571
+      }
+    ],
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "id": "dePs7UPp6GQ",
+      "snippet": {
+        "publishedAt": "2026-07-31T12:00:00Z",
+        "channelId": "UC_C29Tky9rE",
+        "title": "Mrs. GREEN APPLE「Brand New」Official Music Video",
+        "description": "Mrs. GREEN APPLE「Brand New」Music Video",
+        "thumbnails": {
+          "default": { "url": "https://i.ytimg.com/vi/dePs7UPp6GQ/default.jpg" },
+          "high": { "url": "https://i.ytimg.com/vi/dePs7UPp6GQ/hqdefault.jpg" }
+        },
+        "channelTitle": "Mrs. GREEN APPLE",
+        "categoryId": "10",
+        "liveBroadcastContent": "none"
+      },
+      "statistics": {
+        "viewCount": "1987143",
+        "likeCount": "92236",
+        "commentCount": "6370"
+      }
+    }
+  },
+  {
+    "title": "Snow Man - グッタイム / THE FIRST TAKE",
+    "artist": "THE FIRST TAKE",
+    "video_url": "https://www.youtube.com/watch?v=JofSrfFV4Kw",
+    "jasrac_search_title": "グッタイム",
+    "jasrac_search_artist": "Snow Man",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "rights_status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-07-24",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20Snow%20Man",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-02",
+    "valid_until": "2026-10-31",
+    "trend_score": 55,
+    "metrics": {
+      "views": 5826583,
+      "likes": 171886,
+      "comments": 14154,
+      "engagement_rate": 3.19,
+      "daily_views": 647398
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-02",
+        "views": 5826583,
+        "likes": 171886,
+        "comments": 14154,
+        "engagement_rate": 3.19,
+        "daily_views": 647398
+      }
+    ],
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "id": "JofSrfFV4Kw",
+      "snippet": {
+        "publishedAt": "2026-07-24T13:00:00Z",
+        "channelId": "UC9zY_E8mcAo_Oq772LEZq8Q",
+        "title": "Snow Man - グッタイム / THE FIRST TAKE",
+        "description": "THE FIRST TAKE Snow Man",
+        "channelTitle": "THE FIRST TAKE",
+        "categoryId": "10"
+      },
+      "statistics": {
+        "viewCount": "5826583",
+        "likeCount": "171886",
+        "commentCount": "14154"
+      }
+    }
+  }
+]

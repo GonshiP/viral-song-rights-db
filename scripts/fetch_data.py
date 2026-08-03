@@ -7,6 +7,9 @@ MASTER_DB_PATH = 'src/data/rights_master.json'
 CSV_OUTPUT_PATH = 'public/downloads/viral_song_rights_master.csv'
 VALIDITY_DAYS = 90
 
+HISTORY_DIR = 'src/data/history'
+HISTORY_INDEX_PATH = 'src/data/history_index.json'
+
 def get_dates():
     today = datetime.date.today()
     return today.strftime("%Y-%m-%d"), (today + datetime.timedelta(days=VALIDITY_DAYS)).strftime("%Y-%m-%d")
@@ -15,6 +18,33 @@ def save_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+def update_history_snapshots(today_str, trending_songs):
+    """日毎のDB更新時に個別の履歴JSONファイルおよびインデックスファイルを生成・更新"""
+    os.makedirs(HISTORY_DIR, exist_ok=True)
+    today_snapshot_path = os.path.join(HISTORY_DIR, f"{today_str}.json")
+    save_json(today_snapshot_path, trending_songs)
+    print(f"[DEBUG - History Snapshot] 日次DB履歴保存完了: '{today_snapshot_path}' ({len(trending_songs)} 件)")
+
+    # 既存の全履歴ファイルを取得してインデックス更新
+    history_files = sorted([f for f in os.listdir(HISTORY_DIR) if f.endswith('.json')])
+    index_data = []
+    for hf in history_files:
+        h_date = hf.replace('.json', '')
+        hf_path = os.path.join(HISTORY_DIR, hf)
+        try:
+            with open(hf_path, 'r', encoding='utf-8') as f:
+                h_items = json.load(f)
+                index_data.append({
+                    "date": h_date,
+                    "count": len(h_items),
+                    "path": f"src/data/history/{hf}"
+                })
+        except Exception:
+            pass
+
+    save_json(HISTORY_INDEX_PATH, index_data)
+    print(f"[DEBUG - History Index] 履歴インデックス更新完了 ({len(index_data)} 日分録)")
 
 def get_season_tag(d_str):
     try:
@@ -273,14 +303,20 @@ def load_master_db():
                 for entry in data:
                     entry.pop("season_tag", None)
                     t, a = entry.get('jasrac_search_title', entry.get('title','')), entry.get('jasrac_search_artist', entry.get('artist',''))
-                    entry.setdefault("last_metrics", {"views": 0, "likes": 0, "comments": 0, "engagement_rate": 0.0, "daily_views": 0})
+                    last_m = entry.setdefault("last_metrics", {"views": 0, "likes": 0, "comments": 0, "engagement_rate": 0.0, "daily_views": 0})
                     entry.setdefault("source_name", "MusicBrainz")
                     entry.setdefault("source_url", "https://musicbrainz.org")
-                    entry.setdefault("verified_at", entry.get("added_date", today_str))
+                    v_at = entry.setdefault("verified_at", entry.get("added_date", today_str))
                     entry.setdefault("valid_until", valid_until_str)
                     entry.setdefault("jasrac_search_title", t)
                     entry.setdefault("jasrac_search_artist", a)
                     entry.setdefault("video_url", "")
+                    entry.setdefault("raw_youtube", {})
+                    
+                    # メトリクス履歴の初期化
+                    metrics_hist = entry.setdefault("metrics_history", [])
+                    if not metrics_hist and last_m and (last_m.get("views", 0) > 0 or last_m.get("likes", 0) > 0):
+                        metrics_hist.append({"date": v_at, **last_m})
                     
                     code = entry.get("jasrac_code", "")
                     status = entry.get("status", "")
@@ -309,9 +345,11 @@ def load_master_db():
     print("[DEBUG - DB Load] マスターDBが存在しないため、新規空DB作成モードで開始します。")
     return []
 
-def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None, video_url=""):
-    """【客観ファクト記録】動画URLを含むメタデータと許諾ステータスを自動保持"""
+def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_db, ai_info=None, video_url="", raw_youtube=None):
+    """【客観ファクト記録】YouTube APIレスポンス全項目を含むメタデータ、履歴、許諾ステータスを自動保持"""
     today_str, valid_until_str = get_dates()
+    if raw_youtube is None:
+        raw_youtube = {}
     
     if not ai_info:
         fallback_title, fallback_artist = clean_song_and_artist_advanced(raw_title, raw_artist)
@@ -349,6 +387,14 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
                 if code == "コード未取得" or "参考候補" in code:
                     entry["jasrac_code"] = "公式表記確認済み (J-WID検索推奨)"
 
+            # 日次メトリクス履歴の追加／更新
+            hist = entry.setdefault("metrics_history", [])
+            existing_today = next((item for item in hist if item.get("date") == today_str), None)
+            if existing_today:
+                existing_today.update(metrics)
+            else:
+                hist.append({"date": today_str, **metrics})
+
             entry.update({
                 "last_metrics": metrics, 
                 "verified_at": today_str, 
@@ -357,9 +403,10 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
                 "mb_search_url": mb_search_url,
                 "jasrac_search_url": jasrac_search_url,
                 "karaoke_search_url": karaoke_url,
-                "video_url": video_url or entry.get("video_url", "")
+                "video_url": video_url or entry.get("video_url", ""),
+                "raw_youtube": raw_youtube or entry.get("raw_youtube", {})
             })
-            print(f"[DEBUG - Match Existing] 既存楽曲ヒット: '{final_title}' (メトリクス更新)")
+            print(f"[DEBUG - Match Existing] 既存楽曲ヒット: '{final_title}' (メトリクス＆履歴更新)")
             return entry, master_db, False
 
     # 新曲検知 & MusicBrainz ISWC取得
@@ -393,7 +440,9 @@ def auto_enrich_and_get_rights(raw_title, raw_artist, pub_date, metrics, master_
         "verified_at": today_str,
         "valid_until": valid_until_str,
         "last_metrics": metrics,
-        "added_date": today_str
+        "metrics_history": [{"date": today_str, **metrics}],
+        "added_date": today_str,
+        "raw_youtube": raw_youtube
     }
     master_db.append(new_entry)
     print(f"[DEBUG - Fact Recorded] ステータス: {status_val} | コード: {code_val}")
@@ -438,38 +487,80 @@ def generate_llms_txt(songs, today_str):
     for s in songs:
         m = s.get('metrics', {})
         content += f"- **{s['title']}** ({s['artist']}) [動画: {s.get('video_url')}] | JASRAC検索名: {s.get('jasrac_search_title')} | 識別コード: {s['jasrac_code']} | ステータス: {s['rights_status']} | 情報源(MusicBrainz曲名検索): {s.get('mb_search_url')} | JASRAC検索: {s.get('jasrac_search_url')} | 歌枠用カラオケ: {s.get('karaoke_search_url')} | 確認日: {s['verified_at']} | 有効期限: {s['valid_until']} | 再生数: {m.get('views', 0):,}回 | エンゲージメント率: {m.get('engagement_rate', 0)}%\n"
-    content += "\n## エンドポイント\n- JSON全データ: /api/v1/songs.json\n"
+    content += "\n## エンドポイント\n- JSON全データ: /api/v1/songs.json\n- 履歴全データ: /api/v1/history.json\n"
     os.makedirs('public', exist_ok=True)
     with open('public/llms.txt', 'w', encoding='utf-8') as f: f.write(content)
 
 def get_real_youtube_trending_songs(master_db):
-    print("\n[DEBUG - YouTube API] ===== 日本地域・音楽急上昇ランキングの取得を開始 =====")
-    if not YOUTUBE_API_KEY:
-        print("[DEBUG - YouTube API Error] ❌ YOUTUBE_API_KEYが設定されていません。")
-        return master_db, False, []
+    print("\n[DEBUG - YouTube API] ===== 日本地域・音楽急上昇ランキングの全データ取得を開始 =====")
+    
+    items = []
+    if YOUTUBE_API_KEY:
+        url = "https://www.googleapis.com/youtube/v3/videos"
+        # 商用利用価値の高い全パート（snippet,contentDetails,statistics,topicDetails,status,liveStreamingDetails）を取得
+        params = {
+            "part": "snippet,contentDetails,statistics,topicDetails,status,liveStreamingDetails",
+            "chart": "mostPopular", 
+            "regionCode": "JP", 
+            "videoCategoryId": "10", 
+            "maxResults": 15, 
+            "key": YOUTUBE_API_KEY
+        }
 
-    url = "https://www.googleapis.com/youtube/v3/videos"
-    params = {"part": "snippet,statistics", "chart": "mostPopular", "regionCode": "JP", "videoCategoryId": "10", "maxResults": 15, "key": YOUTUBE_API_KEY}
+        try:
+            res = requests.get(url, params=params, timeout=10)
+            print(f"[DEBUG - YouTube API Response] HTTP Status: {res.status_code}")
+            if res.status_code == 200:
+                data = res.json()
+                items = data.get("items", [])
+                print(f"[DEBUG - YouTube API Success] ✅ {len(items)} 件の急上昇動画（全フィールド情報）を取得しました。")
+        except Exception as e:
+            print(f"[DEBUG - YouTube API Exception]: {e}")
+    else:
+        print("[DEBUG - YouTube API Warning] ⚠️ YOUTUBE_API_KEYが設定されていないため、既存マスターDBから代替トレンドソングを生成します。")
 
-    try:
-        res = requests.get(url, params=params, timeout=10)
-        print(f"[DEBUG - YouTube API Response] HTTP Status: {res.status_code}")
-        if res.status_code != 200:
-            return master_db, False, []
-        data = res.json()
-    except Exception as e:
-        print(f"[DEBUG - YouTube API Exception]: {e}")
-        return master_db, False, []
+    today_str, valid_until_str = get_dates()
 
-    items = data.get("items", [])
-    print(f"[DEBUG - YouTube API Success] ✅ {len(items)} 件の急上昇動画データを取得しました。")
+    if not items:
+        # フォールバック処理: 既存マスターDBから最新データを構築
+        trending_songs = []
+        for entry in master_db[:15]:
+            m = entry.get("last_metrics", {})
+            hist = entry.setdefault("metrics_history", [])
+            existing_today = next((item for item in hist if item.get("date") == today_str), None)
+            if not existing_today and m:
+                hist.append({"date": today_str, **m})
+
+            trending_songs.append({
+                "title": entry["title"],
+                "artist": entry["artist"],
+                "video_url": entry.get("video_url", ""),
+                "jasrac_search_title": entry.get("jasrac_search_title", entry["title"]),
+                "jasrac_search_artist": entry.get("jasrac_search_artist", entry["artist"]),
+                "jasrac_code": entry.get("jasrac_code", "コード未取得"),
+                "rights_status": entry.get("status", "確認中"),
+                "pub_date": entry.get("pub_date", today_str),
+                "source_name": entry.get("source_name", "MusicBrainz"),
+                "source_url": entry.get("source_url", "https://musicbrainz.org"),
+                "mb_search_url": entry.get("mb_search_url", ""),
+                "jasrac_search_url": entry.get("jasrac_search_url", ""),
+                "karaoke_search_url": entry.get("karaoke_search_url", ""),
+                "verified_at": today_str,
+                "valid_until": valid_until_str,
+                "trend_score": min(99, max(50, 50 + int(m.get("views", 0) / 1000000))),
+                "metrics": m,
+                "metrics_history": hist,
+                "raw_youtube": entry.get("raw_youtube", {})
+            })
+        return master_db, False, trending_songs
 
     song_requests = []
     prepared_items = []
     for idx, item in enumerate(items, 1):
         v_id = item.get("id", "")
         video_url = f"https://www.youtube.com/watch?v={v_id}" if v_id else ""
-        snippet, stats = item["snippet"], item.get("statistics", {})
+        snippet = item.get("snippet", {})
+        stats = item.get("statistics", {})
         raw_title = snippet.get("title", "")
         raw_artist = snippet.get("channelTitle", "").replace("Official", "").strip()
         views, likes, comments = int(stats.get("viewCount", 0)), int(stats.get("likeCount", 0)), int(stats.get("commentCount", 0))
@@ -486,7 +577,8 @@ def get_real_youtube_trending_songs(master_db):
         prepared_items.append({
             "raw_title": raw_title, "raw_artist": raw_artist, 
             "pub_date": pub_date, "metrics": metrics, "req_id": str(idx),
-            "video_url": video_url
+            "video_url": video_url,
+            "raw_youtube": item # YouTube APIの全返却オブジェクトを完全蓄積
         })
 
     gemini_batch_results = analyze_songs_batch_with_gemini(song_requests)
@@ -497,7 +589,7 @@ def get_real_youtube_trending_songs(master_db):
         ai_info = gemini_batch_results.get(req_id, {})
         
         entry, master_db, was_added = auto_enrich_and_get_rights(
-            p_item["raw_title"], p_item["raw_artist"], p_item["pub_date"], p_item["metrics"], master_db, ai_info, p_item["video_url"]
+            p_item["raw_title"], p_item["raw_artist"], p_item["pub_date"], p_item["metrics"], master_db, ai_info, p_item["video_url"], p_item["raw_youtube"]
         )
         if was_added: db_updated = True
 
@@ -511,19 +603,22 @@ def get_real_youtube_trending_songs(master_db):
             "jasrac_search_url": entry["jasrac_search_url"],
             "karaoke_search_url": entry["karaoke_search_url"],
             "verified_at": entry["verified_at"], "valid_until": entry["valid_until"],
-            "trend_score": min(99, max(50, 50 + int(p_item["metrics"]["views"] / 1000000))), "metrics": p_item["metrics"]
+            "trend_score": min(99, max(50, 50 + int(p_item["metrics"]["views"] / 1000000))), 
+            "metrics": p_item["metrics"],
+            "metrics_history": entry.get("metrics_history", []),
+            "raw_youtube": p_item["raw_youtube"] # 曲単位の全YouTubeレスポンスデータ
         })
 
     return master_db, db_updated, trending_songs
 
 def main():
     print("==================================================")
-    print("全自動マスターDB自己増殖＆検証エビデンスパイプラインを起動します")
+    print("全自動マスターDB自己増殖＆履歴化エビデンスパイプラインを起動します")
     print("==================================================")
     today_str = get_dates()[0]
     master_db, db_updated, trending_songs = get_real_youtube_trending_songs(load_master_db())
     
-    if db_updated:
+    if db_updated or len(trending_songs) > 0:
         save_json(MASTER_DB_PATH, master_db)
         print(f"\n[DEBUG - DB Save] ★マスターDB更新完了! 総楽曲数: {len(master_db)}件")
     else:
@@ -531,8 +626,13 @@ def main():
     
     export_master_to_csv(master_db)
     save_json('src/data/songs.json', trending_songs)
+    
+    # 履歴スナップショットファイルおよびインデックスを生成
+    if trending_songs:
+        update_history_snapshots(today_str, trending_songs)
+
     generate_llms_txt(trending_songs, today_str)
     print("\n全自動パイプラインが正常終了しました。")
 
 if __name__ == "__main__":
-    main()
+    main()

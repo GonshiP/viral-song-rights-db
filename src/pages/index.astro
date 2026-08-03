@@ -1,11 +1,13 @@
 ---
 import rawSongs from '../data/songs.json';
+import rawHistoryIndex from '../data/history_index.json';
 
 interface SongMetrics { views?: number; likes?: number; comments?: number; engagement_rate?: number; daily_views?: number; }
+interface MetricsHistory { date: string; views?: number; likes?: number; comments?: number; engagement_rate?: number; daily_views?: number; }
 interface Song {
   title: string; 
   artist: string; 
-  video_url?: string;            // ★動画URLを追加
+  video_url?: string;
   jasrac_search_title?: string;
   jasrac_search_artist?: string;
   jasrac_code: string; 
@@ -18,9 +20,14 @@ interface Song {
   valid_until: string; 
   trend_score?: number; 
   metrics?: SongMetrics;
+  metrics_history?: MetricsHistory[];
+  raw_youtube?: Record<string, any>;
 }
 
+interface HistoryIndexEntry { date: string; count: number; path: string; }
+
 const songs = rawSongs as Song[];
+const historyIndex = rawHistoryIndex as HistoryIndexEntry[];
 
 const getSeasonTag = (d: string) => {
   const m = parseInt(d?.split('-')[1] || '0', 10);
@@ -47,6 +54,15 @@ const affiliateItems = [
   { title: 'コンデンサーマイクロフォン', desc: '広帯域周波数特性を備えたボーカル・音源収音用マイク。', url: 'https://example.com/affiliate-link-2' }
 ];
 
+// グラフ用データ構造を構築（最大10曲を抽出）
+const chartSongs = songs.slice(0, 10);
+const chartData = JSON.stringify(chartSongs.map(s => ({
+  title: s.jasrac_search_title || s.title,
+  artist: s.jasrac_search_artist || s.artist,
+  history: (s.metrics_history || []).sort((a, b) => a.date.localeCompare(b.date))
+})));
+const historyDates = JSON.stringify(historyIndex.map(h => h.date));
+
 const jsonLdData = {
   "@context": "https://schema.org",
   "@type": "Dataset",
@@ -70,13 +86,25 @@ const jsonLdData = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>トレンドソング権利 ＆ トレンドアナリティクスDB</title>
     <meta name="description" content="リアルタイムのトレンド楽曲動向、権利識別コード、一次ソースURL、原盤権対策リンク、エンゲージメント指標を自動集約したデータベース。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLdData)} />
   </head>
   <body>
     
     <header class="site-header">
-      <h1>トレンドソング権利 ＆ トレンドアナリティクスDB</h1>
-      <p>一次ソースエビデンス・確認日時・原盤権対策リンク付き メタデータ統合マトリクス</p>
+      <div class="header-inner">
+        <h1>📊 トレンドソング権利 ＆ アナリティクスDB</h1>
+        <p>一次ソースエビデンス・確認日時・原盤権対策リンク付き メタデータ統合マトリクス</p>
+        <div class="header-badges">
+          <span class="hbadge">🤖 Gemini AI 解析</span>
+          <span class="hbadge">🎵 MusicBrainz 照合</span>
+          <span class="hbadge">📅 日次自動更新</span>
+          <span class="hbadge">🗂️ {historyIndex.length}日分 履歴</span>
+        </div>
+      </div>
     </header>
 
     <main class="main-container">
@@ -84,7 +112,45 @@ const jsonLdData = {
       <nav class="nav-links" aria-label="主要機能ナビゲーション">
         <a href="/" class="btn btn-primary">📈 リアルタイム・トレンド分析</a>
         <a href="/downloads/viral_song_rights_master.csv" class="btn btn-success">📥 マスターDB (CSV) エクスポート</a>
+        <a href="/api/v1/history.json" class="btn btn-outline" target="_blank" rel="noopener noreferrer">🗂️ 履歴 API</a>
       </nav>
+
+      <!-- ★ グラフィカルデータ推移セクション -->
+      <section class="card chart-section" id="trend-chart-section">
+        <div class="chart-header">
+          <h2>📊 データ推移グラフィカル分析</h2>
+          <p class="chart-subtitle">日次DB更新ごとに蓄積された再生数・エンゲージメント率の時系列推移を可視化</p>
+        </div>
+
+        <div class="chart-controls">
+          <div class="control-group">
+            <label for="metric-selector">📈 指標選択</label>
+            <select id="metric-selector" class="chart-select">
+              <option value="views">再生数</option>
+              <option value="engagement_rate">エンゲージメント率 (%)</option>
+              <option value="daily_views">日速 (推定日次再生数)</option>
+              <option value="likes">いいね数</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="song-filter">🎵 楽曲フィルタ</label>
+            <select id="song-filter" class="chart-select">
+              <option value="all">全楽曲 (トップ10)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="chart-wrapper">
+          <canvas id="trendChart" aria-label="楽曲トレンドグラフ" role="img"></canvas>
+        </div>
+
+        <div class="history-info">
+          <span class="history-label">📅 蓄積履歴日数:</span>
+          {historyIndex.map(h => (
+            <span class="history-chip">{h.date} ({h.count}件)</span>
+          ))}
+        </div>
+      </section>
 
       <!-- システム仕様 -->
       <section class="card spec-card">
@@ -138,6 +204,11 @@ const jsonLdData = {
                   <td class="metrics-cell">
                     <strong>{(song.metrics?.views ?? 0).toLocaleString()} 回再生</strong><br />
                     <span class="engagement-pill">📈 {song.metrics?.engagement_rate ?? 0}%</span>
+                    {song.metrics_history && song.metrics_history.length > 1 && (
+                      <div class="mini-trend">
+                        <span class="mini-trend-label">📅 {song.metrics_history.length}日分記録</span>
+                      </div>
+                    )}
                   </td>
                   {/* 3. 著作権（作詞・作曲） */}
                   <td>
@@ -171,7 +242,18 @@ const jsonLdData = {
       <section class="card api-card">
         <h2>🔌 REST API エンドポイント</h2>
         <p>JASRAC検索名・一次ソースURL・確認期限を含む構造化データセットは、API経由で直接取得可能です。</p>
-        <p><strong>エンドポイント:</strong> <code>/api/v1/songs.json</code></p>
+        <div class="api-endpoints">
+          <div class="api-row">
+            <code class="api-method">GET</code>
+            <code class="api-path">/api/v1/songs.json</code>
+            <span class="api-desc">最新トレンドソング一覧 (metrics_history, raw_youtube 含む)</span>
+          </div>
+          <div class="api-row">
+            <code class="api-method">GET</code>
+            <code class="api-path">/api/v1/history.json</code>
+            <span class="api-desc">日次スナップショット履歴インデックス</span>
+          </div>
+        </div>
       </section>
 
       <!-- 推奨機材（アフィリエイト） -->
@@ -198,54 +280,303 @@ const jsonLdData = {
   </body>
 </html>
 
+<!-- Chart.js グラフ初期化スクリプト -->
+<script define:vars={{ chartData, historyDates }}>
+  const PALETTE = [
+    '#6366f1','#f59e0b','#10b981','#ef4444','#3b82f6',
+    '#8b5cf6','#ec4899','#14b8a6','#f97316','#a3e635'
+  ];
+
+  const songs = JSON.parse(chartData);
+  const allDates = JSON.parse(historyDates);
+
+  // song-filter を動的に構築
+  const songFilter = document.getElementById('song-filter');
+  songs.forEach((s, i) => {
+    const opt = document.createElement('option');
+    opt.value = String(i);
+    opt.textContent = `${s.title} (${s.artist})`;
+    songFilter.appendChild(opt);
+  });
+
+  function getMetricLabel(metric) {
+    const labels = {
+      views: '再生数',
+      engagement_rate: 'エンゲージメント率 (%)',
+      daily_views: '日速',
+      likes: 'いいね数'
+    };
+    return labels[metric] || metric;
+  }
+
+  function buildDatasets(metric, songIndexFilter) {
+    const targetSongs = songIndexFilter === 'all' ? songs : [songs[parseInt(songIndexFilter)]];
+    return targetSongs.map((s, i) => {
+      const color = PALETTE[i % PALETTE.length];
+      const dataMap = {};
+      (s.history || []).forEach(h => { dataMap[h.date] = h[metric] ?? null; });
+      return {
+        label: `${s.title}`,
+        data: allDates.map(d => dataMap[d] ?? null),
+        borderColor: color,
+        backgroundColor: color + '22',
+        borderWidth: 2.5,
+        pointRadius: 5,
+        pointHoverRadius: 8,
+        tension: 0.35,
+        fill: false,
+        spanGaps: true
+      };
+    });
+  }
+
+  const ctx = document.getElementById('trendChart').getContext('2d');
+  let currentMetric = 'views';
+  let currentFilter = 'all';
+
+  const chart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: allDates,
+      datasets: buildDatasets(currentMetric, currentFilter)
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: {
+            font: { family: "'Inter', 'Noto Sans JP', sans-serif", size: 12 },
+            color: '#e2e8f0',
+            boxWidth: 14,
+            padding: 16
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(15,23,42,0.92)',
+          titleColor: '#94a3b8',
+          bodyColor: '#e2e8f0',
+          borderColor: '#334155',
+          borderWidth: 1,
+          padding: 12,
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.y;
+              if (v === null) return `${ctx.dataset.label}: データなし`;
+              if (currentMetric === 'views' || currentMetric === 'daily_views' || currentMetric === 'likes') {
+                return `${ctx.dataset.label}: ${v.toLocaleString()}`;
+              }
+              return `${ctx.dataset.label}: ${v}%`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#1e293b' },
+          ticks: { color: '#94a3b8', font: { size: 12 } }
+        },
+        y: {
+          grid: { color: '#1e293b' },
+          ticks: {
+            color: '#94a3b8',
+            font: { size: 12 },
+            callback: v => {
+              if (currentMetric === 'engagement_rate') return v + '%';
+              return v >= 1000000 ? (v/1000000).toFixed(1) + 'M' : v >= 1000 ? (v/1000).toFixed(0) + 'K' : v;
+            }
+          },
+          title: {
+            display: true,
+            text: getMetricLabel(currentMetric),
+            color: '#64748b',
+            font: { size: 12 }
+          }
+        }
+      }
+    }
+  });
+
+  function updateChart() {
+    chart.data.datasets = buildDatasets(currentMetric, currentFilter);
+    chart.options.scales.y.title.text = getMetricLabel(currentMetric);
+    chart.update('active');
+  }
+
+  document.getElementById('metric-selector').addEventListener('change', e => {
+    currentMetric = e.target.value;
+    updateChart();
+  });
+
+  document.getElementById('song-filter').addEventListener('change', e => {
+    currentFilter = e.target.value;
+    updateChart();
+  });
+</script>
+
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f4f6f9; margin: 0; }
-  .site-header { padding: 35px 20px; background: #111; color: #fff; text-align: center; h1 { margin: 0; font-size: 1.8rem; } p { margin: 8px 0 0; color: #aaa; font-size: 0.95rem; } }
-  .main-container { max-width: 1200px; margin: 30px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    font-family: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.65;
+    color: #e2e8f0;
+    background: #0f172a;
+    margin: 0;
+  }
 
-  .nav-links { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
-  .btn { display: inline-block; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: bold; font-size: 0.9rem; transition: opacity 0.2s; &:hover { opacity: 0.85; } }
-  .btn-sm { padding: 5px 10px; font-size: 0.8rem; }
-  .btn-primary { background: #0066cc; color: #fff; }
-  .btn-success { background: #28a745; color: #fff; }
-  .btn-outline { border: 1px solid #0066cc; color: #0066cc; background: #fff; }
+  /* ===== HEADER ===== */
+  .site-header {
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 50%, #1e293b 100%);
+    border-bottom: 1px solid #334155;
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .header-inner { max-width: 900px; margin: 0 auto; }
+  .site-header h1 { margin: 0 0 8px; font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 700; color: #f1f5f9; letter-spacing: -0.02em; }
+  .site-header p { margin: 0 0 18px; color: #94a3b8; font-size: 0.9rem; }
+  .header-badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .hbadge {
+    background: rgba(99,102,241,0.15);
+    border: 1px solid rgba(99,102,241,0.3);
+    color: #a5b4fc;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 
+  /* ===== LAYOUT ===== */
+  .main-container { max-width: 1280px; margin: 0 auto; padding: 28px 20px 60px; }
+
+  /* ===== NAV ===== */
+  .nav-links { display: flex; gap: 10px; margin-bottom: 28px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 20px; text-decoration: none; border-radius: 8px;
+    font-weight: 600; font-size: 0.88rem; transition: all 0.2s ease;
+    cursor: pointer;
+    &:hover { transform: translateY(-1px); }
+  }
+  .btn-sm { padding: 6px 12px; font-size: 0.8rem; }
+  .btn-primary { background: linear-gradient(135deg,#6366f1,#4f46e5); color: #fff; box-shadow: 0 4px 15px rgba(99,102,241,0.3); }
+  .btn-success { background: linear-gradient(135deg,#059669,#047857); color: #fff; box-shadow: 0 4px 15px rgba(5,150,105,0.3); }
+  .btn-outline { border: 1px solid #334155; color: #94a3b8; background: transparent; &:hover { border-color: #6366f1; color: #a5b4fc; } }
+
+  /* ===== CARDS ===== */
   .card {
-    margin-bottom: 25px; padding: 18px 20px; border-radius: 6px;
-    &.spec-card { background: #fafbfc; border: 1px solid #e1e4e8; h3 { margin: 0 0 8px; font-size: 1rem; color: #24292e; } p { font-size: 0.85rem; color: #586069; margin-bottom: 8px; } ul { font-size: 0.85rem; color: #444; margin: 0; padding-left: 20px; } }
-    &.notice-card { background: #fff8e6; border-left: 4px solid #f39c12; font-size: 0.85rem; h3 { margin: 0 0 8px; color: #b06000; font-size: 0.95rem; } p { margin: 0 0 8px; color: #555; } }
-    &.api-card { margin-top: 40px; background: #f6f8fa; border-left: 5px solid #24292e; h2 { margin: 0 0 10px; font-size: 1.1rem; color: #24292e; } p { font-size: 0.9rem; margin: 0 0 5px; } }
-    &.affiliate-card { border: 1px solid #e1e4e8; background: #fff; h3 { margin: 0 0 5px; font-size: 1.05rem; } p { font-size: 0.9rem; color: #586069; } }
+    margin-bottom: 24px; padding: 22px 24px; border-radius: 12px;
+    background: #1e293b; border: 1px solid #334155;
   }
 
-  .table-wrapper { overflow-x: auto; margin-bottom: 25px; }
+  /* ===== CHART SECTION ===== */
+  .chart-section { background: linear-gradient(135deg, #1e293b 0%, #162032 100%); }
+  .chart-header { margin-bottom: 20px; }
+  .chart-header h2 { margin: 0 0 6px; font-size: 1.15rem; color: #f1f5f9; font-weight: 700; }
+  .chart-subtitle { margin: 0; color: #64748b; font-size: 0.85rem; }
+  .chart-controls {
+    display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;
+  }
+  .control-group { display: flex; flex-direction: column; gap: 6px; }
+  .control-group label { font-size: 0.8rem; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; }
+  .chart-select {
+    background: #0f172a; border: 1px solid #334155; color: #e2e8f0;
+    padding: 8px 12px; border-radius: 8px; font-size: 0.88rem;
+    font-family: inherit; cursor: pointer;
+    min-width: 200px;
+    &:focus { outline: none; border-color: #6366f1; }
+  }
+  .chart-wrapper {
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #1e293b;
+    margin-bottom: 16px;
+    height: 340px;
+    position: relative;
+  }
+  .chart-wrapper canvas { max-height: 300px; }
+  .history-info { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+  .history-label { font-size: 0.8rem; color: #64748b; font-weight: 600; }
+  .history-chip {
+    background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25);
+    color: #818cf8; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem;
+  }
+
+  /* ===== SPEC CARD ===== */
+  .spec-card {
+    h3 { margin: 0 0 10px; font-size: 1rem; color: #cbd5e1; }
+    p { font-size: 0.85rem; color: #64748b; margin-bottom: 10px; }
+    ul { font-size: 0.85rem; color: #94a3b8; margin: 0; padding-left: 20px;
+      li { margin-bottom: 4px; }
+    }
+  }
+
+  /* ===== NOTICE CARD ===== */
+  .notice-card {
+    background: rgba(217,119,6,0.08); border-left: 4px solid #d97706; border-color: #d97706;
+    h3 { margin: 0 0 10px; color: #fbbf24; font-size: 0.95rem; }
+    p { margin: 0 0 10px; color: #94a3b8; font-size: 0.85rem; strong { color: #fcd34d; } }
+  }
+
+  /* ===== TABLE ===== */
+  .table-wrapper { overflow-x: auto; margin-bottom: 24px; border-radius: 12px; border: 1px solid #334155; }
   .data-table {
-    width: 100%; border-collapse: collapse; border: 1px solid #e0e0e0; font-size: 0.88rem;
-    th, td { padding: 12px; border: 1px solid #e0e0e0; vertical-align: middle; }
-    th { background: #f8f9fa; color: #444; text-align: left; white-space: nowrap; }
+    width: 100%; border-collapse: collapse; font-size: 0.87rem;
+    th, td {
+      padding: 13px 14px; border-bottom: 1px solid #1e293b; vertical-align: top;
+      &:not(:last-child) { border-right: 1px solid #1e293b; }
+    }
+    th { background: #0f172a; color: #64748b; text-align: left; white-space: nowrap; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+    tbody tr { &:hover { background: rgba(99,102,241,0.05); } &:last-child td { border-bottom: none; } }
   }
-  .song-title-link {
-    text-decoration: none;
-    color: #0066cc;
-    &:hover { text-decoration: underline; color: #004499; }
-  }
-  .song-title { font-size: 0.92rem; }
-  .song-meta { font-size: 0.8rem; color: #666; }
-  .sub-text { font-size: 0.8rem; color: #555; }
-  .link-primary { color: #0066cc; font-size: 0.8rem; text-decoration: underline; }
-  .text-danger { color: #d9534f; font-weight: bold; }
+  .song-title-link { text-decoration: none; color: #818cf8; &:hover { color: #a5b4fc; text-decoration: underline; } }
+  .song-title { font-size: 0.9rem; font-weight: 600; }
+  .song-meta { font-size: 0.78rem; color: #475569; margin-top: 4px; display: block; }
+  .sub-text { font-size: 0.78rem; color: #475569; display: block; margin-top: 2px; code { font-size: 0.78rem; background: #0f172a; padding: 1px 5px; border-radius: 4px; color: #94a3b8; } }
+  .link-primary { color: #818cf8; font-size: 0.8rem; text-decoration: underline; }
+  .text-danger { color: #f87171; font-weight: 600; }
   .metrics-cell { text-align: right; white-space: nowrap; }
+  .mini-trend { margin-top: 6px; }
+  .mini-trend-label { font-size: 0.72rem; color: #475569; background: rgba(99,102,241,0.1); padding: 2px 8px; border-radius: 10px; }
 
-  .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: bold; }
-  .badge-success { background: #e6f4ea; color: #137333; }
-  .badge-info { background: #e8f0fe; color: #1a73e8; }
-  .badge-warning { background: #fef7e0; color: #b06000; }
-  .badge-neutral { background: #f1f3f4; color: #5f6368; }
-  .engagement-pill { background: #eef6ff; color: #0066cc; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+  .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 700; }
+  .badge-success { background: rgba(16,185,129,0.15); color: #34d399; }
+  .badge-info { background: rgba(99,102,241,0.15); color: #818cf8; }
+  .badge-warning { background: rgba(245,158,11,0.15); color: #fbbf24; }
+  .badge-neutral { background: rgba(100,116,139,0.15); color: #94a3b8; }
+  .engagement-pill { background: rgba(99,102,241,0.15); color: #818cf8; padding: 2px 7px; border-radius: 10px; font-size: 0.78rem; font-weight: 700; }
 
-  .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; }
-  .affiliate-item { border: 1px solid #eee; padding: 15px; border-radius: 6px; background: #fafafa; h4 { margin: 0 0 5px; font-size: 0.95rem; } p { font-size: 0.85rem; color: #666; margin-bottom: 10px; } }
+  /* ===== API CARD ===== */
+  .api-card {
+    background: #0f172a; border-left: 4px solid #6366f1;
+    h2 { margin: 0 0 10px; font-size: 1.05rem; color: #a5b4fc; }
+    p { font-size: 0.88rem; margin: 0 0 14px; color: #64748b; }
+  }
+  .api-endpoints { display: flex; flex-direction: column; gap: 10px; }
+  .api-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .api-method { background: rgba(16,185,129,0.15); color: #34d399; padding: 3px 8px; border-radius: 4px; font-size: 0.78rem; font-weight: 700; }
+  .api-path { background: #1e293b; color: #94a3b8; padding: 4px 10px; border-radius: 5px; font-size: 0.82rem; }
+  .api-desc { color: #475569; font-size: 0.82rem; }
 
-  .empty-state { padding: 40px; text-align: center; background: #fafafa; border: 1px dashed #ccc; border-radius: 6px; color: #666; }
-  .site-footer { margin-top: 50px; padding: 25px; background: #111; color: #888; font-size: 0.8rem; text-align: center; p { max-width: 900px; margin: 0 auto; line-height: 1.5; } }
+  /* ===== AFFILIATE ===== */
+  .affiliate-card {
+    h3 { margin: 0 0 6px; font-size: 1.05rem; color: #cbd5e1; }
+    p { font-size: 0.88rem; color: #64748b; margin-bottom: 14px; }
+  }
+  .affiliate-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .affiliate-item {
+    border: 1px solid #334155; padding: 16px; border-radius: 10px; background: #0f172a;
+    h4 { margin: 0 0 6px; font-size: 0.92rem; color: #cbd5e1; }
+    p { font-size: 0.83rem; color: #475569; margin-bottom: 12px; }
+  }
+
+  .empty-state { padding: 50px; text-align: center; background: #1e293b; border-radius: 10px; color: #475569; }
+
+  .site-footer {
+    margin-top: 60px; padding: 28px; background: #020617;
+    border-top: 1px solid #1e293b; color: #334155; font-size: 0.78rem; text-align: center;
+    p { max-width: 900px; margin: 0 auto; line-height: 1.6; }
+  }
 </style>

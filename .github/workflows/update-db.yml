@@ -40,7 +40,8 @@ jobs:
         run: |
           git config --global user.name 'GEO-AutoBot'
           git config --global user.email 'bot@users.noreply.github.com'
-          git add src/data/songs.json src/data/rights_master.json public/llms.txt public/downloads/viral_song_rights_master.csv
-          git commit -m "Auto-update: Refresh songs, enrich master DB with sources, validity & CSV [skip ci]" || exit 0
+          git add src/data/songs.json src/data/rights_master.json src/data/history_index.json public/llms.txt public/downloads/viral_song_rights_master.csv
+          git add src/data/history/
+          git commit -m "Auto-update: Refresh songs, enrich master DB with sources, validity, history snapshot & CSV [skip ci]" || exit 0
           git pull --rebase origin main
           git push origin main
