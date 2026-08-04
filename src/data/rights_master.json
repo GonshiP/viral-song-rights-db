@@ -13,19 +13,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22Brand%20New%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Brand%20New%20Mrs.%20GREEN%20APPLE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20Brand%20New%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 2734062,
-      "likes": 98690,
-      "comments": 6787,
-      "engagement_rate": 3.86,
-      "daily_views": 911354
+      "views": 3611402,
+      "likes": 104120,
+      "comments": 7255,
+      "engagement_rate": 3.08,
+      "daily_views": 902850
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "RuI3AVFDMctdOLc9bSGF5isGSKY",
+      "etag": "VDMerd0UJrl3pZwG0llgGh1dfHs",
       "id": "dePs7UPp6GQ",
       "snippet": {
         "publishedAt": "2026-07-31T12:00:06Z",
@@ -93,10 +93,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2734062",
-        "likeCount": "98690",
+        "viewCount": "3611402",
+        "likeCount": "104120",
         "favoriteCount": "0",
-        "commentCount": "6787"
+        "commentCount": "7255"
       },
       "topicDetails": {
         "topicCategories": [
@@ -127,6 +127,14 @@
         "comments": 6787,
         "engagement_rate": 3.86,
         "daily_views": 911354
+      },
+      {
+        "date": "2026-08-04",
+        "views": 3611402,
+        "likes": 104120,
+        "comments": 7255,
+        "engagement_rate": 3.08,
+        "daily_views": 902850
       }
     ]
   },
@@ -144,19 +152,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20Snow%20Man",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 6014335,
-      "likes": 172526,
-      "comments": 14336,
-      "engagement_rate": 3.11,
-      "daily_views": 601433
+      "views": 6518014,
+      "likes": 173168,
+      "comments": 14499,
+      "engagement_rate": 2.88,
+      "daily_views": 592546
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "ctmEAwcHTAyGcZDSdWsXiyJjmT4",
+      "etag": "sxncVmjTE1wsXzYLy7MyYrDnnG0",
       "id": "JofSrfFV4Kw",
       "snippet": {
         "publishedAt": "2026-07-24T13:00:06Z",
@@ -230,10 +238,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "6014335",
-        "likeCount": "172526",
+        "viewCount": "6518014",
+        "likeCount": "173168",
         "favoriteCount": "0",
-        "commentCount": "14336"
+        "commentCount": "14499"
       },
       "topicDetails": {
         "topicCategories": [
@@ -264,6 +272,14 @@
         "comments": 14336,
         "engagement_rate": 3.11,
         "daily_views": 601433
+      },
+      {
+        "date": "2026-08-04",
+        "views": 6518014,
+        "likes": 173168,
+        "comments": 14499,
+        "engagement_rate": 2.88,
+        "daily_views": 592546
       }
     ]
   },
@@ -279,21 +295,21 @@
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%22&type=work",
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20A%E3%81%87%21%20group",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=A%E3%81%87%21%20group%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20ACEes",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=ACEes%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 2418585,
-      "likes": 34364,
-      "comments": 83967,
-      "engagement_rate": 4.89,
-      "daily_views": 268731
+      "views": 2476154,
+      "likes": 34654,
+      "comments": 84235,
+      "engagement_rate": 4.8,
+      "daily_views": 247615
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "egr2a5P87brpIS5BjPTBELmFs3c",
+      "etag": "6oP2CD4BQuRlGzisGHuS6mI44Nk",
       "id": "TfvYFX06Mes",
       "snippet": {
         "publishedAt": "2026-07-25T11:00:28Z",
@@ -358,10 +374,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2418585",
-        "likeCount": "34364",
+        "viewCount": "2476154",
+        "likeCount": "34654",
         "favoriteCount": "0",
-        "commentCount": "83967"
+        "commentCount": "84235"
       },
       "topicDetails": {
         "topicCategories": [
@@ -387,6 +403,14 @@
         "comments": 83967,
         "engagement_rate": 4.89,
         "daily_views": 268731
+      },
+      {
+        "date": "2026-08-04",
+        "views": 2476154,
+        "likes": 34654,
+        "comments": 84235,
+        "engagement_rate": 4.8,
+        "daily_views": 247615
       }
     ]
   },
@@ -404,19 +428,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 3135321,
-      "likes": 60626,
-      "comments": 5162,
-      "engagement_rate": 2.1,
-      "daily_views": 1045107
+      "views": 3799855,
+      "likes": 62349,
+      "comments": 6278,
+      "engagement_rate": 1.81,
+      "daily_views": 949963
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "VXrQ4MUMjPzTN4Aec56x0O9LEj4",
+      "etag": "Va2FFS4qOGO8zf1OIpwQEXsyV0E",
       "id": "gXNbJEYuoSw",
       "snippet": {
         "publishedAt": "2026-07-31T04:00:06Z",
@@ -478,10 +502,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3135321",
-        "likeCount": "60626",
+        "viewCount": "3799855",
+        "likeCount": "62349",
         "favoriteCount": "0",
-        "commentCount": "5162"
+        "commentCount": "6278"
       },
       "topicDetails": {
         "topicCategories": [
@@ -514,6 +538,14 @@
         "comments": 5162,
         "engagement_rate": 2.1,
         "daily_views": 1045107
+      },
+      {
+        "date": "2026-08-04",
+        "views": 3799855,
+        "likes": 62349,
+        "comments": 6278,
+        "engagement_rate": 1.81,
+        "daily_views": 949963
       }
     ]
   },
@@ -531,19 +563,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22GO%20GHOST%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20GO%20GHOST%20King%20Gnu",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=King%20Gnu%20GO%20GHOST%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 1327935,
-      "likes": 30432,
-      "comments": 1163,
-      "engagement_rate": 2.38,
-      "daily_views": 221322
+      "views": 1475183,
+      "likes": 31493,
+      "comments": 1181,
+      "engagement_rate": 2.21,
+      "daily_views": 210740
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "hyI_rYYpS7-71u8ss4kXX7uhyO4",
+      "etag": "lfVfm7rb2s0_URU5pcwFwIGW0hY",
       "id": "gT5XyATc-Z8",
       "snippet": {
         "publishedAt": "2026-07-28T15:00:29Z",
@@ -615,10 +647,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1327935",
-        "likeCount": "30432",
+        "viewCount": "1475183",
+        "likeCount": "31493",
         "favoriteCount": "0",
-        "commentCount": "1163"
+        "commentCount": "1181"
       },
       "topicDetails": {
         "topicCategories": [
@@ -646,6 +678,14 @@
         "comments": 1163,
         "engagement_rate": 2.38,
         "daily_views": 221322
+      },
+      {
+        "date": "2026-08-04",
+        "views": 1475183,
+        "likes": 31493,
+        "comments": 1181,
+        "engagement_rate": 2.21,
+        "daily_views": 210740
       }
     ]
   },
@@ -663,25 +703,25 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22WHATCHA%20DOIN%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20WHATCHA%20DOIN%20JO1",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=JO1%20WHATCHA%20DOIN%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 1846395,
-      "likes": 29874,
-      "comments": 7660,
-      "engagement_rate": 2.03,
-      "daily_views": 615465
+      "views": 2366460,
+      "likes": 30835,
+      "comments": 8133,
+      "engagement_rate": 1.65,
+      "daily_views": 591615
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "1xUSBaX3lI_0sMzS9o0plhrYhro",
+      "etag": "OA1M7AgcxQTzplgwle5NaeQMv6M",
       "id": "eN2NlzPdcrs",
       "snippet": {
         "publishedAt": "2026-07-31T03:59:32Z",
         "channelId": "UCsmXiDP8S40uBeJYxvyulmA",
         "title": "JO1 | 'WHATCHA DOIN' Official MV",
-        "description": "JO1 | 'WHATCHA DOIN' Official MV\n\n𝐉𝐎𝟏 𝐔𝐒 𝐄𝐏\n𝐀𝐍𝐈𝐌𝐀𝐋\n\n▼Now Available for Pre-Order\nhttps://orcd.co/JO1-ANIMAL\n\n1ST PRE-RELEASE TRACK\n‘𝑾𝑯𝑨𝑻𝑪𝑯𝑨 𝑫𝑶𝑰𝑵’\n2026.10.02 SINGLE RELEASE\n\n▼Streaming Website\nhttps://orcd.co/whatchadoin\n\n＝＝＝\n\n2026 JO1 NORTH AMERICAN TOUR ‘ANIMAL’\n\n🗓️TOUR SCHEDULE\n📍10.02 (FRI) - TORONTO\n📍10.04 (SUN) - NEW YORK\n📍10.06 (TUE) - CHICAGO\n📍10.08 (THU) - SAN FRANCISCO\n📍10.11 (SUN) - LOS ANGELES\n\n▼GET TICKETS\nhttps://bio.to/jo1_tour_ticket\n\n#JO1 #JO1_ANIMAL \n#JO1_WHATCHADOIN\n\n＝＝＝\n\n[JO1 OFFICIAL SNS]\n▶︎https://jo1.jp​\n▶︎https://twitter.com/official_jo1\n▶︎http://instagram.com/official_JO1\n▶︎https://www.tiktok.com/@jo1_gotothetop\n▶︎https://weibo.com/7454644363/profile?topnav=1&wvr=6&is_all=1",
+        "description": "JO1 | 'WHATCHA DOIN' Official MV\n\n𝐉𝐎𝟏 𝐔𝐒 𝐄𝐏\n𝐀𝐍𝐈𝐌𝐀𝐋\n\n▼Now Available for Pre-Order\nhttps://orcd.co/JO1-ANIMAL\n\n1ST PRE-RELEASE TRACK\n‘𝑾𝑯𝑨𝑻𝑪𝑯𝑨 𝑫𝑶𝑰𝑵’\n2026.10.02 RELEASE\n\n▼Streaming Website\nhttps://orcd.co/whatchadoin\n\n＝＝＝\n\n2026 JO1 NORTH AMERICAN TOUR ‘ANIMAL’\n\n🗓️TOUR SCHEDULE\n📍10.02 (FRI) - TORONTO\n📍10.04 (SUN) - NEW YORK\n📍10.06 (TUE) - CHICAGO\n📍10.08 (THU) - SAN FRANCISCO\n📍10.11 (SUN) - LOS ANGELES\n\n▼GET TICKETS\nhttps://bio.to/jo1_tour_ticket\n\n#JO1 #JO1_ANIMAL \n#JO1_WHATCHADOIN\n\n＝＝＝\n\n[JO1 OFFICIAL SNS]\n▶︎https://jo1.jp​\n▶︎https://twitter.com/official_jo1\n▶︎http://instagram.com/official_JO1\n▶︎https://www.tiktok.com/@jo1_gotothetop\n▶︎https://weibo.com/7454644363/profile?topnav=1&wvr=6&is_all=1",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/eN2NlzPdcrs/default.jpg",
@@ -743,7 +783,7 @@
         "defaultLanguage": "ja",
         "localized": {
           "title": "JO1 | 'WHATCHA DOIN' Official MV",
-          "description": "JO1 | 'WHATCHA DOIN' Official MV\n\n𝐉𝐎𝟏 𝐔𝐒 𝐄𝐏\n𝐀𝐍𝐈𝐌𝐀𝐋\n\n▼Now Available for Pre-Order\nhttps://orcd.co/JO1-ANIMAL\n\n1ST PRE-RELEASE TRACK\n‘𝑾𝑯𝑨𝑻𝑪𝑯𝑨 𝑫𝑶𝑰𝑵’\n2026.10.02 SINGLE RELEASE\n\n▼Streaming Website\nhttps://orcd.co/whatchadoin\n\n＝＝＝\n\n2026 JO1 NORTH AMERICAN TOUR ‘ANIMAL’\n\n🗓️TOUR SCHEDULE\n📍10.02 (FRI) - TORONTO\n📍10.04 (SUN) - NEW YORK\n📍10.06 (TUE) - CHICAGO\n📍10.08 (THU) - SAN FRANCISCO\n📍10.11 (SUN) - LOS ANGELES\n\n▼GET TICKETS\nhttps://bio.to/jo1_tour_ticket\n\n#JO1 #JO1_ANIMAL \n#JO1_WHATCHADOIN\n\n＝＝＝\n\n[JO1 OFFICIAL SNS]\n▶︎https://jo1.jp​\n▶︎https://twitter.com/official_jo1\n▶︎http://instagram.com/official_JO1\n▶︎https://www.tiktok.com/@jo1_gotothetop\n▶︎https://weibo.com/7454644363/profile?topnav=1&wvr=6&is_all=1"
+          "description": "JO1 | 'WHATCHA DOIN' Official MV\n\n𝐉𝐎𝟏 𝐔𝐒 𝐄𝐏\n𝐀𝐍𝐈𝐌𝐀𝐋\n\n▼Now Available for Pre-Order\nhttps://orcd.co/JO1-ANIMAL\n\n1ST PRE-RELEASE TRACK\n‘𝑾𝑯𝑨𝑻𝑪𝑯𝑨 𝑫𝑶𝑰𝑵’\n2026.10.02 RELEASE\n\n▼Streaming Website\nhttps://orcd.co/whatchadoin\n\n＝＝＝\n\n2026 JO1 NORTH AMERICAN TOUR ‘ANIMAL’\n\n🗓️TOUR SCHEDULE\n📍10.02 (FRI) - TORONTO\n📍10.04 (SUN) - NEW YORK\n📍10.06 (TUE) - CHICAGO\n📍10.08 (THU) - SAN FRANCISCO\n📍10.11 (SUN) - LOS ANGELES\n\n▼GET TICKETS\nhttps://bio.to/jo1_tour_ticket\n\n#JO1 #JO1_ANIMAL \n#JO1_WHATCHADOIN\n\n＝＝＝\n\n[JO1 OFFICIAL SNS]\n▶︎https://jo1.jp​\n▶︎https://twitter.com/official_jo1\n▶︎http://instagram.com/official_JO1\n▶︎https://www.tiktok.com/@jo1_gotothetop\n▶︎https://weibo.com/7454644363/profile?topnav=1&wvr=6&is_all=1"
         },
         "defaultAudioLanguage": "en"
       },
@@ -765,10 +805,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1846395",
-        "likeCount": "29874",
+        "viewCount": "2366460",
+        "likeCount": "30835",
         "favoriteCount": "0",
-        "commentCount": "7660"
+        "commentCount": "8133"
       },
       "topicDetails": {
         "topicCategories": [
@@ -794,6 +834,14 @@
         "comments": 7660,
         "engagement_rate": 2.03,
         "daily_views": 615465
+      },
+      {
+        "date": "2026-08-04",
+        "views": 2366460,
+        "likes": 30835,
+        "comments": 8133,
+        "engagement_rate": 1.65,
+        "daily_views": 591615
       }
     ]
   },
@@ -811,19 +859,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 1479764,
-      "likes": 24207,
+      "views": 1628253,
+      "likes": 26099,
       "comments": 0,
-      "engagement_rate": 1.64,
-      "daily_views": 147976
+      "engagement_rate": 1.6,
+      "daily_views": 148023
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "nHWfzefMVnSvB7MkqMWIjU7IiIo",
+      "etag": "pWrXga5tCDlNOFYBGhOIAvQ-YSE",
       "id": "lI7efayDEeU",
       "snippet": {
         "publishedAt": "2026-07-24T15:03:34Z",
@@ -902,8 +950,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1479764",
-        "likeCount": "24207",
+        "viewCount": "1628253",
+        "likeCount": "26099",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -930,6 +978,14 @@
         "comments": 0,
         "engagement_rate": 1.64,
         "daily_views": 147976
+      },
+      {
+        "date": "2026-08-04",
+        "views": 1628253,
+        "likes": 26099,
+        "comments": 0,
+        "engagement_rate": 1.6,
+        "daily_views": 148023
       }
     ]
   },
@@ -947,19 +1003,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22You%20Joy%20Parade%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20You%21Joy%21Parade%21%20M%21LK",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20You%21Joy%21Parade%21%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 1732862,
-      "likes": 67531,
-      "comments": 6321,
-      "engagement_rate": 4.26,
-      "daily_views": 173286
+      "views": 1820719,
+      "likes": 68209,
+      "comments": 6340,
+      "engagement_rate": 4.09,
+      "daily_views": 165519
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "cLxytHhYPodIZpIZ4xws5G3dZOo",
+      "etag": "riqZZYRrMKZmWK6RisuMXQukaa8",
       "id": "81CpK8nCvFw",
       "snippet": {
         "publishedAt": "2026-07-24T12:00:25Z",
@@ -1021,10 +1077,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1732862",
-        "likeCount": "67531",
+        "viewCount": "1820719",
+        "likeCount": "68209",
         "favoriteCount": "0",
-        "commentCount": "6321"
+        "commentCount": "6340"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1050,6 +1106,14 @@
         "comments": 6321,
         "engagement_rate": 4.26,
         "daily_views": 173286
+      },
+      {
+        "date": "2026-08-04",
+        "views": 1820719,
+        "likes": 68209,
+        "comments": 6340,
+        "engagement_rate": 4.09,
+        "daily_views": 165519
       }
     ]
   },
@@ -1065,21 +1129,21 @@
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/3e789d6d-3b7a-4a29-b418-f907566516aa",
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E7%AB%A5%E8%A9%B1%E3%83%9E%E3%82%A8%E3%82%B9%E3%83%88%E3%83%AD",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E7%AB%A5%E8%A9%B1%E3%83%9E%E3%82%A8%E3%82%B9%E3%83%88%E3%83%AD%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E5%BC%8C%E8%AA%A0",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E5%BC%8C%E8%AA%A0%20%E3%83%A2%E3%82%A8%E3%83%81%E3%83%A3%E3%83%83%E3%82%AB%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 3319389,
-      "likes": 88857,
-      "comments": 3268,
-      "engagement_rate": 2.78,
-      "daily_views": 368821
+      "views": 3922583,
+      "likes": 90009,
+      "comments": 3303,
+      "engagement_rate": 2.38,
+      "daily_views": 392258
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "N8eW10nw7wgENoOIbrUwQOh6X74",
+      "etag": "7yvd9NZDuW2xlovlNZDCchWAYR0",
       "id": "uWKFyDPajeo",
       "snippet": {
         "publishedAt": "2026-07-25T14:00:20Z",
@@ -1141,10 +1205,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3319389",
-        "likeCount": "88857",
+        "viewCount": "3922583",
+        "likeCount": "90009",
         "favoriteCount": "0",
-        "commentCount": "3268"
+        "commentCount": "3303"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1168,6 +1232,14 @@
         "comments": 3268,
         "engagement_rate": 2.78,
         "daily_views": 368821
+      },
+      {
+        "date": "2026-08-04",
+        "views": 3922583,
+        "likes": 90009,
+        "comments": 3303,
+        "engagement_rate": 2.38,
+        "daily_views": 392258
       }
     ]
   },
@@ -1185,19 +1257,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22I%20Got%20Your%20Back%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20I%20Got%20Your%20Back%20ILLIT%20%26%20HANA",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=ILLIT%20%26%20HANA%20I%20Got%20Your%20Back%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 6931852,
-      "likes": 397585,
-      "comments": 29285,
-      "engagement_rate": 6.16,
-      "daily_views": 866481
+      "views": 7173328,
+      "likes": 402495,
+      "comments": 29392,
+      "engagement_rate": 6.02,
+      "daily_views": 797036
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "44v0-ITgctBjgFA8sW_9Xth9qio",
+      "etag": "vKZPAPNLuV0TKqaHTENZCaSwDak",
       "id": "_Pk6xfju3l0",
       "snippet": {
         "publishedAt": "2026-07-26T11:00:03Z",
@@ -1265,10 +1337,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "6931852",
-        "likeCount": "397585",
+        "viewCount": "7173328",
+        "likeCount": "402495",
         "favoriteCount": "0",
-        "commentCount": "29285"
+        "commentCount": "29392"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1294,6 +1366,14 @@
         "comments": 29285,
         "engagement_rate": 6.16,
         "daily_views": 866481
+      },
+      {
+        "date": "2026-08-04",
+        "views": 7173328,
+        "likes": 402495,
+        "comments": 29392,
+        "engagement_rate": 6.02,
+        "daily_views": 797036
       }
     ]
   },
@@ -2129,25 +2209,25 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20M%21LK",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-03",
-    "valid_until": "2026-11-01",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
     "last_metrics": {
-      "views": 1152113,
-      "likes": 102262,
-      "comments": 11220,
-      "engagement_rate": 9.85,
-      "daily_views": 1152113
+      "views": 1947521,
+      "likes": 118939,
+      "comments": 12757,
+      "engagement_rate": 6.76,
+      "daily_views": 1947521
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "ArvB-B2GyMpPGt4-aip2E9HlZFo",
+      "etag": "BmCkXK-m9oTfX8orG8UoNykf9bw",
       "id": "7VqCdhFGE78",
       "snippet": {
         "publishedAt": "2026-08-03T09:00:06Z",
         "channelId": "UCFvSFbT8okMrpuFxBEIB2lg",
         "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
+        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/7VqCdhFGE78/default.jpg",
@@ -2181,7 +2261,7 @@
         "defaultLanguage": "ja",
         "localized": {
           "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子　\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果(おお)せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
+          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
         },
         "defaultAudioLanguage": "ja"
       },
@@ -2203,10 +2283,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1152113",
-        "likeCount": "102262",
+        "viewCount": "1947521",
+        "likeCount": "118939",
         "favoriteCount": "0",
-        "commentCount": "11220"
+        "commentCount": "12757"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2237,7 +2317,560 @@
         "comments": 11220,
         "engagement_rate": 9.85,
         "daily_views": 1152113
+      },
+      {
+        "date": "2026-08-04",
+        "views": 1947521,
+        "likes": 118939,
+        "comments": 12757,
+        "engagement_rate": 6.76,
+        "daily_views": 1947521
       }
     ]
+  },
+  {
+    "title": "恋、はじめました。",
+    "artist": "=LOVE - Topic",
+    "video_url": "https://www.youtube.com/watch?v=1wxHLrSmYNg",
+    "jasrac_search_title": "恋、はじめました。",
+    "jasrac_search_artist": "=LOVE",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-03",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/bb3fb958-9fc8-492f-bae0-a5fee812afc4",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%3DLOVE",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%3DLOVE%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
+    "last_metrics": {
+      "views": 190487,
+      "likes": 8573,
+      "comments": 414,
+      "engagement_rate": 4.72,
+      "daily_views": 190487
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-04",
+        "views": 190487,
+        "likes": 8573,
+        "comments": 414,
+        "engagement_rate": 4.72,
+        "daily_views": 190487
+      }
+    ],
+    "added_date": "2026-08-04",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "mCFDIK7ewFtGTyeTtD6FZtUfxMU",
+      "id": "1wxHLrSmYNg",
+      "snippet": {
+        "publishedAt": "2026-08-03T15:00:00Z",
+        "channelId": "UCMUMFn5vbqKrl76gy93ABNQ",
+        "title": "恋、はじめました。",
+        "description": "Provided to YouTube by Sony Music Labels Inc.\n\n恋、はじめました。 · =LOVE\n\n恋、はじめました。\n\n℗ 2026 Sony Music Labels Inc.\n\nReleased on: 2026-08-04\n\nAssociated Performer, Vocal: =LOVE\nVocal: Emiri Otani\nVocal: Hana Oba\nVocal: Risa Otoshima\nVocal: Kiara Saito\nVocal: Maika Sasaki\nVocal: Hitomi Takamatsu\nVocal: Shoko Takiwaki\nVocal: Iori Noguchi\nVocal: Sana Morohashi\nVocal: Anna Yamamoto\nLyricist, Producer: Rino Sashihara\nComposer: Ryuki Koike\nArranger: めんま\n\nAuto-generated by YouTube.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/1wxHLrSmYNg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/1wxHLrSmYNg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/1wxHLrSmYNg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/1wxHLrSmYNg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/1wxHLrSmYNg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "=LOVE - Topic",
+        "tags": [
+          "=LOVE",
+          "イコールラブ",
+          "恋、はじめました。",
+          "コイハジメマシタ",
+          "Koi, Hajimemashita."
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "恋、はじめました。",
+          "description": "Provided to YouTube by Sony Music Labels Inc.\n\n恋、はじめました。 · =LOVE\n\n恋、はじめました。\n\n℗ 2026 Sony Music Labels Inc.\n\nReleased on: 2026-08-04\n\nAssociated Performer, Vocal: =LOVE\nVocal: Emiri Otani\nVocal: Hana Oba\nVocal: Risa Otoshima\nVocal: Kiara Saito\nVocal: Maika Sasaki\nVocal: Hitomi Takamatsu\nVocal: Shoko Takiwaki\nVocal: Iori Noguchi\nVocal: Sana Morohashi\nVocal: Anna Yamamoto\nLyricist, Producer: Rino Sashihara\nComposer: Ryuki Koike\nArranger: めんま\n\nAuto-generated by YouTube."
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT3M39S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "regionRestriction": {
+          "allowed": [
+            "JP"
+          ]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "190487",
+        "likeCount": "8573",
+        "favoriteCount": "0",
+        "commentCount": "414"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia"
+        ]
+      }
+    }
+  },
+  {
+    "title": "BABYMONSTER - 'MOON' M/V",
+    "artist": "BABYMONSTER",
+    "video_url": "https://www.youtube.com/watch?v=xXZwZ0DolJc",
+    "jasrac_search_title": "MOON",
+    "jasrac_search_artist": "BABYMONSTER",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-02",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/7a3d9f3e-8697-4010-8a59-798cab00a232",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22MOON%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20MOON%20BABYMONSTER",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=BABYMONSTER%20MOON%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
+    "last_metrics": {
+      "views": 13543699,
+      "likes": 621080,
+      "comments": 47285,
+      "engagement_rate": 4.93,
+      "daily_views": 6771849
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-04",
+        "views": 13543699,
+        "likes": 621080,
+        "comments": 47285,
+        "engagement_rate": 4.93,
+        "daily_views": 6771849
+      }
+    ],
+    "added_date": "2026-08-04",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "GR4RGP2hhxuJfYe9dBbXz3Qp0vg",
+      "id": "xXZwZ0DolJc",
+      "snippet": {
+        "publishedAt": "2026-08-02T15:00:06Z",
+        "channelId": "UCqwUnggBBct-AY2lAdI88jQ",
+        "title": "BABYMONSTER - 'MOON' M/V",
+        "description": "MOON \n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI shine so bright in the gloom\nI’m the moon, I’m the moon, I’m the moon\n\nFog thickens\nNight vision\nWhere we gonna end up is unwritten\nGrave digger\nGo figure\nBut if you’re killing my mood\nGood riddance\n\nIce in my veins\nYou’re gonna need to keep up with the pace\n더 빨리 더 높이\nWhen you, when you, when you at the crack of dawn\nYou keep on raving on\nYou keep on raving on uh\n\n까만 밤 빛이나\n진짜가 나타나\n세상을 불태워라\n(Baby do you see me now)\n거울아 거울아\n말해봐 알잖아\nIn your heart, leave a mark\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nCharismatic, energetic\nIt’s a habit\nOh she stuntin’, she stuntin’\nI’m in a spaceship coupe \nWe ’bout to take off\nLeave ’em in the dust\nYeah see you later\nOutta this world\nI’m off the radar\nYou wish on a star that you had these bars\n\nI whoosh\nGettin’ that ah\nWhen we go strut in like woah\nSetting on hot\nThat’s what we got\nThat’s how we baking that dough\nLock and we load\nShoot for the stars\nWe in the sky\nRaising the bar\nEyes on the prize\nShining my light\nReady get set\nS.O.S\nWhen I flex\n\n까만 밤 빛이나\n진짜가 나타나\n세상을 불태워라\n(Baby do you see me now)\n거울아 거울아\n말해봐 알잖아\nIn your heart, leave a mark\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\n하늘을 봐\nWe gonna shine bright\n내 길을 가\nBaby it’s our time\nIf you wanna ride\nIf you wanna ride\nIf you wanna ride\nIf you wanna ride, let’s ride\n\nGive ’em all in\nGive ’em all out\nGive ’em all a show\nRide let’s ride\nGive ’em all in\nGive ’em all out\nGive ’em all that woah\nBaby I’mma glow\nIt’s about to blow\nThey don’t even know\n\nOutta this world, we be taking off, get in\nLook at me, I’mma need your attention\nHut 1, 2 hut 1, 2, 3\nAll eyes, all eyes on me\nOutta this world, we be taking off, get in\nLook at me, I’mma need your attention \nHut 1, 2 hut 1, 2, 3\nAll eyes, all eyes on me\n\n#BABYMONSTER #베이비몬스터 #3rdMINIALBUM #춤 #CHOOM #MOON #MV #OUTNOW #YG \n\nAvailable @ https://BABYMONSTER.lnk.to/CHOOM\n\nMore about BABYMONSTER @\nOfficial YouTube https://www.youtube.com/@BABYMONSTER\nOfficial Instagram https://www.instagram.com/babymonster_ygofficial\nOfficial Facebook https://www.facebook.com/BABYMONSTER.ygofficial\nOfficial X https://x.com/YGBABYMONSTER_\nOfficial TikTok https://tiktok.com/@babymonster_yg_tiktok\nOfficial Weibo https://weibo.com/u/7811488144\nOfficial bilibili https://space.bilibili.com/3493127232948989",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xXZwZ0DolJc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xXZwZ0DolJc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xXZwZ0DolJc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xXZwZ0DolJc/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xXZwZ0DolJc/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "BABYMONSTER",
+        "tags": [
+          "BABYMONSTER",
+          "베이비몬스터",
+          "베몬",
+          "BABYMON",
+          "BAEMON",
+          "하람",
+          "아현",
+          "루카",
+          "치키타",
+          "파리타",
+          "로라",
+          "아사",
+          "HARAM",
+          "AHYEON",
+          "RUKA",
+          "CHIQUITA",
+          "PHARITA",
+          "RORA",
+          "ASA"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ko",
+        "localized": {
+          "title": "BABYMONSTER - 'MOON' M/V",
+          "description": "MOON \n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI shine so bright in the gloom\nI’m the moon, I’m the moon, I’m the moon\n\nFog thickens\nNight vision\nWhere we gonna end up is unwritten\nGrave digger\nGo figure\nBut if you’re killing my mood\nGood riddance\n\nIce in my veins\nYou’re gonna need to keep up with the pace\n더 빨리 더 높이\nWhen you, when you, when you at the crack of dawn\nYou keep on raving on\nYou keep on raving on uh\n\n까만 밤 빛이나\n진짜가 나타나\n세상을 불태워라\n(Baby do you see me now)\n거울아 거울아\n말해봐 알잖아\nIn your heart, leave a mark\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nCharismatic, energetic\nIt’s a habit\nOh she stuntin’, she stuntin’\nI’m in a spaceship coupe \nWe ’bout to take off\nLeave ’em in the dust\nYeah see you later\nOutta this world\nI’m off the radar\nYou wish on a star that you had these bars\n\nI whoosh\nGettin’ that ah\nWhen we go strut in like woah\nSetting on hot\nThat’s what we got\nThat’s how we baking that dough\nLock and we load\nShoot for the stars\nWe in the sky\nRaising the bar\nEyes on the prize\nShining my light\nReady get set\nS.O.S\nWhen I flex\n\n까만 밤 빛이나\n진짜가 나타나\n세상을 불태워라\n(Baby do you see me now)\n거울아 거울아\n말해봐 알잖아\nIn your heart, leave a mark\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\nI’m the moon\n보름달 뜨는 밤 On the loose\nZalabim zalabam zalaboom\nI’m the queen of the tide and the youth\nI’m the moon, I’m the moon, I’m the moon\n\n하늘을 봐\nWe gonna shine bright\n내 길을 가\nBaby it’s our time\nIf you wanna ride\nIf you wanna ride\nIf you wanna ride\nIf you wanna ride, let’s ride\n\nGive ’em all in\nGive ’em all out\nGive ’em all a show\nRide let’s ride\nGive ’em all in\nGive ’em all out\nGive ’em all that woah\nBaby I’mma glow\nIt’s about to blow\nThey don’t even know\n\nOutta this world, we be taking off, get in\nLook at me, I’mma need your attention\nHut 1, 2 hut 1, 2, 3\nAll eyes, all eyes on me\nOutta this world, we be taking off, get in\nLook at me, I’mma need your attention \nHut 1, 2 hut 1, 2, 3\nAll eyes, all eyes on me\n\n#BABYMONSTER #베이비몬스터 #3rdMINIALBUM #춤 #CHOOM #MOON #MV #OUTNOW #YG \n\nAvailable @ https://BABYMONSTER.lnk.to/CHOOM\n\nMore about BABYMONSTER @\nOfficial YouTube https://www.youtube.com/@BABYMONSTER\nOfficial Instagram https://www.instagram.com/babymonster_ygofficial\nOfficial Facebook https://www.facebook.com/BABYMONSTER.ygofficial\nOfficial X https://x.com/YGBABYMONSTER_\nOfficial TikTok https://tiktok.com/@babymonster_yg_tiktok\nOfficial Weibo https://weibo.com/u/7811488144\nOfficial bilibili https://space.bilibili.com/3493127232948989"
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "contentDetails": {
+        "duration": "PT2M55S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "13543699",
+        "likeCount": "621080",
+        "favoriteCount": "0",
+        "commentCount": "47285"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Electronic_music",
+          "https://en.wikipedia.org/wiki/Hip_hop_music",
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      },
+      "liveStreamingDetails": {
+        "actualStartTime": "2026-08-02T15:00:06Z",
+        "actualEndTime": "2026-08-02T15:04:00Z",
+        "scheduledStartTime": "2026-08-02T15:00:00Z"
+      }
+    }
+  },
+  {
+    "title": "米津玄師「夜鷹」×『キングダム 魂の決戦』公開記念PV",
+    "artist": "Kenshi Yonezu  米津玄師",
+    "video_url": "https://www.youtube.com/watch?v=qdawWNhgzRo",
+    "jasrac_search_title": "夜鷹",
+    "jasrac_search_artist": "ジン",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-07-31",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/ac212196-fac5-31c4-b54f-6a70d9911d86",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%A4%9C%E9%B7%B9%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%A4%9C%E9%B7%B9%20%E3%82%B8%E3%83%B3",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%B3%20%E5%A4%9C%E9%B7%B9%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
+    "last_metrics": {
+      "views": 653202,
+      "likes": 19438,
+      "comments": 838,
+      "engagement_rate": 3.1,
+      "daily_views": 163300
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-04",
+        "views": 653202,
+        "likes": 19438,
+        "comments": 838,
+        "engagement_rate": 3.1,
+        "daily_views": 163300
+      }
+    ],
+    "added_date": "2026-08-04",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "K02b4DSKyxxyB6fwJNVu7vunksc",
+      "id": "qdawWNhgzRo",
+      "snippet": {
+        "publishedAt": "2026-07-31T10:59:41Z",
+        "channelId": "UCUCeZaZeJbEYAAzvMgrKOPQ",
+        "title": "米津玄師「夜鷹」×『キングダム 魂の決戦』公開記念PV",
+        "description": "「キングダム 魂の決戦」主題歌\n\" KINGDOM: THE CLASH OF SOULS \" Theme Song\n\n━━━━━━━━━━━\n 米津玄師「夜鷹」\n Kenshi Yonezu  -  Yodaka \n━━━━━━━━━━━\nListen here 　https://smej.lnk.to/Yodaka\nSpecial site 　https://reissuerecords.net/Yodaka/\n\n━━━━━━━━━\nキングダム 魂の決戦\n━━━━━━━━━\n大ヒット上映中！\n\nhttps://youtu.be/AQEct00Ks5s\n\n\n天下の大将軍になる夢を抱く主人公の少年・信と、中華統一を目指す若き王・嬴政を壮大なスケールで描く漫画「キングダム」（原泰久／集英社）。2019 年から 2024 年にかけ、実写映画として 4 作品を公開し、シリーズ累計動員 1734 万人、シリーズ累計興行収入 245 億を突破。数々の映画賞とその年の邦画実写映画 No.1 を獲得するなど、日本映画界に燦然と輝くエンターテインメント超大作となった。\n\n漫画は連載 20 周年を迎え、映画も新たな伝説の幕開けへ。シリーズ 5 作目『キングダム 魂の決戦』で描かれるのは、“絶体絶命”。原作でも屈指の人気を誇るエピソード“合従軍編”。シリーズ最大規模で激突する＜秦 vs 六国＞の魂の大攻防戦。秦国存亡をかけた運命の決戦が、この夏、大炎を巻き起こす―。\n\n出演：山﨑賢人\n吉沢亮　橋本環奈　清野菜名　満島真之介　岡山天音\n志尊淳　神尾楓珠　結木滉星　三吉彩花　三山凌輝　山下美月 ／ 蒔田彩珠\n山田裕貴／坂口憲二\n豊川悦司\n髙嶋政宏　要潤　加藤雅也　高橋光臣　平山祐介　一ノ瀬ワタル　佐久間由衣　勝矢\n坂東彌十郎　橋本さとし　笹野高史　谷田歩　中村蒼　田中圭　斎藤工\n玉木宏／佐藤浩市\n小栗旬\n\n原作：原泰久「キングダム」（集英社「週刊ヤングジャンプ」連載）\n\n監督：　佐藤信介\n脚本：　黒岩勉・原泰久\n音楽：　やまだ豊\n主題歌：米津玄師「夜鷹」\n\nhttps://kingdom-the-movie.jp/\n\n上映劇場リスト\nhttps://eigakan.org/theaterpage/schedule.php?t=kingdomthemovie\n\n#夜鷹　#Yodaka　#キングダム\n_________________________________________________\n\nX           　　　 https://twitter.com/hachi_08\nInstagram 　   https://www.instagram.com/hachi_08/\nTikTok              https://www.tiktok.com/@kenshiyonezu_08\nYouTube          https://www.youtube.com/@KenshiYonezu\n\nHP　　　　    http://reissuerecords.net\nMerch　　　  https://shop.kenshiyonezu.jp\n\nStaff X          　      https://twitter.com/reissuerecords\nStaff Instagram     https://www.instagram.com/reissue_records",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/qdawWNhgzRo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/qdawWNhgzRo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/qdawWNhgzRo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/qdawWNhgzRo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/qdawWNhgzRo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Kenshi Yonezu  米津玄師",
+        "tags": [
+          "米津玄師",
+          "ハチ",
+          "Kenshi Yonezu",
+          "HACHI",
+          "オリジナル",
+          "ORIGINAL",
+          "REISSUE RECORDS"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "米津玄師「夜鷹」×『キングダム 魂の決戦』公開記念PV",
+          "description": "「キングダム 魂の決戦」主題歌\n\" KINGDOM: THE CLASH OF SOULS \" Theme Song\n\n━━━━━━━━━━━\n 米津玄師「夜鷹」\n Kenshi Yonezu  -  Yodaka \n━━━━━━━━━━━\nListen here 　https://smej.lnk.to/Yodaka\nSpecial site 　https://reissuerecords.net/Yodaka/\n\n━━━━━━━━━\nキングダム 魂の決戦\n━━━━━━━━━\n大ヒット上映中！\n\nhttps://youtu.be/AQEct00Ks5s\n\n\n天下の大将軍になる夢を抱く主人公の少年・信と、中華統一を目指す若き王・嬴政を壮大なスケールで描く漫画「キングダム」（原泰久／集英社）。2019 年から 2024 年にかけ、実写映画として 4 作品を公開し、シリーズ累計動員 1734 万人、シリーズ累計興行収入 245 億を突破。数々の映画賞とその年の邦画実写映画 No.1 を獲得するなど、日本映画界に燦然と輝くエンターテインメント超大作となった。\n\n漫画は連載 20 周年を迎え、映画も新たな伝説の幕開けへ。シリーズ 5 作目『キングダム 魂の決戦』で描かれるのは、“絶体絶命”。原作でも屈指の人気を誇るエピソード“合従軍編”。シリーズ最大規模で激突する＜秦 vs 六国＞の魂の大攻防戦。秦国存亡をかけた運命の決戦が、この夏、大炎を巻き起こす―。\n\n出演：山﨑賢人\n吉沢亮　橋本環奈　清野菜名　満島真之介　岡山天音\n志尊淳　神尾楓珠　結木滉星　三吉彩花　三山凌輝　山下美月 ／ 蒔田彩珠\n山田裕貴／坂口憲二\n豊川悦司\n髙嶋政宏　要潤　加藤雅也　高橋光臣　平山祐介　一ノ瀬ワタル　佐久間由衣　勝矢\n坂東彌十郎　橋本さとし　笹野高史　谷田歩　中村蒼　田中圭　斎藤工\n玉木宏／佐藤浩市\n小栗旬\n\n原作：原泰久「キングダム」（集英社「週刊ヤングジャンプ」連載）\n\n監督：　佐藤信介\n脚本：　黒岩勉・原泰久\n音楽：　やまだ豊\n主題歌：米津玄師「夜鷹」\n\nhttps://kingdom-the-movie.jp/\n\n上映劇場リスト\nhttps://eigakan.org/theaterpage/schedule.php?t=kingdomthemovie\n\n#夜鷹　#Yodaka　#キングダム\n_________________________________________________\n\nX           　　　 https://twitter.com/hachi_08\nInstagram 　   https://www.instagram.com/hachi_08/\nTikTok              https://www.tiktok.com/@kenshiyonezu_08\nYouTube          https://www.youtube.com/@KenshiYonezu\n\nHP　　　　    http://reissuerecords.net\nMerch　　　  https://shop.kenshiyonezu.jp\n\nStaff X          　      https://twitter.com/reissuerecords\nStaff Instagram     https://www.instagram.com/reissue_records"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT2M48S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "653202",
+        "likeCount": "19438",
+        "favoriteCount": "0",
+        "commentCount": "838"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Entertainment",
+          "https://en.wikipedia.org/wiki/Music_of_Asia"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Travis Japan – 'On My Road -Stadium ver.-' Music Video",
+    "artist": "Travis Japan",
+    "video_url": "https://www.youtube.com/watch?v=pCoVdp-_iMI",
+    "jasrac_search_title": "On My Road",
+    "jasrac_search_artist": "Travis Japan",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-02",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22On%20My%20Road%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22On%20My%20Road%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20On%20My%20Road%20Travis%20Japan",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Travis%20Japan%20On%20My%20Road%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-04",
+    "valid_until": "2026-11-02",
+    "last_metrics": {
+      "views": 293619,
+      "likes": 23746,
+      "comments": 4147,
+      "engagement_rate": 9.5,
+      "daily_views": 146809
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-04",
+        "views": 293619,
+        "likes": 23746,
+        "comments": 4147,
+        "engagement_rate": 9.5,
+        "daily_views": 146809
+      }
+    ],
+    "added_date": "2026-08-04",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "rTr6ELWPSvzkw7qqOtRkfqzBfEM",
+      "id": "pCoVdp-_iMI",
+      "snippet": {
+        "publishedAt": "2026-08-02T15:00:06Z",
+        "channelId": "UCoEIdZkDEZdrCDCJSqwifzw",
+        "title": "Travis Japan – 'On My Road -Stadium ver.-' Music Video",
+        "description": "‘On My Road’ -Stadium Ver.-’  Music Video\n\nDirector: Takuya Oyama (VANLI)\nProducer: Keisuke Nakashima (isle film)\n\nTravis JapanがＪリーグ2026/27シーズンスペシャルアンバサダーに就任！\n2026/27シーズンのＪリーグを盛り上げる楽曲として、‘On My Road’ が起用！\n\n▼‘On My Road’ -Stadium Ver.-’ Download/Stream\n　https://TravisJapan.lnk.to/OnMyRoadStadiumver\n\n▼‘On My Road’ Download/Stream\n　https://TravisJapan.lnk.to/kagenimohinatanimo \n\n▼‘On My Road’ ＪリーグオリジナルMV\n　https://youtu.be/m3hwQ1hOvpQ?si=PvR96iXwH75hvl48\n\n【Travis Japan PROFILE】\n宮近海斗・中村海人・七五三掛龍也・川島如恵留・吉澤閑也・松田元太・松倉海斗の7名からなるダンスボーカルグループ。\n\n▼Connect with Travis Japan\n ・HP：https://www.universal-music.co.jp/travisjapan/\n ・YouTube：https://www.youtube.com/@TravisJapan_official\n・Instagram：https://www.instagram.com/travis_japan_official/\n・X：https://twitter.com/TravisJapan_cr\n・TikTok：https://www.tiktok.com/@travisjapan_capitol\n・https://travisjapan.lnk.to/SNS\n\n#TravisJapan \n\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿\n\n「On My Road -Stadium ver.」\n\n思えば長い長い道を がむしゃらに走り続けてた\n終わることのないこの道は 明日の空へ続いていく\n\nWow...\n\n果てない空はどこまでも青く 僕らは夢を重ねていく\n想いが熱を運んでは 混ざり合ってヒカリだす\nさぁ最高の展開だ 約束の場所でまた会おう\nあの頃と何も変わってない 笑顔溢れている\n\nハロー ハロー\n手を繋いだ 温もり 忘れないよ\n今 輝き出す My Life 君と紡いだ希望\nWow...\n\n駆け出して 踏み出して 終わらない夢の先\n信じていたい Wow\nもう一回 もう一回 明日を照らす太陽\n追いかけて行こう ほら 僕ら探し続ける 君と共に\n\nWow...\n\nもう歓声は上がってんだ 何度だって繰り返し叫ぼう\n難題をぶち壊して行くのは いつも君だったんだ\n\nカモン カモン\n連れていくよ 扉開いた未来\nWow...\n\n飛び込んで 巻き込んで 消えない情熱の中\n時間を越えて ほら何度も 勇気付ける歌 歌いたいんだ\n\nあの日君に誓った事 守り続ける\n\n遠く光るあの場所まで\n君と歩いていく\n\n駆け出して 踏み出して 終わらない夢の先\n信じていたい Wow\nもう一回 もう一回 明日を照らす太陽\n追いかけて行こう ほら 僕ら探し続ける 君と共に\n\nWow... 君と共に\n\n思えば長い長い道で がむしゃらに走り続けてた\nこの先もまだ続いてく 変わらないもの抱きしめて",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pCoVdp-_iMI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pCoVdp-_iMI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pCoVdp-_iMI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pCoVdp-_iMI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pCoVdp-_iMI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Travis Japan",
+        "tags": [
+          "Travis Japan",
+          "TravisJapan",
+          "トラビスジャパン",
+          "トラヴィスジャパン",
+          "トラビス",
+          "トラヴィス",
+          "トラジャ",
+          "宮近海斗",
+          "Kaito Miyachika",
+          "中村海人",
+          "Kaito Nakamura",
+          "七五三掛龍也",
+          "Ryuya Shimekake",
+          "川島如恵留",
+          "Noel Kawashima",
+          "吉澤閑也",
+          "Shizuya Yoshizawa",
+          "松田元太",
+          "Genta Matsuda",
+          "松倉海斗",
+          "Kaito Matsukura",
+          "TJ",
+          "japanese music",
+          "jpop",
+          "japanese pop music",
+          "japanese male idol",
+          "japan idol",
+          "STARTO",
+          "男性アイドル",
+          "アイドル",
+          "日本 アイドル",
+          "とらびす",
+          "On My Road -Stadium ver.-",
+          "On My Road",
+          "サッカー",
+          "Jリーグ",
+          "soccer",
+          "邦楽",
+          "J League",
+          "J.LEAGUE",
+          "明治安田Jリーグ",
+          "日本サッカー",
+          "football"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "Travis Japan – 'On My Road -Stadium ver.-' Music Video",
+          "description": "‘On My Road’ -Stadium Ver.-’  Music Video\n\nDirector: Takuya Oyama (VANLI)\nProducer: Keisuke Nakashima (isle film)\n\nTravis JapanがＪリーグ2026/27シーズンスペシャルアンバサダーに就任！\n2026/27シーズンのＪリーグを盛り上げる楽曲として、‘On My Road’ が起用！\n\n▼‘On My Road’ -Stadium Ver.-’ Download/Stream\n　https://TravisJapan.lnk.to/OnMyRoadStadiumver\n\n▼‘On My Road’ Download/Stream\n　https://TravisJapan.lnk.to/kagenimohinatanimo \n\n▼‘On My Road’ ＪリーグオリジナルMV\n　https://youtu.be/m3hwQ1hOvpQ?si=PvR96iXwH75hvl48\n\n【Travis Japan PROFILE】\n宮近海斗・中村海人・七五三掛龍也・川島如恵留・吉澤閑也・松田元太・松倉海斗の7名からなるダンスボーカルグループ。\n\n▼Connect with Travis Japan\n ・HP：https://www.universal-music.co.jp/travisjapan/\n ・YouTube：https://www.youtube.com/@TravisJapan_official\n・Instagram：https://www.instagram.com/travis_japan_official/\n・X：https://twitter.com/TravisJapan_cr\n・TikTok：https://www.tiktok.com/@travisjapan_capitol\n・https://travisjapan.lnk.to/SNS\n\n#TravisJapan \n\n＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿\n\n「On My Road -Stadium ver.」\n\n思えば長い長い道を がむしゃらに走り続けてた\n終わることのないこの道は 明日の空へ続いていく\n\nWow...\n\n果てない空はどこまでも青く 僕らは夢を重ねていく\n想いが熱を運んでは 混ざり合ってヒカリだす\nさぁ最高の展開だ 約束の場所でまた会おう\nあの頃と何も変わってない 笑顔溢れている\n\nハロー ハロー\n手を繋いだ 温もり 忘れないよ\n今 輝き出す My Life 君と紡いだ希望\nWow...\n\n駆け出して 踏み出して 終わらない夢の先\n信じていたい Wow\nもう一回 もう一回 明日を照らす太陽\n追いかけて行こう ほら 僕ら探し続ける 君と共に\n\nWow...\n\nもう歓声は上がってんだ 何度だって繰り返し叫ぼう\n難題をぶち壊して行くのは いつも君だったんだ\n\nカモン カモン\n連れていくよ 扉開いた未来\nWow...\n\n飛び込んで 巻き込んで 消えない情熱の中\n時間を越えて ほら何度も 勇気付ける歌 歌いたいんだ\n\nあの日君に誓った事 守り続ける\n\n遠く光るあの場所まで\n君と歩いていく\n\n駆け出して 踏み出して 終わらない夢の先\n信じていたい Wow\nもう一回 もう一回 明日を照らす太陽\n追いかけて行こう ほら 僕ら探し続ける 君と共に\n\nWow... 君と共に\n\n思えば長い長い道で がむしゃらに走り続けてた\nこの先もまだ続いてく 変わらないもの抱きしめて"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT4M59S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "293619",
+        "likeCount": "23746",
+        "favoriteCount": "0",
+        "commentCount": "4147"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      },
+      "liveStreamingDetails": {
+        "actualStartTime": "2026-08-02T15:00:06Z",
+        "actualEndTime": "2026-08-02T15:07:05Z",
+        "scheduledStartTime": "2026-08-02T15:00:00Z"
+      }
+    }
   }
 ]
