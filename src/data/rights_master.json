@@ -13,19 +13,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22Brand%20New%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Brand%20New%20Mrs.%20GREEN%20APPLE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20Brand%20New%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 3611402,
-      "likes": 104120,
-      "comments": 7255,
-      "engagement_rate": 3.08,
-      "daily_views": 902850
+      "views": 4478252,
+      "likes": 108359,
+      "comments": 7603,
+      "engagement_rate": 2.59,
+      "daily_views": 895650
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "VDMerd0UJrl3pZwG0llgGh1dfHs",
+      "etag": "SwWuzDN3XeWBxIA5ZBlv_2jGKNg",
       "id": "dePs7UPp6GQ",
       "snippet": {
         "publishedAt": "2026-07-31T12:00:06Z",
@@ -93,10 +93,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3611402",
-        "likeCount": "104120",
+        "viewCount": "4478252",
+        "likeCount": "108359",
         "favoriteCount": "0",
-        "commentCount": "7255"
+        "commentCount": "7603"
       },
       "topicDetails": {
         "topicCategories": [
@@ -135,6 +135,14 @@
         "comments": 7255,
         "engagement_rate": 3.08,
         "daily_views": 902850
+      },
+      {
+        "date": "2026-08-05",
+        "views": 4478252,
+        "likes": 108359,
+        "comments": 7603,
+        "engagement_rate": 2.59,
+        "daily_views": 895650
       }
     ]
   },
@@ -152,19 +160,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20Snow%20Man",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 6518014,
-      "likes": 173168,
-      "comments": 14499,
-      "engagement_rate": 2.88,
-      "daily_views": 592546
+      "views": 7142829,
+      "likes": 173941,
+      "comments": 14710,
+      "engagement_rate": 2.64,
+      "daily_views": 595235
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "sxncVmjTE1wsXzYLy7MyYrDnnG0",
+      "etag": "DDNwOh8V-dFYNziKlc66bmF5Pvg",
       "id": "JofSrfFV4Kw",
       "snippet": {
         "publishedAt": "2026-07-24T13:00:06Z",
@@ -238,10 +246,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "6518014",
-        "likeCount": "173168",
+        "viewCount": "7142829",
+        "likeCount": "173941",
         "favoriteCount": "0",
-        "commentCount": "14499"
+        "commentCount": "14710"
       },
       "topicDetails": {
         "topicCategories": [
@@ -280,6 +288,14 @@
         "comments": 14499,
         "engagement_rate": 2.88,
         "daily_views": 592546
+      },
+      {
+        "date": "2026-08-05",
+        "views": 7142829,
+        "likes": 173941,
+        "comments": 14710,
+        "engagement_rate": 2.64,
+        "daily_views": 595235
       }
     ]
   },
@@ -297,19 +313,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20ACEes",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=ACEes%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 2476154,
-      "likes": 34654,
-      "comments": 84235,
-      "engagement_rate": 4.8,
-      "daily_views": 247615
+      "views": 2534826,
+      "likes": 34872,
+      "comments": 84531,
+      "engagement_rate": 4.71,
+      "daily_views": 230438
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "6oP2CD4BQuRlGzisGHuS6mI44Nk",
+      "etag": "oN3twA8tCnQgUU5pDyR3DlEZ-Qw",
       "id": "TfvYFX06Mes",
       "snippet": {
         "publishedAt": "2026-07-25T11:00:28Z",
@@ -374,10 +390,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2476154",
-        "likeCount": "34654",
+        "viewCount": "2534826",
+        "likeCount": "34872",
         "favoriteCount": "0",
-        "commentCount": "84235"
+        "commentCount": "84531"
       },
       "topicDetails": {
         "topicCategories": [
@@ -411,6 +427,14 @@
         "comments": 84235,
         "engagement_rate": 4.8,
         "daily_views": 247615
+      },
+      {
+        "date": "2026-08-05",
+        "views": 2534826,
+        "likes": 34872,
+        "comments": 84531,
+        "engagement_rate": 4.71,
+        "daily_views": 230438
       }
     ]
   },
@@ -428,25 +452,25 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 3799855,
-      "likes": 62349,
-      "comments": 6278,
-      "engagement_rate": 1.81,
-      "daily_views": 949963
+      "views": 4338053,
+      "likes": 63710,
+      "comments": 7078,
+      "engagement_rate": 1.63,
+      "daily_views": 867610
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "Va2FFS4qOGO8zf1OIpwQEXsyV0E",
+      "etag": "sFkCpNhGOFuAIiTIV-9L5dPnvvw",
       "id": "gXNbJEYuoSw",
       "snippet": {
         "publishedAt": "2026-07-31T04:00:06Z",
         "channelId": "UChNkqst-cjAoIbXb-ukn_tQ",
         "title": "BE:FIRST / BRUCE WAYNE feat. Flo Milli, ATL Jacob -Music Video-",
-        "description": "【BE:FIRST 5th Anniversary Project】\n▼‘BRUCE WANYE’ 2026.07.31 Digital Release\nStreaming & Download : https://lnk.to/bruce_wayne\n\n▼‘BRUCE WANYE’ Music Video Credits\nhttps://befirst.tokyo/discography/digital-single/bruce-wayne/\nWritten by Brittany “Starrah” Hazzard, Jacob Canady, SKY-HI, Tamia Monique Carter, Taylor Ross\nProduced by ATL Jacob, SKY-HI\nVocal Direction : OHGA, Sunny, Xansei\nEnglish Direction : OHGA\nRecording Engineer : Hideaki Jinbu, Mei Kawasaki (prime sound studio form)\nMixing & Mastering Engineer : Oscar Cornejo\nA&R by Nebula17\n\nFlo Milli appears courtesy of RCA Records, a division of Sony Music Entertainment\nATL Jacob appears courtesy of Uptown Records\n\nBE:FIRST\nSOTA\nSHUNTO\nMANATO\nRYUHEI\nJUNON\nLEO\n\nFeat. Artist : Flo milli, ATL Jacob\n\nChoreographer : RIEHATA\n\nTotal Produced by SKY-HI (BMSG)\n\n\n▼”WATCH ME\" 2026.09.18 Global EP Release\nSpecial site : https://befirst.tokyo/global2026/watchme\nPre-Add & Pre-Save : https://ffm.to/befirst_watchme\n\n▼’BRUCE WANYE’ - Playlist -\n https://youtube.com/playlist?list=PLTqS_fgJQQ8s&si=ujs5aH6dWSZ7CHti\n\n\n▼BE:FIRST / Music Video - Playlist -\nhttps://www.youtube.com/playlist?list=PLbnrvWONK6FdEWKeXArhrUMu53Xb7ruxl\n\n▼BE:FIRST / Streaming \nhttps://befirst.lnk.to/Streaming\n\n\n＜BE:FIRST PROFILE＞\nBE:FIRST is a six-member dance and vocal group consisting of SOTA, SHUNTO, MANATO, RYUHEI, JUNON, and LEO. Each member possesses exceptional talent and potential in singing, dancing, and rapping. Their musical sensitivity, demonstrated in their songwriting, composing, and choreography, is also evident. Each member’s individuality and flair are captivating. Since their pre-debut, the group, dubbed “BE:FIRST,” has dominated the top charts in Japan.\n\n\n＜BE:FIRST SNS＞\nOfficial Website : https://befirst.tokyo/\nX : https://twitter.com/BEFIRSTofficial\nX (global) : https://twitter.com/BEFIRST_global\nInstagram : https://www.instagram.com/befirst__official/ \nFacebook : https://www.facebook.com/BEFIRSTofficial\nTikTok : https://www.tiktok.com/@befirst_official\nYouTube Channel : https://www.youtube.com/@BEFIRST_official\nLINE : https://page.line.me/befirst\n\n \n＜BMSG SNS＞\nOfficial Website : https://bmsg.tokyo/\nX : https://x.com/BMSG_official\nInstagram : https://www.instagram.com/bmsg_official/\nYouTube Channel : https://www.youtube.com/BMSG_official\n\n\n#BF_BRUCEWAYNE\n#BEFIRST \n#BEFIR5T\n#BMSG\n#BESTY\n#BEFIRSTXBESTY",
+        "description": "【BE:FIRST 5th Anniversary Project】\n▼‘BRUCE WANYE’ 2026.07.31 Digital Release\nStreaming & Download : https://lnk.to/bruce_wayne\n\n▼‘BRUCE WANYE’ Music Video Credits\nhttps://befirst.tokyo/music/brucewayne/\nWritten by Brittany “Starrah” Hazzard, Jacob Canady, SKY-HI, Tamia Monique Carter, Taylor Ross\nProduced by ATL Jacob, SKY-HI\nVocal Direction : OHGA, Sunny, Xansei\nEnglish Direction : OHGA\nRecording Engineer : Hideaki Jinbu, Mei Kawasaki (prime sound studio form)\nMixing & Mastering Engineer : Oscar Cornejo\nA&R by Nebula17\n\nFlo Milli appears courtesy of RCA Records, a division of Sony Music Entertainment\nATL Jacob appears courtesy of Uptown Records\n\nBE:FIRST\nSOTA\nSHUNTO\nMANATO\nRYUHEI\nJUNON\nLEO\n\nFeat. Artist : Flo milli, ATL Jacob\n\nChoreographer : RIEHATA\n\nTotal Produced by SKY-HI (BMSG)\n\n\n▼”WATCH ME\" 2026.09.18 Global EP Release\nSpecial site : https://befirst.tokyo/global2026/watchme\nPre-Add & Pre-Save : https://ffm.to/befirst_watchme\n\n▼’BRUCE WANYE’ - Playlist -\n https://youtube.com/playlist?list=PLTqS_fgJQQ8s&si=ujs5aH6dWSZ7CHti\n\n\n▼BE:FIRST / Music Video - Playlist -\nhttps://www.youtube.com/playlist?list=PLbnrvWONK6FdEWKeXArhrUMu53Xb7ruxl\n\n▼BE:FIRST / Streaming \nhttps://befirst.lnk.to/Streaming\n\n\n＜BE:FIRST PROFILE＞\nBE:FIRST is a six-member dance and vocal group consisting of SOTA, SHUNTO, MANATO, RYUHEI, JUNON, and LEO. Each member possesses exceptional talent and potential in singing, dancing, and rapping. Their musical sensitivity, demonstrated in their songwriting, composing, and choreography, is also evident. Each member’s individuality and flair are captivating. Since their pre-debut, the group, dubbed “BE:FIRST,” has dominated the top charts in Japan.\n\n\n＜BE:FIRST SNS＞\nOfficial Website : https://befirst.tokyo/\nX : https://twitter.com/BEFIRSTofficial\nX (global) : https://twitter.com/BEFIRST_global\nInstagram : https://www.instagram.com/befirst__official/ \nFacebook : https://www.facebook.com/BEFIRSTofficial\nTikTok : https://www.tiktok.com/@befirst_official\nYouTube Channel : https://www.youtube.com/@BEFIRST_official\nLINE : https://page.line.me/befirst\n\n \n＜BMSG SNS＞\nOfficial Website : https://bmsg.tokyo/\nX : https://x.com/BMSG_official\nInstagram : https://www.instagram.com/bmsg_official/\nYouTube Channel : https://www.youtube.com/BMSG_official\n\n\n#BF_BRUCEWAYNE\n#BEFIRST \n#BEFIR5T\n#BMSG\n#BESTY\n#BEFIRSTXBESTY",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/gXNbJEYuoSw/default.jpg",
@@ -480,7 +504,7 @@
         "defaultLanguage": "en",
         "localized": {
           "title": "BE:FIRST / BRUCE WAYNE feat. Flo Milli, ATL Jacob -Music Video-",
-          "description": "【BE:FIRST 5th Anniversary Project】\n▼‘BRUCE WANYE’ 2026.07.31 Digital Release\nStreaming & Download : https://lnk.to/bruce_wayne\n\n▼‘BRUCE WANYE’ Music Video Credits\nhttps://befirst.tokyo/discography/digital-single/bruce-wayne/\nWritten by Brittany “Starrah” Hazzard, Jacob Canady, SKY-HI, Tamia Monique Carter, Taylor Ross\nProduced by ATL Jacob, SKY-HI\nVocal Direction : OHGA, Sunny, Xansei\nEnglish Direction : OHGA\nRecording Engineer : Hideaki Jinbu, Mei Kawasaki (prime sound studio form)\nMixing & Mastering Engineer : Oscar Cornejo\nA&R by Nebula17\n\nFlo Milli appears courtesy of RCA Records, a division of Sony Music Entertainment\nATL Jacob appears courtesy of Uptown Records\n\nBE:FIRST\nSOTA\nSHUNTO\nMANATO\nRYUHEI\nJUNON\nLEO\n\nFeat. Artist : Flo milli, ATL Jacob\n\nChoreographer : RIEHATA\n\nTotal Produced by SKY-HI (BMSG)\n\n\n▼”WATCH ME\" 2026.09.18 Global EP Release\nSpecial site : https://befirst.tokyo/global2026/watchme\nPre-Add & Pre-Save : https://ffm.to/befirst_watchme\n\n▼’BRUCE WANYE’ - Playlist -\n https://youtube.com/playlist?list=PLTqS_fgJQQ8s&si=ujs5aH6dWSZ7CHti\n\n\n▼BE:FIRST / Music Video - Playlist -\nhttps://www.youtube.com/playlist?list=PLbnrvWONK6FdEWKeXArhrUMu53Xb7ruxl\n\n▼BE:FIRST / Streaming \nhttps://befirst.lnk.to/Streaming\n\n\n＜BE:FIRST PROFILE＞\nBE:FIRST is a six-member dance and vocal group consisting of SOTA, SHUNTO, MANATO, RYUHEI, JUNON, and LEO. Each member possesses exceptional talent and potential in singing, dancing, and rapping. Their musical sensitivity, demonstrated in their songwriting, composing, and choreography, is also evident. Each member’s individuality and flair are captivating. Since their pre-debut, the group, dubbed “BE:FIRST,” has dominated the top charts in Japan.\n\n\n＜BE:FIRST SNS＞\nOfficial Website : https://befirst.tokyo/\nX : https://twitter.com/BEFIRSTofficial\nX (global) : https://twitter.com/BEFIRST_global\nInstagram : https://www.instagram.com/befirst__official/ \nFacebook : https://www.facebook.com/BEFIRSTofficial\nTikTok : https://www.tiktok.com/@befirst_official\nYouTube Channel : https://www.youtube.com/@BEFIRST_official\nLINE : https://page.line.me/befirst\n\n \n＜BMSG SNS＞\nOfficial Website : https://bmsg.tokyo/\nX : https://x.com/BMSG_official\nInstagram : https://www.instagram.com/bmsg_official/\nYouTube Channel : https://www.youtube.com/BMSG_official\n\n\n#BF_BRUCEWAYNE\n#BEFIRST \n#BEFIR5T\n#BMSG\n#BESTY\n#BEFIRSTXBESTY"
+          "description": "【BE:FIRST 5th Anniversary Project】\n▼‘BRUCE WANYE’ 2026.07.31 Digital Release\nStreaming & Download : https://lnk.to/bruce_wayne\n\n▼‘BRUCE WANYE’ Music Video Credits\nhttps://befirst.tokyo/music/brucewayne/\nWritten by Brittany “Starrah” Hazzard, Jacob Canady, SKY-HI, Tamia Monique Carter, Taylor Ross\nProduced by ATL Jacob, SKY-HI\nVocal Direction : OHGA, Sunny, Xansei\nEnglish Direction : OHGA\nRecording Engineer : Hideaki Jinbu, Mei Kawasaki (prime sound studio form)\nMixing & Mastering Engineer : Oscar Cornejo\nA&R by Nebula17\n\nFlo Milli appears courtesy of RCA Records, a division of Sony Music Entertainment\nATL Jacob appears courtesy of Uptown Records\n\nBE:FIRST\nSOTA\nSHUNTO\nMANATO\nRYUHEI\nJUNON\nLEO\n\nFeat. Artist : Flo milli, ATL Jacob\n\nChoreographer : RIEHATA\n\nTotal Produced by SKY-HI (BMSG)\n\n\n▼”WATCH ME\" 2026.09.18 Global EP Release\nSpecial site : https://befirst.tokyo/global2026/watchme\nPre-Add & Pre-Save : https://ffm.to/befirst_watchme\n\n▼’BRUCE WANYE’ - Playlist -\n https://youtube.com/playlist?list=PLTqS_fgJQQ8s&si=ujs5aH6dWSZ7CHti\n\n\n▼BE:FIRST / Music Video - Playlist -\nhttps://www.youtube.com/playlist?list=PLbnrvWONK6FdEWKeXArhrUMu53Xb7ruxl\n\n▼BE:FIRST / Streaming \nhttps://befirst.lnk.to/Streaming\n\n\n＜BE:FIRST PROFILE＞\nBE:FIRST is a six-member dance and vocal group consisting of SOTA, SHUNTO, MANATO, RYUHEI, JUNON, and LEO. Each member possesses exceptional talent and potential in singing, dancing, and rapping. Their musical sensitivity, demonstrated in their songwriting, composing, and choreography, is also evident. Each member’s individuality and flair are captivating. Since their pre-debut, the group, dubbed “BE:FIRST,” has dominated the top charts in Japan.\n\n\n＜BE:FIRST SNS＞\nOfficial Website : https://befirst.tokyo/\nX : https://twitter.com/BEFIRSTofficial\nX (global) : https://twitter.com/BEFIRST_global\nInstagram : https://www.instagram.com/befirst__official/ \nFacebook : https://www.facebook.com/BEFIRSTofficial\nTikTok : https://www.tiktok.com/@befirst_official\nYouTube Channel : https://www.youtube.com/@BEFIRST_official\nLINE : https://page.line.me/befirst\n\n \n＜BMSG SNS＞\nOfficial Website : https://bmsg.tokyo/\nX : https://x.com/BMSG_official\nInstagram : https://www.instagram.com/bmsg_official/\nYouTube Channel : https://www.youtube.com/BMSG_official\n\n\n#BF_BRUCEWAYNE\n#BEFIRST \n#BEFIR5T\n#BMSG\n#BESTY\n#BEFIRSTXBESTY"
         },
         "defaultAudioLanguage": "ja"
       },
@@ -502,10 +526,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3799855",
-        "likeCount": "62349",
+        "viewCount": "4338053",
+        "likeCount": "63710",
         "favoriteCount": "0",
-        "commentCount": "6278"
+        "commentCount": "7078"
       },
       "topicDetails": {
         "topicCategories": [
@@ -546,6 +570,14 @@
         "comments": 6278,
         "engagement_rate": 1.81,
         "daily_views": 949963
+      },
+      {
+        "date": "2026-08-05",
+        "views": 4338053,
+        "likes": 63710,
+        "comments": 7078,
+        "engagement_rate": 1.63,
+        "daily_views": 867610
       }
     ]
   },
@@ -563,19 +595,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22GO%20GHOST%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20GO%20GHOST%20King%20Gnu",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=King%20Gnu%20GO%20GHOST%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 1475183,
-      "likes": 31493,
-      "comments": 1181,
-      "engagement_rate": 2.21,
-      "daily_views": 210740
+      "views": 1600458,
+      "likes": 32295,
+      "comments": 1183,
+      "engagement_rate": 2.09,
+      "daily_views": 200057
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "lfVfm7rb2s0_URU5pcwFwIGW0hY",
+      "etag": "Voh9KZk3BVCcxscPVxcHejxlMFw",
       "id": "gT5XyATc-Z8",
       "snippet": {
         "publishedAt": "2026-07-28T15:00:29Z",
@@ -647,10 +679,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1475183",
-        "likeCount": "31493",
+        "viewCount": "1600458",
+        "likeCount": "32295",
         "favoriteCount": "0",
-        "commentCount": "1181"
+        "commentCount": "1183"
       },
       "topicDetails": {
         "topicCategories": [
@@ -686,6 +718,14 @@
         "comments": 1181,
         "engagement_rate": 2.21,
         "daily_views": 210740
+      },
+      {
+        "date": "2026-08-05",
+        "views": 1600458,
+        "likes": 32295,
+        "comments": 1183,
+        "engagement_rate": 2.09,
+        "daily_views": 200057
       }
     ]
   },
@@ -703,19 +743,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22WHATCHA%20DOIN%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20WHATCHA%20DOIN%20JO1",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=JO1%20WHATCHA%20DOIN%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 2366460,
-      "likes": 30835,
-      "comments": 8133,
-      "engagement_rate": 1.65,
-      "daily_views": 591615
+      "views": 2884849,
+      "likes": 31462,
+      "comments": 8495,
+      "engagement_rate": 1.39,
+      "daily_views": 576969
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "OA1M7AgcxQTzplgwle5NaeQMv6M",
+      "etag": "o4-RVCK3wZTFt5Sq05qbU4Gknh8",
       "id": "eN2NlzPdcrs",
       "snippet": {
         "publishedAt": "2026-07-31T03:59:32Z",
@@ -792,7 +832,7 @@
         "dimension": "2d",
         "definition": "hd",
         "caption": "true",
-        "licensedContent": true,
+        "licensedContent": false,
         "contentRating": {},
         "projection": "rectangular"
       },
@@ -805,10 +845,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2366460",
-        "likeCount": "30835",
+        "viewCount": "2884849",
+        "likeCount": "31462",
         "favoriteCount": "0",
-        "commentCount": "8133"
+        "commentCount": "8495"
       },
       "topicDetails": {
         "topicCategories": [
@@ -842,6 +882,14 @@
         "comments": 8133,
         "engagement_rate": 1.65,
         "daily_views": 591615
+      },
+      {
+        "date": "2026-08-05",
+        "views": 2884849,
+        "likes": 31462,
+        "comments": 8495,
+        "engagement_rate": 1.39,
+        "daily_views": 576969
       }
     ]
   },
@@ -859,19 +907,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3%28CV.%E9%88%B4%E6%9C%A8%E3%81%BF%E3%81%AE%E3%82%8A%29%2C%20%E4%BA%BA%E9%AD%9A%28CV.%E5%A4%A7%E6%9C%A8%E5%92%B2%E7%B5%B5%E5%AD%90%29%20%26%20%E4%BA%BA%E9%AD%9A%28CV.%E4%B8%83%E7%80%AC%E5%BD%A9%E5%A4%8F%29%20%E5%B3%B6%E3%81%AE%E3%81%86%E3%81%9F%20%28%E3%82%BB%E3%82%A4%E3%83%AC%E3%83%BC%E3%83%B3ver.%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 1628253,
-      "likes": 26099,
+      "views": 1765080,
+      "likes": 27734,
       "comments": 0,
-      "engagement_rate": 1.6,
-      "daily_views": 148023
+      "engagement_rate": 1.57,
+      "daily_views": 147090
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "pWrXga5tCDlNOFYBGhOIAvQ-YSE",
+      "etag": "Zvb4up2WJko9f1mAeUriq5O5W04",
       "id": "lI7efayDEeU",
       "snippet": {
         "publishedAt": "2026-07-24T15:03:34Z",
@@ -950,8 +998,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1628253",
-        "likeCount": "26099",
+        "viewCount": "1765080",
+        "likeCount": "27734",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -986,6 +1034,14 @@
         "comments": 0,
         "engagement_rate": 1.6,
         "daily_views": 148023
+      },
+      {
+        "date": "2026-08-05",
+        "views": 1765080,
+        "likes": 27734,
+        "comments": 0,
+        "engagement_rate": 1.57,
+        "daily_views": 147090
       }
     ]
   },
@@ -1003,19 +1059,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22You%20Joy%20Parade%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20You%21Joy%21Parade%21%20M%21LK",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20You%21Joy%21Parade%21%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 1820719,
-      "likes": 68209,
-      "comments": 6340,
-      "engagement_rate": 4.09,
-      "daily_views": 165519
+      "views": 1898909,
+      "likes": 68746,
+      "comments": 6350,
+      "engagement_rate": 3.95,
+      "daily_views": 158242
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "riqZZYRrMKZmWK6RisuMXQukaa8",
+      "etag": "8jxjvEZNj9PAKdudPqYQXxN4ncE",
       "id": "81CpK8nCvFw",
       "snippet": {
         "publishedAt": "2026-07-24T12:00:25Z",
@@ -1077,10 +1133,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1820719",
-        "likeCount": "68209",
+        "viewCount": "1898909",
+        "likeCount": "68746",
         "favoriteCount": "0",
-        "commentCount": "6340"
+        "commentCount": "6350"
       },
       "topicDetails": {
         "topicCategories": [
@@ -1114,6 +1170,14 @@
         "comments": 6340,
         "engagement_rate": 4.09,
         "daily_views": 165519
+      },
+      {
+        "date": "2026-08-05",
+        "views": 1898909,
+        "likes": 68746,
+        "comments": 6350,
+        "engagement_rate": 3.95,
+        "daily_views": 158242
       }
     ]
   },
@@ -2209,25 +2273,25 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20M%21LK",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 1947521,
-      "likes": 118939,
-      "comments": 12757,
-      "engagement_rate": 6.76,
-      "daily_views": 1947521
+      "views": 2517203,
+      "likes": 126220,
+      "comments": 13467,
+      "engagement_rate": 5.55,
+      "daily_views": 1258601
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "BmCkXK-m9oTfX8orG8UoNykf9bw",
+      "etag": "6iA7r7Hv-J4i46GXI1uK5i_gDQI",
       "id": "7VqCdhFGE78",
       "snippet": {
         "publishedAt": "2026-08-03T09:00:06Z",
         "channelId": "UCFvSFbT8okMrpuFxBEIB2lg",
         "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
+        "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\nすべてを僕の罪にして　\n愛してよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人",
         "thumbnails": {
           "default": {
             "url": "https://i.ytimg.com/vi/7VqCdhFGE78/default.jpg",
@@ -2261,7 +2325,7 @@
         "defaultLanguage": "ja",
         "localized": {
           "title": "M!LK - 罪と罰と雨とキス (佐野勇斗＆吉田仁人) (Official Music Video)",
-          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
+          "description": "佐野勇斗＆吉田仁人「罪と罰と雨とキス」2026.8.3 Release.\nDownload&Streaming\nhttps://MILK.lnk.to/TsumitoBatsutoAmetoKiss\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n「罪と罰と雨とキス」\n作詞：児玉雨子・三好啓太\n作曲・編曲：三好啓太　\n\n「君を 君を 愛してる」と\n言えぬ罰の代わりに\n僕の名前　呼んで\n鋭い　その声で\nせめてトドメ刺して\n\n誰か それはさだめだと\n断じてくれたならいい\nいつか傷つくことなど\nわかりきってるのに\n\n心の裏　甘く\n灼きついたままの\n影とメモワール\n君しか知らない秘密の鼓動も\nデタラメ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と　逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\n\nブラウスの襟の切っ先が\n喉元を問い詰めてる\nただの君とただの僕\nまだ言い訳がほしくて\n\n偶然じゃない きっと\n必然なのだと 信じたくて\n祈るようにぎゅっと　すがる先さえも\n君しかない\n\n美しいまま散れない　そんな予感\nそれでも　君がいい\n底のない螺旋階段を下りて\n手遅れ\n\n君を 君を 探してる\n夢のなか　彷徨う傷\n君を 君を 抱きとめたいのに\nすり抜け落ちてく\n奈落へ\n\n君を 君を 愛してる\n罪と罰と雨とキス\n君と 君と 逃げ果せたいのに\n運命にはりつけられたまま\n動けない\nどうか何も言わないで\n愚かな僕の吐息ごと\n裁いてよ\n\nすべてを僕の罪にして　\n愛してよ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n\n★DVD & Blu-ray「M!LK ARENA TOUR 2025-2026 \"\"SMILE POP!\"\"」\nhttps://www.jvcmusic.co.jp/MILK/SMILEPOP/\n\n★「You!Joy!Parade!」\nDownload&Streaming\nhttps://milk.lnk.to/YouJoyParade\n\nMusic Video\nhttps://youtu.be/3C0EOqt7sqA\n\n★「しおざきわんだーらんど(塩﨑太智)」\nDownload&Streaming\nhttps://MILK.lnk.to/ShiozakiWonderland\n\nMusic Video\nhttps://youtu.be/kcXKLaLNqww\n\nDance Practice Movie\nhttps://youtu.be/lYWFDKop744\n\n★「真・運命 (曽野舜太&山中柔太朗)」\nDownload&Streaming\nhttps://milk.lnk.to/MajiDestiny\n\nMusic Video\nhttps://youtu.be/dEEd9HHEQE0?si=iHgyouDYUoGoLRp_\n\n★「アイドルパワー」\nDownload&Streaming\nhttps://MILK.lnk.to/IDOLPOWER\n\nDance Practice Movie\nhttps://youtu.be/6of_otfupFc\n\nコール講座\nhttps://youtu.be/cw-Eo0mZEvY?si=vC6qKsIvxhTvKylg\n\n★両A面シングル「爆裂愛してる / 好きすぎて滅！」\nDownload&Streaming\nhttps://MILK.lnk.to/BakuretsuMetsu\n\n★「爆裂愛してる」\nMusic Video\nhttps://youtu.be/tpFDnOnOdSQ?si=Uiy-lS8rcNq9FCy8\n\nコール講座\nhttps://youtu.be/Tv7Y-Z-HUmo?si=b4ZodrVRyDN1xiTZ\n\nライブ映像\nhttps://youtu.be/ET04rrWSG4Y?si=nftuQbVpenlBHCyv\n\nDance Performance Movie\nhttps://youtu.be/FjUQ6lReiis?si=oqTh74iO-Smk25IL\n\n★「好きすぎて滅！」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/Sukisugite_METSU\n\nMusic Video\nhttps://www.youtube.com/watch?v=ZVUxJsPfoX8\n\nDance Practice Movie\nhttps://youtu.be/YsjSpzRUCTI?si=HIsSZg3rA1S1IEDB\n\n★「イイじゃん」\nDownload&Streaming\nhttps://jvcmusic.lnk.to/iijyan\n\nMusic Video\nhttps://www.youtube.com/watch?v=GW-XMhRQDFI\n\nDance Practice Movie\nhttps://youtu.be/K6qZWKFPcNM?si=ke957TwBAOHy6kAQ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n★M!LK ARENA TOUR 2026-2027 「シャカリキレボリューション」\nM!LK史上最大規模、約16万人を動員するアリーナツアー開催決定❤️‍🔥\nhttps://sd-milk.com/contents/schedule?data=live\n\n2026.09.26(土)　 マリンメッセ福岡B館\n2026.09.27(日)　 マリンメッセ福岡B館\n2026.10.24(土)　 ゼビオアリーナ仙台\n2026.10.25(日)　 ゼビオアリーナ仙台\n2026.11.21(土)　 ぴあアリーナMM\n2026.11.22(日)　 ぴあアリーナMM\n2026.12.12(土)　 Aichi Sky Expo ホールA\n2026.12.13(日)　 Aichi Sky Expo ホールA\n2026.12.25(金)　 ⼤阪城ホール\n2026.12.26(土)　 ⼤阪城ホール\n2027.01.15(金)　 横浜アリーナ\n2027.01.16(土)　 横浜アリーナ\n2027.01.17(日)　 横浜アリーナ\n\n＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊\n\n【M!LK PROFILE】\nM!LKとは、佐野勇斗・塩﨑太智・曽野舜太・山中柔太朗・吉田仁人からなる変幻自在の5人組ダンスボーカルグループ。\nグループ名には「何色にも染まることの出来る存在に」という意味が込められている。\n\n■M!LK公式ファンクラブ ”PREMIUM MILK” \nhttps://sd-milk.com/about/membership\n■HP : http://sd-milk.com/\n■X：https://x.com/milk_info\n■Instagram： https://www.instagram.com/milk_official_2014/\n■TikTok : https://www.tiktok.com/@milk_official\n■LINE : https://lin.ee/QgHhhSY \n\n#MILK\n#罪と罰と雨とキス\n#佐野勇斗\n#吉田仁人"
         },
         "defaultAudioLanguage": "ja"
       },
@@ -2283,10 +2347,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1947521",
-        "likeCount": "118939",
+        "viewCount": "2517203",
+        "likeCount": "126220",
         "favoriteCount": "0",
-        "commentCount": "12757"
+        "commentCount": "13467"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2325,6 +2389,14 @@
         "comments": 12757,
         "engagement_rate": 6.76,
         "daily_views": 1947521
+      },
+      {
+        "date": "2026-08-05",
+        "views": 2517203,
+        "likes": 126220,
+        "comments": 13467,
+        "engagement_rate": 5.55,
+        "daily_views": 1258601
       }
     ]
   },
@@ -2342,14 +2414,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%3DLOVE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%3DLOVE%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 190487,
-      "likes": 8573,
-      "comments": 414,
-      "engagement_rate": 4.72,
-      "daily_views": 190487
+      "views": 299880,
+      "likes": 9851,
+      "comments": 463,
+      "engagement_rate": 3.44,
+      "daily_views": 149940
     },
     "metrics_history": [
       {
@@ -2359,12 +2431,20 @@
         "comments": 414,
         "engagement_rate": 4.72,
         "daily_views": 190487
+      },
+      {
+        "date": "2026-08-05",
+        "views": 299880,
+        "likes": 9851,
+        "comments": 463,
+        "engagement_rate": 3.44,
+        "daily_views": 149940
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "mCFDIK7ewFtGTyeTtD6FZtUfxMU",
+      "etag": "r2RQKuxjvuCEH_SGTEu_M_TKBm0",
       "id": "1wxHLrSmYNg",
       "snippet": {
         "publishedAt": "2026-08-03T15:00:00Z",
@@ -2438,10 +2518,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "190487",
-        "likeCount": "8573",
+        "viewCount": "299880",
+        "likeCount": "9851",
         "favoriteCount": "0",
-        "commentCount": "414"
+        "commentCount": "463"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2465,14 +2545,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22MOON%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20MOON%20BABYMONSTER",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=BABYMONSTER%20MOON%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 13543699,
-      "likes": 621080,
-      "comments": 47285,
-      "engagement_rate": 4.93,
-      "daily_views": 6771849
+      "views": 18249407,
+      "likes": 646835,
+      "comments": 48415,
+      "engagement_rate": 3.81,
+      "daily_views": 6083135
     },
     "metrics_history": [
       {
@@ -2482,12 +2562,20 @@
         "comments": 47285,
         "engagement_rate": 4.93,
         "daily_views": 6771849
+      },
+      {
+        "date": "2026-08-05",
+        "views": 18249407,
+        "likes": 646835,
+        "comments": 48415,
+        "engagement_rate": 3.81,
+        "daily_views": 6083135
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "GR4RGP2hhxuJfYe9dBbXz3Qp0vg",
+      "etag": "xWTXlx7vtTrT34nEXJEipewUBPw",
       "id": "xXZwZ0DolJc",
       "snippet": {
         "publishedAt": "2026-08-02T15:00:06Z",
@@ -2570,10 +2658,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "13543699",
-        "likeCount": "621080",
+        "viewCount": "18249407",
+        "likeCount": "646835",
         "favoriteCount": "0",
-        "commentCount": "47285"
+        "commentCount": "48415"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2605,14 +2693,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E5%A4%9C%E9%B7%B9%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E5%A4%9C%E9%B7%B9%20%E3%82%B8%E3%83%B3",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%B8%E3%83%B3%20%E5%A4%9C%E9%B7%B9%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 653202,
-      "likes": 19438,
-      "comments": 838,
-      "engagement_rate": 3.1,
-      "daily_views": 163300
+      "views": 742820,
+      "likes": 20206,
+      "comments": 868,
+      "engagement_rate": 2.84,
+      "daily_views": 148564
     },
     "metrics_history": [
       {
@@ -2622,12 +2710,20 @@
         "comments": 838,
         "engagement_rate": 3.1,
         "daily_views": 163300
+      },
+      {
+        "date": "2026-08-05",
+        "views": 742820,
+        "likes": 20206,
+        "comments": 868,
+        "engagement_rate": 2.84,
+        "daily_views": 148564
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "K02b4DSKyxxyB6fwJNVu7vunksc",
+      "etag": "ChM9HM6uzTVyU5BANjT6qPKyadI",
       "id": "qdawWNhgzRo",
       "snippet": {
         "publishedAt": "2026-07-31T10:59:41Z",
@@ -2698,10 +2794,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "653202",
-        "likeCount": "19438",
+        "viewCount": "742820",
+        "likeCount": "20206",
         "favoriteCount": "0",
-        "commentCount": "838"
+        "commentCount": "868"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2722,17 +2818,17 @@
     "pub_date": "2026-08-02",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22On%20My%20Road%22&type=work",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22On%20My%20Road%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20On%20My%20Road%20Travis%20Japan",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=Travis%20Japan%20On%20My%20Road%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-04",
-    "valid_until": "2026-11-02",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22On%20My%20Road%20Stadium%20ver.%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20On%20My%20Road%20%28Stadium%20ver.%29%20Travis%20Japan",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Travis%20Japan%20On%20My%20Road%20%28Stadium%20ver.%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
     "last_metrics": {
-      "views": 293619,
-      "likes": 23746,
-      "comments": 4147,
-      "engagement_rate": 9.5,
-      "daily_views": 146809
+      "views": 384179,
+      "likes": 24933,
+      "comments": 4681,
+      "engagement_rate": 7.71,
+      "daily_views": 128059
     },
     "metrics_history": [
       {
@@ -2742,12 +2838,20 @@
         "comments": 4147,
         "engagement_rate": 9.5,
         "daily_views": 146809
+      },
+      {
+        "date": "2026-08-05",
+        "views": 384179,
+        "likes": 24933,
+        "comments": 4681,
+        "engagement_rate": 7.71,
+        "daily_views": 128059
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "rTr6ELWPSvzkw7qqOtRkfqzBfEM",
+      "etag": "QiECT-yTiLCjWMRVrQeUn41tQRA",
       "id": "pCoVdp-_iMI",
       "snippet": {
         "publishedAt": "2026-08-02T15:00:06Z",
@@ -2854,10 +2958,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "293619",
-        "likeCount": "23746",
+        "viewCount": "384179",
+        "likeCount": "24933",
         "favoriteCount": "0",
-        "commentCount": "4147"
+        "commentCount": "4681"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2870,6 +2974,271 @@
         "actualStartTime": "2026-08-02T15:00:06Z",
         "actualEndTime": "2026-08-02T15:07:05Z",
         "scheduledStartTime": "2026-08-02T15:00:00Z"
+      }
+    }
+  },
+  {
+    "title": "≠ME - 愛くださいませ / THE FIRST TAKE",
+    "artist": "THE FIRST TAKE",
+    "video_url": "https://www.youtube.com/watch?v=TKwquEKR6zU",
+    "jasrac_search_title": "愛くださいませ",
+    "jasrac_search_artist": "≠ME",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-07-31",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%20%E2%89%A0ME",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E2%89%A0ME%20%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
+    "last_metrics": {
+      "views": 1035840,
+      "likes": 52463,
+      "comments": 4657,
+      "engagement_rate": 5.51,
+      "daily_views": 207168
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-05",
+        "views": 1035840,
+        "likes": 52463,
+        "comments": 4657,
+        "engagement_rate": 5.51,
+        "daily_views": 207168
+      }
+    ],
+    "added_date": "2026-08-05",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "OZQlFoGhpdkXx0c05lHJAJmuivM",
+      "id": "TKwquEKR6zU",
+      "snippet": {
+        "publishedAt": "2026-07-31T13:00:06Z",
+        "channelId": "UC9zY_E8mcAo_Oq772LEZq8Q",
+        "title": "≠ME - 愛くださいませ / THE FIRST TAKE",
+        "description": "「THE FIRST TAKE」は、一発撮りのパフォーマンスを鮮明に切り取るYouTubeチャンネル。\n\n第691回は、指原莉乃プロデュースのアイドルグループ・≠ME(ノットイコールミー)が初登場。\n今回披露するのは、SNSで永田詩央里による目のハイライトが消えるサビのパフォーマンスが話題となり、各SNSでバイラルヒットした楽曲、「愛くださいませ」。\n\"恋より上の究極呪縛ソング\"と呼ばれる本楽曲を、世界観溢れるここだけのスペシャルバージョンにて一発撮りでパフォーマンス。\n\nSTREAMING & DOWNLOAD: https://not-equal-me.lnk.to/Aikudasai_KokoDe\n\nLyric: Rino Sashihara\nCompose: Kanata Saito\nSound Director: a.k.a. JAKE\nArrange: APAZZI\n\n\n■≠ME OFFICIAL\nHP: https://not-equal-me.jp/\nYouTube: https://www.youtube.com/channel/UCBmvHfXdGCvi_b6lFeU-E1Q\nX: https://x.com/Notequal_ME\nInstagram: https://www.instagram.com/notequal_me.official\nTikTok: https://www.tiktok.com/@notequal_me\n\n■「THE FIRST TAKE」OFFICIAL  \nWeb Site: https://www.thefirsttake.jp/\nInstagram: https://www.instagram.com/the_firsttake/\nX: https://twitter.com/The_FirstTake\nTikTok: https://www.tiktok.com/@the_first_take\nHIGHLIGHT: https://youtube.com/playlist?list=PLeLvSt3A0DdlkPkNqYDQcOhyfw4Rvs_hP&si=nzEahXLF6z2wEV1H\nTHE FIRST TIMES: https://www.thefirsttimes.jp/\n\n■RULES\n白いスタジオに置かれた一本のマイク。 \nここでのルールはただ一つ。\n一発撮りのパフォーマンスをすること。 \n\nA microphone and a white studio.\nAnd 1 rule.\nYou’ve got 1 TAKE.\n\n■STATEMENT\n一発撮りで切りとる。\n今という時間と、\n今しか出せない音を。\n\nTHE FIRST TAKE\nこの瞬間は、二度とない。\n\nCAPTURE THE TAKE.\nTHIS MOMENT.\nTHIS SOUND.\n\nTHE FIRST TAKE\nIT ONLY HAPPENS ONCE.\n\nEpisode 691 marks the first appearance of ≠ME (Not Equal Me), the idol group produced by Rino Sashihara.\nThey will perform “Ai Kudasai Mase,” a track that went viral after clips of Shiori Nagata’s chorus performance—where the light in her eyes suddenly vanishes—spread across social media.\nEnjoy this one-shot performance of a song known as “the ultimate song that casts a curse, higher than love,” in a special rendition that captures its unique world, exclusively for THE FIRST TAKE.\n\nCREDITS    \n―     \nDirector/Creative Director: Keisuke Shimizu\nArt Director: Yo Kimura\nCopywriter: Hiroshi Yamazaki\nDirector of Photography: Masato Moriyama\nTechnical Coordinator / Chief Camera Assistants: Toru Miura (Spice)\nCamera Assistants: Koichi Yuri (Spice), Takaya Yamaguchi (Spice), Kazuhisa Sakamoto(Spice)\nLighting Director: Kazuhide Toya\nLighting Assistants: Tomohisa Nishimura,Hidetaka Sato,Wataru Ide,Kenta Abe,Chisato Nishikawa\nArt Designer : Naoto Kashiwagi (studio noll)\nArt Assistants: Takashi Irei (studio noll), Taku Yoshikawa (studio noll)\nMovie Producer: Shohei Sadohara (TYO drive)\nProduction Manager:Yutaro Watanabe (TYO drive), Naoki Munekawa (TYO drive), Chisaki Yamamoto (TYOdrive), Seitaro Inoue\nProduction Assistant: Nagisa Taki, Yoshiko Okubo\nOffline Editor: Kentaro Kinoshita\nColorist: Takaku Hiruma (McRAY)\nOnline Editor: Yukiya Morita (McRAY)\nSound Engineer: Masashi Kitazawa\nSound Director: Hirotake Ohnishi (SCOOP Music), Rui Ogihara\nStylist: Shinobu Kayano, Yui Fukuda (OSARECOMPANY Inc.)\nHair&Make up: Megumi Nishimura, Yuki Omiyama (MARVEE), Asami Sarai, Naoko Saito, OSARECOMPANY Inc.\n\n#THEFIRSTTAKE #ノイミー #愛くださいませ",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/TKwquEKR6zU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/TKwquEKR6zU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/TKwquEKR6zU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/TKwquEKR6zU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/TKwquEKR6zU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "THE FIRST TAKE",
+        "tags": [
+          "the first take",
+          "firsttake",
+          "ファーストテイク",
+          "ふぁーすとていく",
+          "一発撮り",
+          "TFT",
+          "音楽",
+          "音楽番組",
+          "≠ME",
+          "ノイミー",
+          "Not Equal Me",
+          "のいみー",
+          "愛くださいませ",
+          "Ai Kudasai Mase"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "≠ME - 愛くださいませ / THE FIRST TAKE",
+          "description": "「THE FIRST TAKE」は、一発撮りのパフォーマンスを鮮明に切り取るYouTubeチャンネル。\n\n第691回は、指原莉乃プロデュースのアイドルグループ・≠ME(ノットイコールミー)が初登場。\n今回披露するのは、SNSで永田詩央里による目のハイライトが消えるサビのパフォーマンスが話題となり、各SNSでバイラルヒットした楽曲、「愛くださいませ」。\n\"恋より上の究極呪縛ソング\"と呼ばれる本楽曲を、世界観溢れるここだけのスペシャルバージョンにて一発撮りでパフォーマンス。\n\nSTREAMING & DOWNLOAD: https://not-equal-me.lnk.to/Aikudasai_KokoDe\n\nLyric: Rino Sashihara\nCompose: Kanata Saito\nSound Director: a.k.a. JAKE\nArrange: APAZZI\n\n\n■≠ME OFFICIAL\nHP: https://not-equal-me.jp/\nYouTube: https://www.youtube.com/channel/UCBmvHfXdGCvi_b6lFeU-E1Q\nX: https://x.com/Notequal_ME\nInstagram: https://www.instagram.com/notequal_me.official\nTikTok: https://www.tiktok.com/@notequal_me\n\n■「THE FIRST TAKE」OFFICIAL  \nWeb Site: https://www.thefirsttake.jp/\nInstagram: https://www.instagram.com/the_firsttake/\nX: https://twitter.com/The_FirstTake\nTikTok: https://www.tiktok.com/@the_first_take\nHIGHLIGHT: https://youtube.com/playlist?list=PLeLvSt3A0DdlkPkNqYDQcOhyfw4Rvs_hP&si=nzEahXLF6z2wEV1H\nTHE FIRST TIMES: https://www.thefirsttimes.jp/\n\n■RULES\n白いスタジオに置かれた一本のマイク。 \nここでのルールはただ一つ。\n一発撮りのパフォーマンスをすること。 \n\nA microphone and a white studio.\nAnd 1 rule.\nYou’ve got 1 TAKE.\n\n■STATEMENT\n一発撮りで切りとる。\n今という時間と、\n今しか出せない音を。\n\nTHE FIRST TAKE\nこの瞬間は、二度とない。\n\nCAPTURE THE TAKE.\nTHIS MOMENT.\nTHIS SOUND.\n\nTHE FIRST TAKE\nIT ONLY HAPPENS ONCE.\n\nEpisode 691 marks the first appearance of ≠ME (Not Equal Me), the idol group produced by Rino Sashihara.\nThey will perform “Ai Kudasai Mase,” a track that went viral after clips of Shiori Nagata’s chorus performance—where the light in her eyes suddenly vanishes—spread across social media.\nEnjoy this one-shot performance of a song known as “the ultimate song that casts a curse, higher than love,” in a special rendition that captures its unique world, exclusively for THE FIRST TAKE.\n\nCREDITS    \n―     \nDirector/Creative Director: Keisuke Shimizu\nArt Director: Yo Kimura\nCopywriter: Hiroshi Yamazaki\nDirector of Photography: Masato Moriyama\nTechnical Coordinator / Chief Camera Assistants: Toru Miura (Spice)\nCamera Assistants: Koichi Yuri (Spice), Takaya Yamaguchi (Spice), Kazuhisa Sakamoto(Spice)\nLighting Director: Kazuhide Toya\nLighting Assistants: Tomohisa Nishimura,Hidetaka Sato,Wataru Ide,Kenta Abe,Chisato Nishikawa\nArt Designer : Naoto Kashiwagi (studio noll)\nArt Assistants: Takashi Irei (studio noll), Taku Yoshikawa (studio noll)\nMovie Producer: Shohei Sadohara (TYO drive)\nProduction Manager:Yutaro Watanabe (TYO drive), Naoki Munekawa (TYO drive), Chisaki Yamamoto (TYOdrive), Seitaro Inoue\nProduction Assistant: Nagisa Taki, Yoshiko Okubo\nOffline Editor: Kentaro Kinoshita\nColorist: Takaku Hiruma (McRAY)\nOnline Editor: Yukiya Morita (McRAY)\nSound Engineer: Masashi Kitazawa\nSound Director: Hirotake Ohnishi (SCOOP Music), Rui Ogihara\nStylist: Shinobu Kayano, Yui Fukuda (OSARECOMPANY Inc.)\nHair&Make up: Megumi Nishimura, Yuki Omiyama (MARVEE), Asami Sarai, Naoko Saito, OSARECOMPANY Inc.\n\n#THEFIRSTTAKE #ノイミー #愛くださいませ"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT5M17S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "1035840",
+        "likeCount": "52463",
+        "favoriteCount": "0",
+        "commentCount": "4657"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      },
+      "liveStreamingDetails": {
+        "actualStartTime": "2026-07-31T13:00:06Z",
+        "actualEndTime": "2026-07-31T13:07:26Z",
+        "scheduledStartTime": "2026-07-31T13:00:00Z"
+      }
+    }
+  },
+  {
+    "title": "?????????",
+    "artist": "Snow Man",
+    "video_url": "https://www.youtube.com/watch?v=I-TX9GZpDeY",
+    "jasrac_search_title": "?????????",
+    "jasrac_search_artist": "Snow Man",
+    "jasrac_code": "コード未取得",
+    "status": "未登録・非管理曲の可能性あり",
+    "pub_date": "2026-08-05",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%3F%3F%3F%3F%3F%3F%3F%3F%3F%20Snow%20Man",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%3F%3F%3F%3F%3F%3F%3F%3F%3F%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-05",
+    "valid_until": "2026-11-03",
+    "last_metrics": {
+      "views": 665037,
+      "likes": 61891,
+      "comments": 2892,
+      "engagement_rate": 9.74,
+      "daily_views": 665037
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-05",
+        "views": 665037,
+        "likes": 61891,
+        "comments": 2892,
+        "engagement_rate": 9.74,
+        "daily_views": 665037
+      }
+    ],
+    "added_date": "2026-08-05",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "grE3AsGKlRX9PZseFNgTNUOi0os",
+      "id": "I-TX9GZpDeY",
+      "snippet": {
+        "publishedAt": "2026-08-05T08:00:14Z",
+        "channelId": "UCuFPaemAaMR8R5cHzjy23dQ",
+        "title": "?????????",
+        "description": "_________________________________________________________\n\n2026.08.09 20:00 CHECK IN ON YouTube\n\n_________________________________________________________\n\n◆Snow Man Instagram\nhttps://www.instagram.com/snowman.official.9/\n\n◆Snow Man TikTok\nhttps://www.tiktok.com/@snowman_mentrecording_s\n\n◆Snow Man X\nhttps://x.com/SN__20200122\n\n◆Snow Man Weibo\nhttps://www.weibo.com/SnowManofficial\n\n◆STARTO ENTERTAINMENT Official Site\nhttps://starto.jp/\n\n◆Snow Man HP\nhttps://mentrecording.jp/snowman/\n\n\n#SnowMan #すのちゅーぶ \n#岩本照 #深澤辰哉 #ラウール #渡辺翔太 #向井康二 #阿部亮平 #目黒蓮 #宮舘涼太 #佐久間大介 \n#HikaruIwamoto #TatsuyaFukazawa #Raul #ShotaWatanabe #KojiMukai #RyoheiAbe #RenMeguro #RyotaMiyadate #DaisukeSakuma",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/I-TX9GZpDeY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/I-TX9GZpDeY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/I-TX9GZpDeY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/I-TX9GZpDeY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/I-TX9GZpDeY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Snow Man",
+        "tags": [
+          "Snow Man",
+          "スノーマン",
+          "岩本 照",
+          "Hikaru Iwamoto",
+          "深澤 辰哉",
+          "Tatsuya Fukazawa",
+          "ラウール",
+          "Raul",
+          "渡辺 翔太",
+          "Shota Watanabe",
+          "向井 康二",
+          "Koji Mukai",
+          "阿部 亮平",
+          "Ryohei Abe",
+          "目黒 蓮",
+          "Ren Meguro",
+          "宮舘 涼太",
+          "Ryota Miyadate",
+          "佐久間 大介",
+          "Daisuke Sakuma"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "?????????",
+          "description": "_________________________________________________________\n\n2026.08.09 20:00 CHECK IN ON YouTube\n\n_________________________________________________________\n\n◆Snow Man Instagram\nhttps://www.instagram.com/snowman.official.9/\n\n◆Snow Man TikTok\nhttps://www.tiktok.com/@snowman_mentrecording_s\n\n◆Snow Man X\nhttps://x.com/SN__20200122\n\n◆Snow Man Weibo\nhttps://www.weibo.com/SnowManofficial\n\n◆STARTO ENTERTAINMENT Official Site\nhttps://starto.jp/\n\n◆Snow Man HP\nhttps://mentrecording.jp/snowman/\n\n\n#SnowMan #すのちゅーぶ \n#岩本照 #深澤辰哉 #ラウール #渡辺翔太 #向井康二 #阿部亮平 #目黒蓮 #宮舘涼太 #佐久間大介 \n#HikaruIwamoto #TatsuyaFukazawa #Raul #ShotaWatanabe #KojiMukai #RyoheiAbe #RenMeguro #RyotaMiyadate #DaisukeSakuma"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT1M",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": false,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "665037",
+        "likeCount": "61891",
+        "favoriteCount": "0",
+        "commentCount": "2892"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Lifestyle_(sociology)"
+        ]
       }
     }
   }
