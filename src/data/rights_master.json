@@ -16,16 +16,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 5471313,
-      "likes": 112799,
-      "comments": 8080,
-      "engagement_rate": 2.21,
-      "daily_views": 911885
+      "views": 6213539,
+      "likes": 115429,
+      "comments": 8350,
+      "engagement_rate": 1.99,
+      "daily_views": 887648
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "6x4BjTMLGtqXNH4SfMa33_lPgqs",
+      "etag": "nJCs254X_lkcUN3P7SCffPAMsRk",
       "id": "dePs7UPp6GQ",
       "snippet": {
         "publishedAt": "2026-07-31T12:00:06Z",
@@ -93,10 +93,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "5471313",
-        "likeCount": "112799",
+        "viewCount": "6213539",
+        "likeCount": "115429",
         "favoriteCount": "0",
-        "commentCount": "8080"
+        "commentCount": "8350"
       },
       "topicDetails": {
         "topicCategories": [
@@ -146,11 +146,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 5471313,
-        "likes": 112799,
-        "comments": 8080,
-        "engagement_rate": 2.21,
-        "daily_views": 911885
+        "views": 6213539,
+        "likes": 115429,
+        "comments": 8350,
+        "engagement_rate": 1.99,
+        "daily_views": 887648
       }
     ]
   },
@@ -171,16 +171,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 7716581,
-      "likes": 174726,
-      "comments": 15032,
-      "engagement_rate": 2.46,
-      "daily_views": 593583
+      "views": 8193107,
+      "likes": 175267,
+      "comments": 15762,
+      "engagement_rate": 2.33,
+      "daily_views": 585221
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "O7QI8HHjRBh09hRuDJ1Rt22nX_I",
+      "etag": "LPvc_JFyLbrGCUocs0DvVzKP2jc",
       "id": "JofSrfFV4Kw",
       "snippet": {
         "publishedAt": "2026-07-24T13:00:06Z",
@@ -254,10 +254,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "7716581",
-        "likeCount": "174726",
+        "viewCount": "8193107",
+        "likeCount": "175267",
         "favoriteCount": "0",
-        "commentCount": "15032"
+        "commentCount": "15762"
       },
       "topicDetails": {
         "topicCategories": [
@@ -307,11 +307,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 7716581,
-        "likes": 174726,
-        "comments": 15032,
-        "engagement_rate": 2.46,
-        "daily_views": 593583
+        "views": 8193107,
+        "likes": 175267,
+        "comments": 15762,
+        "engagement_rate": 2.33,
+        "daily_views": 585221
       }
     ]
   },
@@ -332,16 +332,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 2589677,
-      "likes": 35092,
-      "comments": 84801,
-      "engagement_rate": 4.63,
-      "daily_views": 215806
+      "views": 2628401,
+      "likes": 35226,
+      "comments": 84902,
+      "engagement_rate": 4.57,
+      "daily_views": 202184
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "2yq6Rf3gGh3tqjq8jpWQrgLcZ8U",
+      "etag": "cNfvINOlgWOIyKBQwQ7SMriru_U",
       "id": "TfvYFX06Mes",
       "snippet": {
         "publishedAt": "2026-07-25T11:00:28Z",
@@ -406,10 +406,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2589677",
-        "likeCount": "35092",
+        "viewCount": "2628401",
+        "likeCount": "35226",
         "favoriteCount": "0",
-        "commentCount": "84801"
+        "commentCount": "84902"
       },
       "topicDetails": {
         "topicCategories": [
@@ -454,11 +454,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 2589677,
-        "likes": 35092,
-        "comments": 84801,
-        "engagement_rate": 4.63,
-        "daily_views": 215806
+        "views": 2628401,
+        "likes": 35226,
+        "comments": 84902,
+        "engagement_rate": 4.57,
+        "daily_views": 202184
       }
     ]
   },
@@ -479,16 +479,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 4728006,
-      "likes": 64908,
-      "comments": 7660,
-      "engagement_rate": 1.53,
-      "daily_views": 788001
+      "views": 5018001,
+      "likes": 65497,
+      "comments": 8212,
+      "engagement_rate": 1.47,
+      "daily_views": 716857
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "0ELu7qVAjK4n9ey64Bi2B7KcS9U",
+      "etag": "aXstU5iF8ZQcZsduGGomxh81qbM",
       "id": "gXNbJEYuoSw",
       "snippet": {
         "publishedAt": "2026-07-31T04:00:06Z",
@@ -550,10 +550,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "4728006",
-        "likeCount": "64908",
+        "viewCount": "5018001",
+        "likeCount": "65497",
         "favoriteCount": "0",
-        "commentCount": "7660"
+        "commentCount": "8212"
       },
       "topicDetails": {
         "topicCategories": [
@@ -605,11 +605,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 4728006,
-        "likes": 64908,
-        "comments": 7660,
-        "engagement_rate": 1.53,
-        "daily_views": 788001
+        "views": 5018001,
+        "likes": 65497,
+        "comments": 8212,
+        "engagement_rate": 1.47,
+        "daily_views": 716857
       }
     ]
   },
@@ -630,16 +630,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 1728129,
-      "likes": 33175,
-      "comments": 1190,
-      "engagement_rate": 1.99,
-      "daily_views": 192014
+      "views": 1802389,
+      "likes": 33655,
+      "comments": 1193,
+      "engagement_rate": 1.93,
+      "daily_views": 180238
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "0-GGTXKYH58J3hERHZM8yEJKp3I",
+      "etag": "wFwVHXGvxCZLzjtRar-OilsWk_s",
       "id": "gT5XyATc-Z8",
       "snippet": {
         "publishedAt": "2026-07-28T15:00:29Z",
@@ -711,10 +711,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1728129",
-        "likeCount": "33175",
+        "viewCount": "1802389",
+        "likeCount": "33655",
         "favoriteCount": "0",
-        "commentCount": "1190"
+        "commentCount": "1193"
       },
       "topicDetails": {
         "topicCategories": [
@@ -761,11 +761,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 1728129,
-        "likes": 33175,
-        "comments": 1190,
-        "engagement_rate": 1.99,
-        "daily_views": 192014
+        "views": 1802389,
+        "likes": 33655,
+        "comments": 1193,
+        "engagement_rate": 1.93,
+        "daily_views": 180238
       }
     ]
   },
@@ -786,16 +786,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 3279705,
-      "likes": 32025,
-      "comments": 8907,
+      "views": 3325084,
+      "likes": 32315,
+      "comments": 9097,
       "engagement_rate": 1.25,
-      "daily_views": 546617
+      "daily_views": 475012
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "n277ktOcIxT5o-X5OcsbFDL4Y8c",
+      "etag": "12FQnshY3CX6tylE2K2dsDuYv74",
       "id": "eN2NlzPdcrs",
       "snippet": {
         "publishedAt": "2026-07-31T03:59:32Z",
@@ -885,10 +885,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3279705",
-        "likeCount": "32025",
+        "viewCount": "3325084",
+        "likeCount": "32315",
         "favoriteCount": "0",
-        "commentCount": "8907"
+        "commentCount": "9097"
       },
       "topicDetails": {
         "topicCategories": [
@@ -933,11 +933,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 3279705,
-        "likes": 32025,
-        "comments": 8907,
+        "views": 3325084,
+        "likes": 32315,
+        "comments": 9097,
         "engagement_rate": 1.25,
-        "daily_views": 546617
+        "daily_views": 475012
       }
     ]
   },
@@ -958,16 +958,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 1907007,
-      "likes": 29475,
+      "views": 2016504,
+      "likes": 30829,
       "comments": 0,
-      "engagement_rate": 1.55,
-      "daily_views": 146692
+      "engagement_rate": 1.53,
+      "daily_views": 144036
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "Hvxn4RYqjSG8M8xD3U_GuSWEjZI",
+      "etag": "OsuNiPIf7_pwSruTUruEFFSWo2Q",
       "id": "lI7efayDEeU",
       "snippet": {
         "publishedAt": "2026-07-24T15:03:34Z",
@@ -1046,8 +1046,8 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1907007",
-        "likeCount": "29475",
+        "viewCount": "2016504",
+        "likeCount": "30829",
         "favoriteCount": "0",
         "commentCount": "0"
       },
@@ -1093,11 +1093,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 1907007,
-        "likes": 29475,
+        "views": 2016504,
+        "likes": 30829,
         "comments": 0,
-        "engagement_rate": 1.55,
-        "daily_views": 146692
+        "engagement_rate": 1.53,
+        "daily_views": 144036
       }
     ]
   },
@@ -2332,16 +2332,16 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 3074170,
-      "likes": 131809,
-      "comments": 14246,
-      "engagement_rate": 4.75,
-      "daily_views": 1024723
+      "views": 3418572,
+      "likes": 134387,
+      "comments": 14577,
+      "engagement_rate": 4.36,
+      "daily_views": 854643
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "_Go28BU7a5AYtnmV9GXuIpj3tLE",
+      "etag": "qIANLskJ8DFhFq9ZuefmANabZa0",
       "id": "7VqCdhFGE78",
       "snippet": {
         "publishedAt": "2026-08-03T09:00:06Z",
@@ -2403,10 +2403,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3074170",
-        "likeCount": "131809",
+        "viewCount": "3418572",
+        "likeCount": "134387",
         "favoriteCount": "0",
-        "commentCount": "14246"
+        "commentCount": "14577"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2456,11 +2456,11 @@
       },
       {
         "date": "2026-08-07",
-        "views": 3074170,
-        "likes": 131809,
-        "comments": 14246,
-        "engagement_rate": 4.75,
-        "daily_views": 1024723
+        "views": 3418572,
+        "likes": 134387,
+        "comments": 14577,
+        "engagement_rate": 4.36,
+        "daily_views": 854643
       }
     ]
   },
@@ -2481,11 +2481,11 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 395719,
-      "likes": 10729,
-      "comments": 495,
-      "engagement_rate": 2.84,
-      "daily_views": 131906
+      "views": 457215,
+      "likes": 11209,
+      "comments": 514,
+      "engagement_rate": 2.56,
+      "daily_views": 114303
     },
     "metrics_history": [
       {
@@ -2506,17 +2506,17 @@
       },
       {
         "date": "2026-08-07",
-        "views": 395719,
-        "likes": 10729,
-        "comments": 495,
-        "engagement_rate": 2.84,
-        "daily_views": 131906
+        "views": 457215,
+        "likes": 11209,
+        "comments": 514,
+        "engagement_rate": 2.56,
+        "daily_views": 114303
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "P5vTGST8LQYGkGr-DOPZk1oh5WI",
+      "etag": "ysYDedzv0gUVMAV10yxRR75_Th8",
       "id": "1wxHLrSmYNg",
       "snippet": {
         "publishedAt": "2026-08-03T15:00:00Z",
@@ -2589,15 +2589,16 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "395719",
-        "likeCount": "10729",
+        "viewCount": "457215",
+        "likeCount": "11209",
         "favoriteCount": "0",
-        "commentCount": "495"
+        "commentCount": "514"
       },
       "topicDetails": {
         "topicCategories": [
           "https://en.wikipedia.org/wiki/Music",
-          "https://en.wikipedia.org/wiki/Music_of_Asia"
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
         ]
       }
     }
@@ -3073,11 +3074,11 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 1115525,
-      "likes": 53581,
-      "comments": 4721,
-      "engagement_rate": 5.23,
-      "daily_views": 185920
+      "views": 1163939,
+      "likes": 54190,
+      "comments": 4764,
+      "engagement_rate": 5.07,
+      "daily_views": 166277
     },
     "metrics_history": [
       {
@@ -3090,17 +3091,17 @@
       },
       {
         "date": "2026-08-07",
-        "views": 1115525,
-        "likes": 53581,
-        "comments": 4721,
-        "engagement_rate": 5.23,
-        "daily_views": 185920
+        "views": 1163939,
+        "likes": 54190,
+        "comments": 4764,
+        "engagement_rate": 5.07,
+        "daily_views": 166277
       }
     ],
     "added_date": "2026-08-05",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "ty02HpUrlJFdCC2eSBVOK13EolE",
+      "etag": "-syyocDy-XSGMXb_VjcLWsrH_K8",
       "id": "TKwquEKR6zU",
       "snippet": {
         "publishedAt": "2026-07-31T13:00:06Z",
@@ -3178,10 +3179,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1115525",
-        "likeCount": "53581",
+        "viewCount": "1163939",
+        "likeCount": "54190",
         "favoriteCount": "0",
-        "commentCount": "4721"
+        "commentCount": "4764"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3354,26 +3355,26 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 287528,
-      "likes": 12205,
-      "comments": 347,
-      "engagement_rate": 4.37,
-      "daily_views": 287528
+      "views": 354991,
+      "likes": 13417,
+      "comments": 366,
+      "engagement_rate": 3.88,
+      "daily_views": 177495
     },
     "metrics_history": [
       {
         "date": "2026-08-07",
-        "views": 287528,
-        "likes": 12205,
-        "comments": 347,
-        "engagement_rate": 4.37,
-        "daily_views": 287528
+        "views": 354991,
+        "likes": 13417,
+        "comments": 366,
+        "engagement_rate": 3.88,
+        "daily_views": 177495
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "oMinVPGda1g6RiS3WVt849bPEC8",
+      "etag": "8GdfQYqEPi0pF2iKrBHUJC1ip0c",
       "id": "llGkuk4IV1g",
       "snippet": {
         "publishedAt": "2026-08-05T09:04:33Z",
@@ -3454,10 +3455,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "287528",
-        "likeCount": "12205",
+        "viewCount": "354991",
+        "likeCount": "13417",
         "favoriteCount": "0",
-        "commentCount": "347"
+        "commentCount": "366"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3485,26 +3486,26 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 260480,
-      "likes": 13132,
-      "comments": 480,
-      "engagement_rate": 5.23,
-      "daily_views": 260480
+      "views": 316147,
+      "likes": 14361,
+      "comments": 510,
+      "engagement_rate": 4.7,
+      "daily_views": 158073
     },
     "metrics_history": [
       {
         "date": "2026-08-07",
-        "views": 260480,
-        "likes": 13132,
-        "comments": 480,
-        "engagement_rate": 5.23,
-        "daily_views": 260480
+        "views": 316147,
+        "likes": 14361,
+        "comments": 510,
+        "engagement_rate": 4.7,
+        "daily_views": 158073
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "z6ms2eEBzcl96zHWnbVnul6Ah0I",
+      "etag": "tlz9PLHJ9NzcwGTrSQfcV-vMHk0",
       "id": "k77C6BIAJ9U",
       "snippet": {
         "publishedAt": "2026-08-05T09:00:32Z",
@@ -3585,10 +3586,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "260480",
-        "likeCount": "13132",
+        "viewCount": "316147",
+        "likeCount": "14361",
         "favoriteCount": "0",
-        "commentCount": "480"
+        "commentCount": "510"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3616,26 +3617,26 @@
     "verified_at": "2026-08-07",
     "valid_until": "2026-11-05",
     "last_metrics": {
-      "views": 189372,
-      "likes": 8713,
-      "comments": 203,
-      "engagement_rate": 4.71,
-      "daily_views": 189372
+      "views": 242034,
+      "likes": 9556,
+      "comments": 210,
+      "engagement_rate": 4.03,
+      "daily_views": 121017
     },
     "metrics_history": [
       {
         "date": "2026-08-07",
-        "views": 189372,
-        "likes": 8713,
-        "comments": 203,
-        "engagement_rate": 4.71,
-        "daily_views": 189372
+        "views": 242034,
+        "likes": 9556,
+        "comments": 210,
+        "engagement_rate": 4.03,
+        "daily_views": 121017
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "j1S9-Yc6nU4EfBYHFD7jeVN0b_U",
+      "etag": "IhpbnQbW1sYAhkjESiKZEH3GcBA",
       "id": "w0SY-JtadZA",
       "snippet": {
         "publishedAt": "2026-08-05T09:01:38Z",
@@ -3716,10 +3717,282 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "189372",
-        "likeCount": "8713",
+        "viewCount": "242034",
+        "likeCount": "9556",
         "favoriteCount": "0",
-        "commentCount": "203"
+        "commentCount": "210"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Stray Kids \"This & That\" M/V",
+    "artist": "JYP Entertainment",
+    "video_url": "https://www.youtube.com/watch?v=BZ4UzthYTss",
+    "jasrac_search_title": "This & That (Festival Version)",
+    "jasrac_search_artist": "Stray Kids",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-07",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/0ccb0499-a32d-4de8-be72-2ec914510a2d",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22This%20%26%20That%20Festival%20Version%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20This%20%26%20That%20%28Festival%20Version%29%20Stray%20Kids",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Stray%20Kids%20This%20%26%20That%20%28Festival%20Version%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-07",
+    "valid_until": "2026-11-05",
+    "last_metrics": {
+      "views": 8935741,
+      "likes": 790931,
+      "comments": 79259,
+      "engagement_rate": 9.74,
+      "daily_views": 8935741
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-07",
+        "views": 8935741,
+        "likes": 790931,
+        "comments": 79259,
+        "engagement_rate": 9.74,
+        "daily_views": 8935741
+      }
+    ],
+    "added_date": "2026-08-07",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "hnKMaZjEj7uXOE2dp9E1Br6i8kM",
+      "id": "BZ4UzthYTss",
+      "snippet": {
+        "publishedAt": "2026-08-07T04:00:01Z",
+        "channelId": "UCaO6TYtlC8U5ttz62hTrZgg",
+        "title": "Stray Kids \"This & That\" M/V",
+        "description": "Stray Kids(스트레이 키즈) \"This & That\" M/V\n\nListen to \"THIS & THAT\" now🚚\nhttp://stray-kids.lnk.to/THISANDTHAT\n\nStray Kids \"THIS & THAT\"\niTunes & Apple Music: https://stray-kids.lnk.to/THISANDTHAT/AppleMusic\nSpotify: https://stray-kids.lnk.to/THISANDTHAT/Spotify\n\nStray Kids Official YouTube: https://www.youtube.com/c/StrayKids\nStray Kids Official Twitter: https://twitter.com/Stray_Kids\nStray Kids Official Instagram: https://www.instagram.com/realstraykids/\nStray Kids Official TikTok: https://www.tiktok.com/@jypestraykids\nStray Kids Official Facebook: https://www.facebook.com/JYPEStrayKids/\nStray Kids Official Threads: https://www.threads.com/@realstraykids\nStray Kids Official FANS (Android) https://play.google.com/store/apps/details?id=com.jype.fans\nStray Kids Official FANS (iOS) https://apps.apple.com/app/fans-for-fans-artists/id6474999628\n\n#StrayKids #스트레이키즈\n#THIS_AND_THAT\n#StrayKidsComeback\n#YouMakeStrayKidsStay\n\nCopyrights 2026 ⓒ JYP Entertainment. All Rights Reserved.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/BZ4UzthYTss/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/BZ4UzthYTss/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/BZ4UzthYTss/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/BZ4UzthYTss/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/BZ4UzthYTss/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "JYP Entertainment",
+        "tags": [
+          "JYP Entertainment",
+          "JYP",
+          "Stray Kids",
+          "스트레이 키즈",
+          "SKZ",
+          "스키즈",
+          "방찬",
+          "BANG CHAN",
+          "리노",
+          "LEE KNOW",
+          "창빈",
+          "CHANGBIN",
+          "현진",
+          "황현진",
+          "HYUNJIN",
+          "한",
+          "한지성",
+          "HAN",
+          "필릭스",
+          "FELIX",
+          "용복",
+          "승민",
+          "김승민",
+          "SEUNGMIN",
+          "아이엔",
+          "I.N",
+          "stray kids comeback",
+          "스트레이 키즈 컴백",
+          "스키즈 컴백",
+          "skz comeback",
+          "skz",
+          "SKZ Teaser",
+          "스키즈 티저",
+          "스트레이 키즈 티저",
+          "Stray Kids teaser",
+          "Stray Kids THIS & THAT",
+          "SKZ THIS & THAT",
+          "스키즈 디스앤댓",
+          "SKZ This & That",
+          "This & That",
+          "디스앤댓",
+          "stray kids this & that",
+          "디스앤댓 뮤비",
+          "this & that mv",
+          "skz this & that mv",
+          "skz music video",
+          "stray kids this & that music video"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Stray Kids \"This & That\" M/V",
+          "description": "Stray Kids(스트레이 키즈) \"This & That\" M/V\n\nListen to \"THIS & THAT\" now🚚\nhttp://stray-kids.lnk.to/THISANDTHAT\n\nStray Kids \"THIS & THAT\"\niTunes & Apple Music: https://stray-kids.lnk.to/THISANDTHAT/AppleMusic\nSpotify: https://stray-kids.lnk.to/THISANDTHAT/Spotify\n\nStray Kids Official YouTube: https://www.youtube.com/c/StrayKids\nStray Kids Official Twitter: https://twitter.com/Stray_Kids\nStray Kids Official Instagram: https://www.instagram.com/realstraykids/\nStray Kids Official TikTok: https://www.tiktok.com/@jypestraykids\nStray Kids Official Facebook: https://www.facebook.com/JYPEStrayKids/\nStray Kids Official Threads: https://www.threads.com/@realstraykids\nStray Kids Official FANS (Android) https://play.google.com/store/apps/details?id=com.jype.fans\nStray Kids Official FANS (iOS) https://apps.apple.com/app/fans-for-fans-artists/id6474999628\n\n#StrayKids #스트레이키즈\n#THIS_AND_THAT\n#StrayKidsComeback\n#YouMakeStrayKidsStay\n\nCopyrights 2026 ⓒ JYP Entertainment. All Rights Reserved."
+        },
+        "defaultAudioLanguage": "ko"
+      },
+      "contentDetails": {
+        "duration": "PT3M14S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "8935741",
+        "likeCount": "790931",
+        "favoriteCount": "0",
+        "commentCount": "79259"
+      }
+    }
+  },
+  {
+    "title": "Mrs. GREEN APPLE – クスシキ | MUSIC AWARDS JAPAN 2026",
+    "artist": "Mrs. GREEN APPLE",
+    "video_url": "https://www.youtube.com/watch?v=lsHy8vRpnAM",
+    "jasrac_search_title": "クスシキ",
+    "jasrac_search_artist": "Mrs. GREEN APPLE",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-06",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%20Mrs.%20GREEN%20APPLE",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-07",
+    "valid_until": "2026-11-05",
+    "last_metrics": {
+      "views": 489095,
+      "likes": 33012,
+      "comments": 1148,
+      "engagement_rate": 6.98,
+      "daily_views": 489095
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-07",
+        "views": 489095,
+        "likes": 33012,
+        "comments": 1148,
+        "engagement_rate": 6.98,
+        "daily_views": 489095
+      }
+    ],
+    "added_date": "2026-08-07",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "9c6Mj0buHXBe495Jnt9SVBaJCVc",
+      "id": "lsHy8vRpnAM",
+      "snippet": {
+        "publishedAt": "2026-08-06T09:00:03Z",
+        "channelId": "UCpFgmZm65yOU5X-hmWkWjuw",
+        "title": "Mrs. GREEN APPLE – クスシキ | MUSIC AWARDS JAPAN 2026",
+        "description": "「世界とつながり、音楽の未来を灯す（ともす）。」をコンセプトとした国内最大規模の国際音楽賞「MUSIC AWARDS JAPAN」。\n2026年6月13日（土）に開催された「MUSIC AWARDS JAPAN 2026 Grand Ceremony」より、「クスシキ」のスペシャルライブパフォーマンスを公開。\n\n「MUSIC AWARDS JAPAN 2026」開催概要\n・開催⽇時：2026年6⽉13⽇（⼟）\n※開催ウィーク：2026年6⽉5⽇（⾦）〜6⽉13⽇（⼟）\n・会場：TOYOTA ARENA TOKYO他\n・協⼒：経済産業省、⽂化庁、⽇本貿易振興機構（ジェトロ）\n・後援：東京都、江東区、渋⾕区、国際交流基⾦、⼀般社団法⼈東京臨海副都⼼まちづくり協議会\n\nMUSIC AWARDS JAPAN / CEIPA https://www.youtube.com/@MusicAwardsJapanCEIPA\n\n※授賞式本編はLeminoにてアーカイブ配信予定！\nhttps://lemino.docomo.ne.jp/ft/0000119/\n\nMUSIC AWARDS JAPAN 公式サイト\nhttps://www.musicawardsjapan.com/\n\nMUSIC AWARDS JAPAN 公式SNS\nX：https://x.com/MAJ_CEIPA\nFacebook：https://www.facebook.com/maj.ceipa.official/\nInstagram：https://www.instagram.com/maj_ceipa_official/\nTikTok：https://www.tiktok.com/@maj_ceipa_official\nTimeTree：https://timetreeapp.com/public_calendars/musicawardsjapan_ceipa_official\n\nCEIPAの新メディア「OTOMO（オトモ）」\nhttps://otomo.net/\n\n-------------------\n＜協賛パートナー＞\nトップパートナー：トヨタグループ\nプラチナパートナー：株式会社木下グループ\nゴールドパートナー：株式会社NTTドコモ、アサヒビール株式会社\nシルバーパートナー：オッズパーク！、京都芸術大学（学校法人瓜生山学園）、スポティファイジャパン株式会社、東急不動産株式会社、読売新聞社\nプライズパートナー：株式会社エクシング、株式会社第一興商、一般社団法人日本音楽著作権協会（JASRAC）、スポティファイジャパン株式会社、株式会社MIXI、株式会社USEN（U-NEXT.HD）、LINE MUSIC株式会社\n-------------------\n\n#MUSICAWARDSJAPAN #CEIPA #MAJ2026",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lsHy8vRpnAM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lsHy8vRpnAM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lsHy8vRpnAM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lsHy8vRpnAM/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lsHy8vRpnAM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mrs. GREEN APPLE",
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "Mrs. GREEN APPLE – クスシキ | MUSIC AWARDS JAPAN 2026",
+          "description": "「世界とつながり、音楽の未来を灯す（ともす）。」をコンセプトとした国内最大規模の国際音楽賞「MUSIC AWARDS JAPAN」。\n2026年6月13日（土）に開催された「MUSIC AWARDS JAPAN 2026 Grand Ceremony」より、「クスシキ」のスペシャルライブパフォーマンスを公開。\n\n「MUSIC AWARDS JAPAN 2026」開催概要\n・開催⽇時：2026年6⽉13⽇（⼟）\n※開催ウィーク：2026年6⽉5⽇（⾦）〜6⽉13⽇（⼟）\n・会場：TOYOTA ARENA TOKYO他\n・協⼒：経済産業省、⽂化庁、⽇本貿易振興機構（ジェトロ）\n・後援：東京都、江東区、渋⾕区、国際交流基⾦、⼀般社団法⼈東京臨海副都⼼まちづくり協議会\n\nMUSIC AWARDS JAPAN / CEIPA https://www.youtube.com/@MusicAwardsJapanCEIPA\n\n※授賞式本編はLeminoにてアーカイブ配信予定！\nhttps://lemino.docomo.ne.jp/ft/0000119/\n\nMUSIC AWARDS JAPAN 公式サイト\nhttps://www.musicawardsjapan.com/\n\nMUSIC AWARDS JAPAN 公式SNS\nX：https://x.com/MAJ_CEIPA\nFacebook：https://www.facebook.com/maj.ceipa.official/\nInstagram：https://www.instagram.com/maj_ceipa_official/\nTikTok：https://www.tiktok.com/@maj_ceipa_official\nTimeTree：https://timetreeapp.com/public_calendars/musicawardsjapan_ceipa_official\n\nCEIPAの新メディア「OTOMO（オトモ）」\nhttps://otomo.net/\n\n-------------------\n＜協賛パートナー＞\nトップパートナー：トヨタグループ\nプラチナパートナー：株式会社木下グループ\nゴールドパートナー：株式会社NTTドコモ、アサヒビール株式会社\nシルバーパートナー：オッズパーク！、京都芸術大学（学校法人瓜生山学園）、スポティファイジャパン株式会社、東急不動産株式会社、読売新聞社\nプライズパートナー：株式会社エクシング、株式会社第一興商、一般社団法人日本音楽著作権協会（JASRAC）、スポティファイジャパン株式会社、株式会社MIXI、株式会社USEN（U-NEXT.HD）、LINE MUSIC株式会社\n-------------------\n\n#MUSICAWARDSJAPAN #CEIPA #MAJ2026"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT3M19S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "true",
+        "licensedContent": true,
+        "regionRestriction": {
+          "blocked": [
+            "BY",
+            "RU"
+          ]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "489095",
+        "likeCount": "33012",
+        "favoriteCount": "0",
+        "commentCount": "1148"
       },
       "topicDetails": {
         "topicCategories": [
