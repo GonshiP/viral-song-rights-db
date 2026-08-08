@@ -23,5 +23,10 @@
     "date": "2026-08-07",
     "count": 15,
     "path": "src/data/history/2026-08-07.json"
+  },
+  {
+    "date": "2026-08-08",
+    "count": 15,
+    "path": "src/data/history/2026-08-08.json"
   }
 ]

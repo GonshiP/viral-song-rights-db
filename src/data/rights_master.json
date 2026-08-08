@@ -13,19 +13,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22Brand%20New%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Brand%20New%20Mrs.%20GREEN%20APPLE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20Brand%20New%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 6213539,
-      "likes": 115429,
-      "comments": 8350,
-      "engagement_rate": 1.99,
-      "daily_views": 887648
+      "views": 6964852,
+      "likes": 118217,
+      "comments": 8759,
+      "engagement_rate": 1.82,
+      "daily_views": 870606
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "nJCs254X_lkcUN3P7SCffPAMsRk",
+      "etag": "wKqXSzezOOd9juDLhNVpLWqC2qw",
       "id": "dePs7UPp6GQ",
       "snippet": {
         "publishedAt": "2026-07-31T12:00:06Z",
@@ -93,10 +93,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "6213539",
-        "likeCount": "115429",
+        "viewCount": "6964852",
+        "likeCount": "118217",
         "favoriteCount": "0",
-        "commentCount": "8350"
+        "commentCount": "8759"
       },
       "topicDetails": {
         "topicCategories": [
@@ -151,6 +151,14 @@
         "comments": 8350,
         "engagement_rate": 1.99,
         "daily_views": 887648
+      },
+      {
+        "date": "2026-08-08",
+        "views": 6964852,
+        "likes": 118217,
+        "comments": 8759,
+        "engagement_rate": 1.82,
+        "daily_views": 870606
       }
     ]
   },
@@ -168,19 +176,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20Snow%20Man",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Snow%20Man%20%E3%82%B0%E3%83%83%E3%82%BF%E3%82%A4%E3%83%A0%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 8193107,
-      "likes": 175267,
-      "comments": 15762,
-      "engagement_rate": 2.33,
-      "daily_views": 585221
+      "views": 8343226,
+      "likes": 175897,
+      "comments": 15907,
+      "engagement_rate": 2.3,
+      "daily_views": 556215
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "LPvc_JFyLbrGCUocs0DvVzKP2jc",
+      "etag": "Nr5cP5xl3dv_2vCnvjm0MTzNYYY",
       "id": "JofSrfFV4Kw",
       "snippet": {
         "publishedAt": "2026-07-24T13:00:06Z",
@@ -254,10 +262,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "8193107",
-        "likeCount": "175267",
+        "viewCount": "8343226",
+        "likeCount": "175897",
         "favoriteCount": "0",
-        "commentCount": "15762"
+        "commentCount": "15907"
       },
       "topicDetails": {
         "topicCategories": [
@@ -312,6 +320,14 @@
         "comments": 15762,
         "engagement_rate": 2.33,
         "daily_views": 585221
+      },
+      {
+        "date": "2026-08-08",
+        "views": 8343226,
+        "likes": 175897,
+        "comments": 15907,
+        "engagement_rate": 2.3,
+        "daily_views": 556215
       }
     ]
   },
@@ -329,19 +345,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20ACEes",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=ACEes%20%E7%9C%9F%E5%A4%9C%E4%B8%AD%E3%81%AEZOO%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 2628401,
-      "likes": 35226,
-      "comments": 84902,
-      "engagement_rate": 4.57,
-      "daily_views": 202184
+      "views": 2671409,
+      "likes": 35383,
+      "comments": 85046,
+      "engagement_rate": 4.51,
+      "daily_views": 190814
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "cNfvINOlgWOIyKBQwQ7SMriru_U",
+      "etag": "D8EAgmLafFOloO0HdOPrF1_T4HQ",
       "id": "TfvYFX06Mes",
       "snippet": {
         "publishedAt": "2026-07-25T11:00:28Z",
@@ -406,10 +422,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "2628401",
-        "likeCount": "35226",
+        "viewCount": "2671409",
+        "likeCount": "35383",
         "favoriteCount": "0",
-        "commentCount": "84902"
+        "commentCount": "85046"
       },
       "topicDetails": {
         "topicCategories": [
@@ -459,6 +475,14 @@
         "comments": 84902,
         "engagement_rate": 4.57,
         "daily_views": 202184
+      },
+      {
+        "date": "2026-08-08",
+        "views": 2671409,
+        "likes": 35383,
+        "comments": 85046,
+        "engagement_rate": 4.51,
+        "daily_views": 190814
       }
     ]
   },
@@ -474,21 +498,21 @@
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
     "mb_search_url": "https://musicbrainz.org/search?query=%22BRUCE%20WAYNE%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST%20feat.%20Flo%20Milli%2C%20ATL%20Jacob",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20feat.%20Flo%20Milli%2C%20ATL%20Jacob%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BRUCE%20WAYNE%20BE%3AFIRST",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=BE%3AFIRST%20BRUCE%20WAYNE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 5018001,
-      "likes": 65497,
-      "comments": 8212,
-      "engagement_rate": 1.47,
-      "daily_views": 716857
+      "views": 5368999,
+      "likes": 66072,
+      "comments": 8410,
+      "engagement_rate": 1.39,
+      "daily_views": 671124
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "aXstU5iF8ZQcZsduGGomxh81qbM",
+      "etag": "ZBe-fYlTvxKEI_soqcqC-yow0HI",
       "id": "gXNbJEYuoSw",
       "snippet": {
         "publishedAt": "2026-07-31T04:00:06Z",
@@ -550,10 +574,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "5018001",
-        "likeCount": "65497",
+        "viewCount": "5368999",
+        "likeCount": "66072",
         "favoriteCount": "0",
-        "commentCount": "8212"
+        "commentCount": "8410"
       },
       "topicDetails": {
         "topicCategories": [
@@ -610,6 +634,14 @@
         "comments": 8212,
         "engagement_rate": 1.47,
         "daily_views": 716857
+      },
+      {
+        "date": "2026-08-08",
+        "views": 5368999,
+        "likes": 66072,
+        "comments": 8410,
+        "engagement_rate": 1.39,
+        "daily_views": 671124
       }
     ]
   },
@@ -627,19 +659,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22GO%20GHOST%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20GO%20GHOST%20King%20Gnu",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=King%20Gnu%20GO%20GHOST%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 1802389,
-      "likes": 33655,
-      "comments": 1193,
-      "engagement_rate": 1.93,
-      "daily_views": 180238
+      "views": 1882410,
+      "likes": 34244,
+      "comments": 1197,
+      "engagement_rate": 1.88,
+      "daily_views": 171128
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "wFwVHXGvxCZLzjtRar-OilsWk_s",
+      "etag": "zEZqGa9iEq_-ZgLRnHbcaoGzYTk",
       "id": "gT5XyATc-Z8",
       "snippet": {
         "publishedAt": "2026-07-28T15:00:29Z",
@@ -711,10 +743,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1802389",
-        "likeCount": "33655",
+        "viewCount": "1882410",
+        "likeCount": "34244",
         "favoriteCount": "0",
-        "commentCount": "1193"
+        "commentCount": "1197"
       },
       "topicDetails": {
         "topicCategories": [
@@ -766,6 +798,14 @@
         "comments": 1193,
         "engagement_rate": 1.93,
         "daily_views": 180238
+      },
+      {
+        "date": "2026-08-08",
+        "views": 1882410,
+        "likes": 34244,
+        "comments": 1197,
+        "engagement_rate": 1.88,
+        "daily_views": 171128
       }
     ]
   },
@@ -783,19 +823,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22WHATCHA%20DOIN%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20WHATCHA%20DOIN%20JO1",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=JO1%20WHATCHA%20DOIN%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 3325084,
-      "likes": 32315,
-      "comments": 9097,
-      "engagement_rate": 1.25,
-      "daily_views": 475012
+      "views": 3379392,
+      "likes": 32601,
+      "comments": 9377,
+      "engagement_rate": 1.24,
+      "daily_views": 422424
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "12FQnshY3CX6tylE2K2dsDuYv74",
+      "etag": "0dOZ_Q9M_i9XVwvmJpu93vsAhEo",
       "id": "eN2NlzPdcrs",
       "snippet": {
         "publishedAt": "2026-07-31T03:59:32Z",
@@ -885,10 +925,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3325084",
-        "likeCount": "32315",
+        "viewCount": "3379392",
+        "likeCount": "32601",
         "favoriteCount": "0",
-        "commentCount": "9097"
+        "commentCount": "9377"
       },
       "topicDetails": {
         "topicCategories": [
@@ -938,6 +978,14 @@
         "comments": 9097,
         "engagement_rate": 1.25,
         "daily_views": 475012
+      },
+      {
+        "date": "2026-08-08",
+        "views": 3379392,
+        "likes": 32601,
+        "comments": 9377,
+        "engagement_rate": 1.24,
+        "daily_views": 422424
       }
     ]
   },
@@ -2329,19 +2377,19 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20M%21LK",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=M%21LK%20%E7%BD%AA%E3%81%A8%E7%BD%B0%E3%81%A8%E9%9B%A8%E3%81%A8%E3%82%AD%E3%82%B9%20%28%E4%BD%90%E9%87%8E%E5%8B%87%E6%96%97%26%E5%90%89%E7%94%B0%E4%BB%81%E4%BA%BA%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 3418572,
-      "likes": 134387,
-      "comments": 14577,
-      "engagement_rate": 4.36,
-      "daily_views": 854643
+      "views": 3794411,
+      "likes": 137072,
+      "comments": 14988,
+      "engagement_rate": 4.01,
+      "daily_views": 758882
     },
     "added_date": "2026-08-02",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "qIANLskJ8DFhFq9ZuefmANabZa0",
+      "etag": "0IyFWdhk3stPwz6UcEKFjHJcXMM",
       "id": "7VqCdhFGE78",
       "snippet": {
         "publishedAt": "2026-08-03T09:00:06Z",
@@ -2403,10 +2451,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "3418572",
-        "likeCount": "134387",
+        "viewCount": "3794411",
+        "likeCount": "137072",
         "favoriteCount": "0",
-        "commentCount": "14577"
+        "commentCount": "14988"
       },
       "topicDetails": {
         "topicCategories": [
@@ -2461,6 +2509,14 @@
         "comments": 14577,
         "engagement_rate": 4.36,
         "daily_views": 854643
+      },
+      {
+        "date": "2026-08-08",
+        "views": 3794411,
+        "likes": 137072,
+        "comments": 14988,
+        "engagement_rate": 4.01,
+        "daily_views": 758882
       }
     ]
   },
@@ -2478,14 +2534,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%3DLOVE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%3DLOVE%20%E6%81%8B%E3%80%81%E3%81%AF%E3%81%98%E3%82%81%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 457215,
-      "likes": 11209,
-      "comments": 514,
-      "engagement_rate": 2.56,
-      "daily_views": 114303
+      "views": 522277,
+      "likes": 11733,
+      "comments": 539,
+      "engagement_rate": 2.35,
+      "daily_views": 104455
     },
     "metrics_history": [
       {
@@ -2511,12 +2567,20 @@
         "comments": 514,
         "engagement_rate": 2.56,
         "daily_views": 114303
+      },
+      {
+        "date": "2026-08-08",
+        "views": 522277,
+        "likes": 11733,
+        "comments": 539,
+        "engagement_rate": 2.35,
+        "daily_views": 104455
       }
     ],
     "added_date": "2026-08-04",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "ysYDedzv0gUVMAV10yxRR75_Th8",
+      "etag": "QUtCfL2iy_OhMSbU1q2c9dRmgU8",
       "id": "1wxHLrSmYNg",
       "snippet": {
         "publishedAt": "2026-08-03T15:00:00Z",
@@ -2589,10 +2653,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "457215",
-        "likeCount": "11209",
+        "viewCount": "522277",
+        "likeCount": "11733",
         "favoriteCount": "0",
-        "commentCount": "514"
+        "commentCount": "539"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3071,14 +3135,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%20%E2%89%A0ME",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=%E2%89%A0ME%20%E6%84%9B%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84%E3%81%BE%E3%81%9B%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 1163939,
-      "likes": 54190,
-      "comments": 4764,
-      "engagement_rate": 5.07,
-      "daily_views": 166277
+      "views": 1212386,
+      "likes": 54763,
+      "comments": 4779,
+      "engagement_rate": 4.91,
+      "daily_views": 151548
     },
     "metrics_history": [
       {
@@ -3096,12 +3160,20 @@
         "comments": 4764,
         "engagement_rate": 5.07,
         "daily_views": 166277
+      },
+      {
+        "date": "2026-08-08",
+        "views": 1212386,
+        "likes": 54763,
+        "comments": 4779,
+        "engagement_rate": 4.91,
+        "daily_views": 151548
       }
     ],
     "added_date": "2026-08-05",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "-syyocDy-XSGMXb_VjcLWsrH_K8",
+      "etag": "dNik3pFWLi2kGvgoTtvu9r0wdT4",
       "id": "TKwquEKR6zU",
       "snippet": {
         "publishedAt": "2026-07-31T13:00:06Z",
@@ -3179,10 +3251,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "1163939",
-        "likeCount": "54190",
+        "viewCount": "1212386",
+        "likeCount": "54763",
         "favoriteCount": "0",
-        "commentCount": "4764"
+        "commentCount": "4779"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3352,14 +3424,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22NON%20STOP%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20NON%20STOP%20HANA",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=HANA%20NON%20STOP%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 354991,
-      "likes": 13417,
-      "comments": 366,
-      "engagement_rate": 3.88,
-      "daily_views": 177495
+      "views": 409545,
+      "likes": 14241,
+      "comments": 380,
+      "engagement_rate": 3.57,
+      "daily_views": 136515
     },
     "metrics_history": [
       {
@@ -3369,12 +3441,20 @@
         "comments": 366,
         "engagement_rate": 3.88,
         "daily_views": 177495
+      },
+      {
+        "date": "2026-08-08",
+        "views": 409545,
+        "likes": 14241,
+        "comments": 380,
+        "engagement_rate": 3.57,
+        "daily_views": 136515
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "8GdfQYqEPi0pF2iKrBHUJC1ip0c",
+      "etag": "wURVnxdII2dXM6-zv3yt06noFEo",
       "id": "llGkuk4IV1g",
       "snippet": {
         "publishedAt": "2026-08-05T09:04:33Z",
@@ -3455,10 +3535,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "354991",
-        "likeCount": "13417",
+        "viewCount": "409545",
+        "likeCount": "14241",
         "favoriteCount": "0",
-        "commentCount": "366"
+        "commentCount": "380"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3483,14 +3563,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22Tiger%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Tiger%20HANA",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=HANA%20Tiger%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 316147,
-      "likes": 14361,
-      "comments": 510,
-      "engagement_rate": 4.7,
-      "daily_views": 158073
+      "views": 364518,
+      "likes": 15313,
+      "comments": 528,
+      "engagement_rate": 4.35,
+      "daily_views": 121506
     },
     "metrics_history": [
       {
@@ -3500,12 +3580,20 @@
         "comments": 510,
         "engagement_rate": 4.7,
         "daily_views": 158073
+      },
+      {
+        "date": "2026-08-08",
+        "views": 364518,
+        "likes": 15313,
+        "comments": 528,
+        "engagement_rate": 4.35,
+        "daily_views": 121506
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "tlz9PLHJ9NzcwGTrSQfcV-vMHk0",
+      "etag": "xJOP-eWXij8d2RfEZnTIjYZDLiM",
       "id": "k77C6BIAJ9U",
       "snippet": {
         "publishedAt": "2026-08-05T09:00:32Z",
@@ -3586,10 +3674,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "316147",
-        "likeCount": "14361",
+        "viewCount": "364518",
+        "likeCount": "15313",
         "favoriteCount": "0",
-        "commentCount": "510"
+        "commentCount": "528"
       },
       "topicDetails": {
         "topicCategories": [
@@ -3742,17 +3830,17 @@
     "pub_date": "2026-08-07",
     "source_name": "MusicBrainz",
     "source_url": "https://musicbrainz.org/work/0ccb0499-a32d-4de8-be72-2ec914510a2d",
-    "mb_search_url": "https://musicbrainz.org/search?query=%22This%20%26%20That%20Festival%20Version%22&type=work",
-    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20This%20%26%20That%20%28Festival%20Version%29%20Stray%20Kids",
-    "karaoke_search_url": "https://www.youtube.com/results?search_query=Stray%20Kids%20This%20%26%20That%20%28Festival%20Version%29%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22This%20%26%20That%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20This%20%26%20That%20Stray%20Kids",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=Stray%20Kids%20This%20%26%20That%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 8935741,
-      "likes": 790931,
-      "comments": 79259,
-      "engagement_rate": 9.74,
-      "daily_views": 8935741
+      "views": 18905866,
+      "likes": 996358,
+      "comments": 94715,
+      "engagement_rate": 5.77,
+      "daily_views": 18905866
     },
     "metrics_history": [
       {
@@ -3762,12 +3850,20 @@
         "comments": 79259,
         "engagement_rate": 9.74,
         "daily_views": 8935741
+      },
+      {
+        "date": "2026-08-08",
+        "views": 18905866,
+        "likes": 996358,
+        "comments": 94715,
+        "engagement_rate": 5.77,
+        "daily_views": 18905866
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "hnKMaZjEj7uXOE2dp9E1Br6i8kM",
+      "etag": "xYKpicCxqSqCa4NpW1WSBppSjh4",
       "id": "BZ4UzthYTss",
       "snippet": {
         "publishedAt": "2026-08-07T04:00:01Z",
@@ -3878,10 +3974,10 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "8935741",
-        "likeCount": "790931",
+        "viewCount": "18905866",
+        "likeCount": "996358",
         "favoriteCount": "0",
-        "commentCount": "79259"
+        "commentCount": "94715"
       }
     }
   },
@@ -3899,14 +3995,14 @@
     "mb_search_url": "https://musicbrainz.org/search?query=%22%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%22&type=work",
     "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%20Mrs.%20GREEN%20APPLE",
     "karaoke_search_url": "https://www.youtube.com/results?search_query=Mrs.%20GREEN%20APPLE%20%E3%82%AF%E3%82%B9%E3%82%B7%E3%82%AD%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
-    "verified_at": "2026-08-07",
-    "valid_until": "2026-11-05",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
     "last_metrics": {
-      "views": 489095,
-      "likes": 33012,
-      "comments": 1148,
-      "engagement_rate": 6.98,
-      "daily_views": 489095
+      "views": 647931,
+      "likes": 36123,
+      "comments": 1220,
+      "engagement_rate": 5.76,
+      "daily_views": 323965
     },
     "metrics_history": [
       {
@@ -3916,12 +4012,20 @@
         "comments": 1148,
         "engagement_rate": 6.98,
         "daily_views": 489095
+      },
+      {
+        "date": "2026-08-08",
+        "views": 647931,
+        "likes": 36123,
+        "comments": 1220,
+        "engagement_rate": 5.76,
+        "daily_views": 323965
       }
     ],
     "added_date": "2026-08-07",
     "raw_youtube": {
       "kind": "youtube#video",
-      "etag": "9c6Mj0buHXBe495Jnt9SVBaJCVc",
+      "etag": "FuwemxtRsDAMvT8BPkuRKPx5ljM",
       "id": "lsHy8vRpnAM",
       "snippet": {
         "publishedAt": "2026-08-06T09:00:03Z",
@@ -3989,16 +4093,390 @@
         "madeForKids": false
       },
       "statistics": {
-        "viewCount": "489095",
-        "likeCount": "33012",
+        "viewCount": "647931",
+        "likeCount": "36123",
         "favoriteCount": "0",
-        "commentCount": "1148"
+        "commentCount": "1220"
       },
       "topicDetails": {
         "topicCategories": [
           "https://en.wikipedia.org/wiki/Music",
           "https://en.wikipedia.org/wiki/Music_of_Asia",
           "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      }
+    }
+  },
+  {
+    "title": "HANA / BAD LOVE -Spotify On Stage Tokyo 2025-",
+    "artist": "HANA official",
+    "video_url": "https://www.youtube.com/watch?v=W7vfwpV5jBk",
+    "jasrac_search_title": "BAD LOVE",
+    "jasrac_search_artist": "HANA",
+    "jasrac_code": "公式表記確認済み (J-WID検索推奨)",
+    "status": "iTunesで公式表記確認済み",
+    "pub_date": "2026-08-05",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/work/c92f8d5f-3eec-4740-be59-dd0eeb1618e5",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22BAD%20LOVE%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20BAD%20LOVE%20HANA",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=HANA%20BAD%20LOVE%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
+    "last_metrics": {
+      "views": 373057,
+      "likes": 13265,
+      "comments": 321,
+      "engagement_rate": 3.64,
+      "daily_views": 124352
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-08",
+        "views": 373057,
+        "likes": 13265,
+        "comments": 321,
+        "engagement_rate": 3.64,
+        "daily_views": 124352
+      }
+    ],
+    "added_date": "2026-08-08",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "-6QW0eXLzBfWZw1nnWOpQkU5aBg",
+      "id": "W7vfwpV5jBk",
+      "snippet": {
+        "publishedAt": "2026-08-05T09:03:07Z",
+        "channelId": "UCWPDq5P9K2hNKFaN5WSfclw",
+        "title": "HANA / BAD LOVE -Spotify On Stage Tokyo 2025-",
+        "description": "2025年12月12日(金)開催　「Spotify On Stage Tokyo 2025 -Year-End Special-」\n\nHANA 1st Album 'HANA'\n▼Download & Streaming\nhttps://hana-brave.lnk.to/HANA\n\n*******\n\nちゃんみなプロデュース7人組ガールズグループ HANA。メンバーは CHIKA / NAOKO / JISOO / YURI / MOMOKA / KOHARU / MAHINA の7名で構成され、それぞれが異なるバックグラウンドと強烈な個性を持ちながら、唯一無二の世界観と統一感を両立させている。\n圧倒的なライブパフォーマンス、等身大の心情と強さを描く歌詞そしてそして飾らない人間性で、自らの道を切り開く“次世代の象徴”として、音楽シーンを席巻し続けている。\n\nWeb https://hana.b-rave.tokyo\nInstagram https://www.instagram.com/hana_brave_official\nTikTok https://www.tiktok.com/@hana_brave_official\nX  https://x.com/HANA__BRAVE \n\n#HANA",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W7vfwpV5jBk/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W7vfwpV5jBk/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W7vfwpV5jBk/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/W7vfwpV5jBk/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/W7vfwpV5jBk/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "HANA official",
+        "tags": [
+          "HANA",
+          "ハナ",
+          "ノノガ",
+          "NoNoGirls",
+          "CHIKA",
+          "KOHARU",
+          "MAHINA",
+          "MOMOKA",
+          "JISOO",
+          "NAOKO",
+          "YURI",
+          "BMSG",
+          "ROSE",
+          "BADLOVE",
+          "NONSTOP",
+          "Tiger",
+          "BlueJeans"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "ja",
+        "localized": {
+          "title": "HANA / BAD LOVE -Spotify On Stage Tokyo 2025-",
+          "description": "2025年12月12日(金)開催　「Spotify On Stage Tokyo 2025 -Year-End Special-」\n\nHANA 1st Album 'HANA'\n▼Download & Streaming\nhttps://hana-brave.lnk.to/HANA\n\n*******\n\nちゃんみなプロデュース7人組ガールズグループ HANA。メンバーは CHIKA / NAOKO / JISOO / YURI / MOMOKA / KOHARU / MAHINA の7名で構成され、それぞれが異なるバックグラウンドと強烈な個性を持ちながら、唯一無二の世界観と統一感を両立させている。\n圧倒的なライブパフォーマンス、等身大の心情と強さを描く歌詞そしてそして飾らない人間性で、自らの道を切り開く“次世代の象徴”として、音楽シーンを席巻し続けている。\n\nWeb https://hana.b-rave.tokyo\nInstagram https://www.instagram.com/hana_brave_official\nTikTok https://www.tiktok.com/@hana_brave_official\nX  https://x.com/HANA__BRAVE \n\n#HANA"
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT3M11S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "373057",
+        "likeCount": "13265",
+        "favoriteCount": "0",
+        "commentCount": "321"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia",
+          "https://en.wikipedia.org/wiki/Pop_music"
+        ]
+      }
+    }
+  },
+  {
+    "title": "Unknown Thread",
+    "artist": "Spitz - Topic",
+    "video_url": "https://www.youtube.com/watch?v=wzC9ZiL2kHY",
+    "jasrac_search_title": "Unknown Thread",
+    "jasrac_search_artist": "スピッツ",
+    "jasrac_code": "コード未取得",
+    "status": "未登録・非管理曲の可能性あり",
+    "pub_date": "2026-08-06",
+    "source_name": "MusicBrainz",
+    "source_url": "https://musicbrainz.org/search?query=%22Unknown%20Thread%22&type=work",
+    "mb_search_url": "https://musicbrainz.org/search?query=%22Unknown%20Thread%22&type=work",
+    "jasrac_search_url": "https://www.google.com/search?q=JASRAC%20%E6%A4%9C%E7%B4%A2%20Unknown%20Thread%20%E3%82%B9%E3%83%94%E3%83%83%E3%83%84",
+    "karaoke_search_url": "https://www.youtube.com/results?search_query=%E3%82%B9%E3%83%94%E3%83%83%E3%83%84%20Unknown%20Thread%20%E3%82%AB%E3%83%A9%E3%82%AA%E3%82%B1%20%E6%AD%8C%E6%9E%A0%E7%94%A8",
+    "verified_at": "2026-08-08",
+    "valid_until": "2026-11-06",
+    "last_metrics": {
+      "views": 338626,
+      "likes": 10963,
+      "comments": 603,
+      "engagement_rate": 3.42,
+      "daily_views": 169313
+    },
+    "metrics_history": [
+      {
+        "date": "2026-08-08",
+        "views": 338626,
+        "likes": 10963,
+        "comments": 603,
+        "engagement_rate": 3.42,
+        "daily_views": 169313
+      }
+    ],
+    "added_date": "2026-08-08",
+    "raw_youtube": {
+      "kind": "youtube#video",
+      "etag": "N-287KTWHCBs9-2Fy9rPglp8T-0",
+      "id": "wzC9ZiL2kHY",
+      "snippet": {
+        "publishedAt": "2026-08-06T10:00:07Z",
+        "channelId": "UCa1Dtbauq3vNdm0osXMScuA",
+        "title": "Unknown Thread",
+        "description": "Provided to YouTube by Universal Music Group\n\nUnknown Thread · Spitz\n\nUnknown Thread\n\n℗ 2026 UNIVERSAL MUSIC LLC\n\nReleased on: 2026-08-07\n\nVocalist: Masamune Kusano\nRecordingarranger, Producer: Spitz\nProducer, Recordingarranger: Seiji Kameda\nRecording Engineer, Mixing Engineer: Tohru Takayama\nMastering Engineer: Emily Lazar\nComposer, Lyricist: Masamune Kusano\n\nAuto-generated by YouTube.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/wzC9ZiL2kHY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/wzC9ZiL2kHY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/wzC9ZiL2kHY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/wzC9ZiL2kHY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/wzC9ZiL2kHY/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Spitz - Topic",
+        "tags": [
+          "Spitz",
+          "スピッツ",
+          "Unknown Thread",
+          "ミシラヌイト",
+          "見知らぬ糸"
+        ],
+        "categoryId": "10",
+        "liveBroadcastContent": "none",
+        "defaultLanguage": "en",
+        "localized": {
+          "title": "Unknown Thread",
+          "description": "Provided to YouTube by Universal Music Group\n\nUnknown Thread · Spitz\n\nUnknown Thread\n\n℗ 2026 UNIVERSAL MUSIC LLC\n\nReleased on: 2026-08-07\n\nVocalist: Masamune Kusano\nRecordingarranger, Producer: Spitz\nProducer, Recordingarranger: Seiji Kameda\nRecording Engineer, Mixing Engineer: Tohru Takayama\nMastering Engineer: Emily Lazar\nComposer, Lyricist: Masamune Kusano\n\nAuto-generated by YouTube."
+        },
+        "defaultAudioLanguage": "ja"
+      },
+      "contentDetails": {
+        "duration": "PT4M12S",
+        "dimension": "2d",
+        "definition": "hd",
+        "caption": "false",
+        "licensedContent": true,
+        "regionRestriction": {
+          "allowed": [
+            "AE",
+            "AR",
+            "AS",
+            "AT",
+            "AU",
+            "AW",
+            "AZ",
+            "BA",
+            "BD",
+            "BE",
+            "BG",
+            "BH",
+            "BM",
+            "BO",
+            "BR",
+            "CA",
+            "CH",
+            "CL",
+            "CO",
+            "CR",
+            "CY",
+            "CZ",
+            "DE",
+            "DK",
+            "DO",
+            "DZ",
+            "EC",
+            "EE",
+            "EG",
+            "ES",
+            "FI",
+            "FR",
+            "GB",
+            "GE",
+            "GF",
+            "GH",
+            "GP",
+            "GR",
+            "GT",
+            "GU",
+            "HK",
+            "HN",
+            "HR",
+            "HU",
+            "ID",
+            "IE",
+            "IL",
+            "IN",
+            "IQ",
+            "IS",
+            "IT",
+            "JM",
+            "JO",
+            "JP",
+            "KE",
+            "KH",
+            "KR",
+            "KW",
+            "KY",
+            "KZ",
+            "LA",
+            "LB",
+            "LI",
+            "LK",
+            "LT",
+            "LU",
+            "LV",
+            "LY",
+            "MA",
+            "MK",
+            "MP",
+            "MQ",
+            "MT",
+            "MX",
+            "MY",
+            "NC",
+            "NG",
+            "NI",
+            "NL",
+            "NO",
+            "NP",
+            "NZ",
+            "OM",
+            "PA",
+            "PE",
+            "PF",
+            "PG",
+            "PH",
+            "PK",
+            "PL",
+            "PR",
+            "PT",
+            "PY",
+            "QA",
+            "RE",
+            "RO",
+            "RS",
+            "SA",
+            "SE",
+            "SG",
+            "SI",
+            "SK",
+            "SN",
+            "SV",
+            "TC",
+            "TH",
+            "TN",
+            "TR",
+            "TW",
+            "TZ",
+            "UA",
+            "UG",
+            "US",
+            "UY",
+            "VE",
+            "VI",
+            "VN",
+            "YE",
+            "YT",
+            "ZA",
+            "ZW"
+          ]
+        },
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "status": {
+        "uploadStatus": "processed",
+        "privacyStatus": "public",
+        "license": "youtube",
+        "embeddable": true,
+        "publicStatsViewable": true,
+        "madeForKids": false
+      },
+      "statistics": {
+        "viewCount": "338626",
+        "likeCount": "10963",
+        "favoriteCount": "0",
+        "commentCount": "603"
+      },
+      "topicDetails": {
+        "topicCategories": [
+          "https://en.wikipedia.org/wiki/Music",
+          "https://en.wikipedia.org/wiki/Music_of_Asia"
         ]
       }
     }
